@@ -11,7 +11,7 @@ const PATHS = {
   assets: 'assets/'
 };
 
-const PAGES_DIR = `${PATHS.src}/pug`
+const PAGES_DIR = `${PATHS.src}`
 const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
 
 module.exports = {
@@ -79,16 +79,18 @@ module.exports = {
       }
     ]
   },
-  
+
   plugins: [
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].[hash].css`,
     }),
     new CopyWebpackPlugin([
-
+      { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
+      { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
+      { from: `${PATHS.src}/lib`, to: `${PATHS.assets}lib` }
     ]),
 
-    
+
     ...PAGES.map(page => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}`,
       filename: `./${page.replace(/\.pug/,'.html')}`
