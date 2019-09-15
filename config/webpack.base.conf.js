@@ -100,6 +100,11 @@ module.exports = {
       filename: './index.html',
       inject: true
     }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/ui-kit/colorstype/colorstype.pug`,
+      filename: './ui-kit/colorstype.html',
+      inject: true
+    }),
     new HtmlWebpackExternalsPlugin({
       externals: [
         {
