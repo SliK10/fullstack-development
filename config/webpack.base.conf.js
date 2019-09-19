@@ -5,6 +5,7 @@ const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+
 const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
@@ -16,15 +17,17 @@ const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.p
 
 module.exports = {
   externals: {
-    paths: PATHS
+    paths: PATHS,
+    jquery: 'jQuery'
   },
   entry: {
-    app: PATHS.src
+    app: PATHS.src,
+    colorstype: `${PATHS.src}/uikit/colorstype/colorstype.js`
   },
   output: {
     path: PATHS.build,
     filename: `${PATHS.assets}js/[name].js`,
-    publicPath: ''
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -54,7 +57,7 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: { sourceMap: true }
+            options: { sourceMap: true}
           }, {
             loader: 'postcss-loader',
             options: { sourceMap: true, config: { path: './postcss.config.js' } }
@@ -81,13 +84,13 @@ module.exports = {
   },
 
   plugins: [
+
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].[hash].css`,
     }),
     new CopyWebpackPlugin([
-      { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
-      { from: `${PATHS.src}/lib`, to: `${PATHS.assets}lib` }
+      { from: `${PATHS.src}/${PATHS.assets}/fonts`, to: `${PATHS.assets}fonts` },
+      { from: `${PATHS.src}/components`, to: `${PATHS.assets}img`, flatten:true, ignore:['*.html', '*.pug', '*.css', '*.scss', '*.js'] }
     ]),
 
 
@@ -101,8 +104,9 @@ module.exports = {
       inject: true
     }),
     new HtmlWebpackPlugin({
-      template: `${PAGES_DIR}/ui-kit/colorstype/colorstype.pug`,
-      filename: './ui-kit/colorstype.html',
+      template: `${PAGES_DIR}/uikit/colorstype/colorstype.pug`,
+      chunks: ["colorstype"],
+      filename: './uikit/colorstype.html',
       inject: true
     }),
     new HtmlWebpackExternalsPlugin({

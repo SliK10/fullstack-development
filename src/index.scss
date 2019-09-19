@@ -1,5 +1,11 @@
-@import './scss/normalize.scss';
-@import './scss/fonts.scss';
-/*== Colors & Types ==*/
-@import './ui-kit/colorstype/colorstype.scss';
-/*=====*/
+@import './assets/scss/normalize.scss';
+@import './assets/scss/fonts.scss';
+@import './views/layout/main.scss';
+@import './uikit/colorstype/colorstype.scss';
+
+a {
+  font-family: 'Montserrat-Bold', sans-serif;
+}
+h1 {
+  font-family: 'Montserrat-Regular', sans-serif;
+}
