@@ -1,0 +1,20 @@
+@import '../../assets/scss/normalize.scss';
+@import '../../views/layout/main.scss';
+@import '../../assets/scss/mixins.scss';
+@import '../../components/toxin_icon/toxin.scss';
+
+.toxin-icon{
+  margin-top: 1.875rem;
+  margin-left: 1.875rem;
+  &__figure {
+  width: 48px;
+  height: 48px;
+  }
+  &__circle {
+    fill: none;
+    stroke: rgba(31, 32, 65, 0.25);
+    stroke-width: 3px;
+    cx: 24;
+    cy: 24;
+  }
+}
