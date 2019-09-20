@@ -1,0 +1,24 @@
+.rectangle__wrapper
+  .rectangle-color
+    mixin rectangle(color)
+      div(class= 'rectangle rectangle-color__'+color)
+
+    +rectangle('dark100')
+    +rectangle('dark75')
+    +rectangle('dark50')
+    +rectangle('dark25')
+    +rectangle('dark5')
+    +rectangle('purple')
+    +rectangle('green')
+
+  .rectangle-description
+    mixin rectangle-text(name, color)
+      .rectangle-text=  name
+
+    +rectangle-text('Dark Shade 100%')
+    +rectangle-text('Dark Shade 75%')
+    +rectangle-text('Dark Shade 50%')
+    +rectangle-text('Dark Shade 25%')
+    +rectangle-text('Dark Shade 5%')
+    +rectangle-text('Purple')
+    +rectangle-text('Green')

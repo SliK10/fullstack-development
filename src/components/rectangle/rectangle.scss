@@ -1,0 +1,45 @@
+.rectangle__wrapper {
+  margin-left: 9.375rem;
+  @include font-third;
+  font-size: 1.1875rem;
+  line-height: 1.8125;
+  display: flex;
+}
+.rectangle-color {
+  .rectangle {
+    width: 4.375rem;
+    height: 4.375rem;
+    border-radius: 6px;
+    margin-bottom: 1.25rem;
+  }
+  &__dark100 {
+    @include dark100;
+  }
+  &__dark75 {
+    @include dark75;
+  }
+  &__dark50 {
+    @include dark50;
+  }
+  &__dark25 {
+    @include dark25;
+  }
+  &__dark5 {
+    @include dark5;
+  }
+  &__purple {
+    @include purple;
+  }
+  &__green {
+    @include green;
+  }
+}
+.rectangle-description {
+  margin-left: 2.5rem;
+  line-height: center;
+  .rectangle-text {
+    &__color {
+      margin-bottom: 19px;
+    }
+  }
+}

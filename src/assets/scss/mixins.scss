@@ -7,24 +7,27 @@
 @mixin font-third {
   font-family: 'Quicksand-Bold', sans-serif;
 }
-@mixin color-purple {
+@mixin font-forth {
+  font-family: 'Quicksand-Regular', sans-serif;
+}
+@mixin purple {
   background: #bc9cff;
 }
-@mixin color-green {
+@mixin green {
   background: #6fcf97;
 }
-@mixin color-dark100 {
+@mixin dark100 {
   background: #1f2041;
 }
-@mixin color-dark75 {
+@mixin dark75 {
   background: rgba(31, 32, 65, 0.75);
 }
-@mixin color-dark50 {
+@mixin dark50 {
   background: rgba(31, 32, 65, 0.5);
 }
-@mixin color-dark25 {
+@mixin dark25 {
   background: rgba(31, 32, 65, 0.25);
 }
-@mixin color-dark5 {
+@mixin dark5 {
   background: rgba(31, 32, 65, 0.05);
 }

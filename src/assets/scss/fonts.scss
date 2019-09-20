@@ -37,3 +37,11 @@
        url('/assets/fonts/Quicksand/Bold/Quicksand-Bold.ttf') format('truetype'),
        url('/assets/fonts/Quicksand/Bold/Quicksand-Bold.svg') format('svg');
 }
+
+@font-face {
+  font-family: 'Quicksand-Regular';
+  src: url('/assets/fonts/Quicksand/Regular/Quicksand-Regular.eot');
+  src: url('/assets/fonts/Quicksand/Regular/Quicksand-Regular.woff') format('woff'),
+       url('/assets/fonts/Quicksand/Regular/Quicksand-Regular.ttf') format('truetype'),
+       url('/assets/fonts/Quicksand/Regular/Quicksand-Regular.svg') format('svg');
+}
