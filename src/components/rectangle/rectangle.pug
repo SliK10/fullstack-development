@@ -13,12 +13,14 @@
 
   .rectangle-description
     mixin rectangle-text(name, color)
-      .rectangle-text=  name
+      .rectangle-text
+        p.rectangle-text__name=  name
+        p.rectangle-text__color= color
 
-    +rectangle-text('Dark Shade 100%')
-    +rectangle-text('Dark Shade 75%')
-    +rectangle-text('Dark Shade 50%')
-    +rectangle-text('Dark Shade 25%')
-    +rectangle-text('Dark Shade 5%')
-    +rectangle-text('Purple')
-    +rectangle-text('Green')
+    +rectangle-text('Dark Shade 100%', '#1F2041')
+    +rectangle-text('Dark Shade 75%', '#1F2041')
+    +rectangle-text('Dark Shade 50%', '#1F2041')
+    +rectangle-text('Dark Shade 25%', '#1F2041')
+    +rectangle-text('Dark Shade 5%', '#1F2041')
+    +rectangle-text('Purple', '#BC9CFF')
+    +rectangle-text('Green', '#6FCF97')

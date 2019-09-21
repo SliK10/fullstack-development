@@ -1,5 +1,11 @@
+@import '../../assets/scss/normalize.scss';
+@import '../../assets/scss/fonts.scss';
+@import '../../assets/scss/mixins.scss';
+
+
 .page {
   margin: 0 auto;
   max-width: 1440px;
   background: #fff;
+  @include font-main;
 }

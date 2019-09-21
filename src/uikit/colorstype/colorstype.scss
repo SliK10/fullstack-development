@@ -4,3 +4,12 @@
 @import '../../assets/scss/fonts.scss';
 @import '../../components/toxin_icon/toxin.scss';
 @import '../../components/rectangle/rectangle.scss';
+@import '../../components/fontsize/fontsize.scss';
+
+
+.page__cell {
+  margin-right: 191px;
+  margin-left: 9.375rem;
+  display: flex;
+  justify-content: space-between;
+}

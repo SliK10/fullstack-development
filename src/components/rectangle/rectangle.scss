@@ -1,6 +1,4 @@
 .rectangle__wrapper {
-  margin-left: 9.375rem;
-  @include font-third;
   font-size: 1.1875rem;
   line-height: 1.8125;
   display: flex;
@@ -36,10 +34,19 @@
 }
 .rectangle-description {
   margin-left: 2.5rem;
-  line-height: center;
+  width: 160px;
   .rectangle-text {
+    margin-bottom: 25px;
+
+    &__name {
+      margin: 0;
+      padding-top: 3px;
+      @include font-third;
+    }
     &__color {
-      margin-bottom: 19px;
+      line-height: 1.5;
+      margin: 0;
+      @include font-forth;
     }
   }
 }
