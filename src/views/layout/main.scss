@@ -2,7 +2,9 @@
 @import '../../assets/scss/fonts.scss';
 @import '../../assets/scss/mixins.scss';
 
-
+* {
+  box-sizing:border-box;
+}
 .page {
   margin: 0 auto;
   max-width: 1440px;

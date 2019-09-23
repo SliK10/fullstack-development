@@ -22,7 +22,8 @@ module.exports = {
   },
   entry: {
     app: PATHS.src,
-    colorstype: `${PATHS.src}/uikit/colorstype/colorstype.js`
+    colorstype: `${PATHS.src}/uikit/colorstype/colorstype.js`,
+    formelements: `${PATHS.src}/uikit/formelements/formelements.js`
   },
   output: {
     path: PATHS.build,
@@ -107,6 +108,12 @@ module.exports = {
       template: `${PAGES_DIR}/uikit/colorstype/colorstype.pug`,
       chunks: ["colorstype"],
       filename: './uikit/colorstype.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/uikit/formelements/formelements.pug`,
+      chunks: ["formelements"],
+      filename: './uikit/formelements.html',
       inject: true
     }),
     new HtmlWebpackExternalsPlugin({

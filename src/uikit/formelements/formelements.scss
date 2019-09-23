@@ -1,0 +1,11 @@
+@import '../../assets/scss/normalize.scss';
+@import '../../assets/scss/fonts.scss';
+@import '../../assets/scss/mixins.scss';
+@import '../../views/layout/main.scss';
+@import '../../components/toxin_icon/toxin.scss';
+
+.label {
+  @include font-two;
+  font-size: 12px;
+  line-height: 15px;
+}
