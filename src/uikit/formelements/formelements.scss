@@ -3,9 +3,12 @@
 @import '../../assets/scss/mixins.scss';
 @import '../../views/layout/main.scss';
 @import '../../components/toxin_icon/toxin.scss';
+@import '../../components/textfield/textfield.scss';
+@import '../../components/maskedtf/maskedtf.scss';
 
-.label {
-  @include font-two;
-  font-size: 12px;
-  line-height: 15px;
+.page__row.toxin {
+  margin-bottom: 63px;
+}
+.page__cell {
+  margin: 0 8.8125rem;
 }

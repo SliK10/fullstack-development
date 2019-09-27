@@ -6,7 +6,9 @@
 @import '../../components/rectangle/rectangle.scss';
 @import '../../components/fontsize/fontsize.scss';
 
-
+.page__row.toxin {
+  margin-bottom: 4.1875rem;
+}
 .page__cell {
   margin-right: 191px;
   margin-left: 9.375rem;
