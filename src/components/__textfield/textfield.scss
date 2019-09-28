@@ -3,13 +3,13 @@
   font-size: 12px;
   line-height: 15px;
 }
-.form-email {
+.form {
   margin-bottom: 1.25rem;
 }
-.form-email__title {
+.form__title {
   margin: 0;
 }
-.form-email__input {
+.form__input {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   @include font-main;
@@ -20,10 +20,10 @@
   height: 44px;
   margin-top: 4px;
 }
-.form-email__input:hover,
-.form-email__input:focus {
+.form__input:hover,
+.form__input:focus {
   border: 1px solid rgba(31, 32, 65, 0.5);
 }
-input.form-email__input::placeholder {
+input.form__input::placeholder {
   color: rgba(31, 32, 65, 0.25);
 }

@@ -1,12 +1,13 @@
 extends ../../views/layout/main.pug
+include ../../components/__textfield/textfield.pug
 
 block title
   title Form Elements
 
 block content
   .page__row.toxin
-    include ../../components/toxin_icon/toxin.pug
+    include ../../components/toxin-icon/toxin.pug
   .page__row
     .page__cell
-      include ../../components/textfield/textfield.pug
-      include ../../components/maskedtf/maskedtf.pug
+      +text-field({name: 'TEXT FIELD', labelFor: 'email', inputType: 'text', inputPlaceholder: 'Email'})
+      +text-field({name: 'MASKED TEXT FIELD', labelFor: 'maskedtf', inputType: 'text', inputPlaceholder: 'ДД.ММ.ГГГГ'})

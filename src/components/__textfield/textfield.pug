@@ -1,0 +1,6 @@
+mixin text-field(options)
+  .text-field
+    form.form
+      p.form__title
+        label.form__title-label.label(for= options.labelFor)= options.name
+      input.form__input(type= options.inputType name= options.labelFor id= options.labelFor placeholder= options.inputPlaceholder)

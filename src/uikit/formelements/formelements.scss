@@ -2,9 +2,9 @@
 @import '../../assets/scss/fonts.scss';
 @import '../../assets/scss/mixins.scss';
 @import '../../views/layout/main.scss';
-@import '../../components/toxin_icon/toxin.scss';
-@import '../../components/textfield/textfield.scss';
-@import '../../components/maskedtf/maskedtf.scss';
+@import '../../components/toxin-icon/toxin.scss';
+@import '../../components/__textfield/textfield.scss';
+@import '../../components/__maskedtf/maskedtf.scss';
 
 .page__row.toxin {
   margin-bottom: 63px;
