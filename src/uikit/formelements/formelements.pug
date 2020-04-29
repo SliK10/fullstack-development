@@ -1,5 +1,6 @@
 extends ../../views/layout/main.pug
 include ../../components/__textfield/textfield.pug
+include ../../components/__dropdown/dropdown.pug
 
 block title
   title Form Elements
@@ -9,5 +10,7 @@ block content
     include ../../components/toxin-icon/toxin.pug
   .page__row
     .page__cell
-      +text-field({name: 'TEXT FIELD', labelFor: 'email', inputType: 'text', inputPlaceholder: 'Email'})
-      +text-field({name: 'MASKED TEXT FIELD', labelFor: 'maskedtf', inputType: 'text', inputPlaceholder: 'ДД.ММ.ГГГГ'})
+      +text-field({name: 'text field', labelFor: 'email', inputType: 'text', inputPlaceholder: 'Email'})
+      +text-field({name: 'text field', labelFor: 'email', inputTupe: 'text', inputPlaceholder: 'This pretty awesome'})
+      +dropdown({label: 'dropdown', placeholder: 'Сколько гостей', firstGuestLabel: 'взрослые', secondGuestLabel: 'дети'})
+      +text-field({name: 'masked text field', labelFor: 'maskedtf', inputType: 'text', inputPlaceholder: 'ДД.ММ.ГГГГ'})
