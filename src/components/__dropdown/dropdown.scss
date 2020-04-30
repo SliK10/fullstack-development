@@ -2,7 +2,7 @@
     margin-bottom: 1.25rem;
 }
 .dropdown__label-name,
-.choice-guests__label
+.panel-of-choice__label
  {
   @include font-two;
   font-size: 12px;
@@ -23,7 +23,7 @@
   display: flex;
   cursor: pointer;
 
-  .dropdown__amount-guests {
+  .dropdown__area-of-placeholder {
     width: 276px;
     height: 44px;
     line-height: 42px;
@@ -50,7 +50,7 @@
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-radius: 4px 4px 0 0;
   cursor: pointer;
-  .dropdown__amount-guests {
+  .dropdown__area-of-placeholder {
     width: 276px;
     height: 44px;
     line-height: 42px;
@@ -66,7 +66,7 @@
     }
   }
 }
-.choice-guests {
+.panel-of-choice {
   width: 320px;
   height: 158px;
   border-bottom: 1px solid rgba(31, 32, 65, 0.5);
@@ -81,24 +81,26 @@
   position: absolute;
   z-index: 1;
 }
-.choice-guests__wrapper,
-.choice-guests__wrapper-apply-and-cancel {
+.panel-of-choice__wrapper,
+.panel-of-choice__wrapper-apply-and-cancel {
   width: 298px;
   height: 30px;
   margin: 6px 7px 7px 14px;
   display: flex;
   justify-content: space-between;
 }
-.choice-guests__wrapper-apply-and-cancel {
+.panel-of-choice__wrapper-apply-and-cancel {
   margin-top: 12px;
 }
-.choice-guests__label {
+.panel-of-choice__label {
   line-height: 28px;
 }
 .buttons-of-choice {
   display: inline-flex;
 }
-.buttons-of-choice__amount {
+.buttons-of-choice__amount-of-adults,
+.buttons-of-choice__amount-of-children,
+.buttons-of-choice__amount-of-babyes {
   @include font-two;
   font-size: 12px;
   line-height: 28px;
@@ -107,8 +109,12 @@
   width: 32px;
   text-align: center;
 }
-.button-increase,
-.button-reduce {
+.button__add-adults,
+.button__add-children,
+.button__add-babyes,
+.button__remove-adults,
+.button__remove-children,
+.button__remove-babyes {
   width: 30px;
   height: 30px;
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -117,11 +123,17 @@
   color: rgba(31, 32, 65, 0.5);
   cursor: pointer;
 }
-.button-increase {
+.button__add-adults[disabled],
+.button__add-children[disabled],
+.button__add-babyes[disabled],
+.button__remove-adults[disabled],
+.button__remove-children[disabled],
+.button__remove-babyes[disabled] {
   border: 1px solid rgba(31, 32, 65, 0.25);
   opacity: 0.38;
+  cursor: not-allowed;
 }
-.choice-guests__wrapper-apply-and-cancel {
+.panel-of-choice__wrapper-apply-and-cancel {
 
   .apply,
   .cancel {

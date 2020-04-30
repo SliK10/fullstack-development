@@ -1,40 +1,35 @@
 //-
   options принимает объект настроек
-  {label: <text>, placeholder: <text>, firstGuestLabel: <text>, secondGuestLabel: <text>, thirdGuestLabel: <text>}
-mixin dropdown(options)
+  {label: <text>, placeholder: <text>, firstGuestLabel: <text>, secondGuestLabel: <text>, thirdGuestLabel: <text> , applyAndCancel: true/false}
+mixin dropdownGuests(options)
   .dropdown
     .dropdown__wrapper
       p.dropdown__label-name= options.label
       .dropdown__show-info
-        .dropdown__amount-guests= options.placeholder
+        .dropdown__area-of-placeholder= options.placeholder
         .dropdown__expand-more-wrapper
           svg.dropdown__expand-more-svg(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg")
             path(d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5")
-      .choice-guests.hide
-        .choice-guests__wrapper.adult
-          .choice-guests__label= options.firstGuestLabel
+      .panel-of-choice.hide
+        .panel-of-choice__wrapper
+          .panel-of-choice__label= options.firstGuestLabel
           .buttons-of-choice
-            .buttons-of-choice__increase
-              button.button-increase(type="button") -
-            .buttons-of-choice__amount 0
-            .buttons-of-choice__resduce
-              button.button-reduce(type="button") +
-        .choice-guests__wrapper.children
-          .choice-guests__label= options.secondGuestLabel
+            button.button__remove-adults(type="button" disabled) -
+            .buttons-of-choice__amount-of-adults 0
+            button.button__add-adults(type="button") +
+        .panel-of-choice__wrapper
+          .panel-of-choice__label= options.secondGuestLabel
           .buttons-of-choice
-            .buttons-of-choice__increase
-              button.button-increase(type="button") -
-            .buttons-of-choice__amount 0
-            .buttons-of-choice__resduce
-              button.button-reduce(type="button") +
-        .choice-guests__wrapper.babies
-          .choice-guests__label Младенцы
+            button.button__remove-children(type="button" disabled) -
+            .buttons-of-choice__amount-of-children 0
+            button.button__add-children(type="button") +
+        .panel-of-choice__wrapper
+          .panel-of-choice__label= options.thirdGuestLabel
           .buttons-of-choice
-            .buttons-of-choice__increase
-              button.button-increase(type="button") -
-            .buttons-of-choice__amount 0
-            .buttons-of-choice__resduce
-              button.button-reduce(type="button") +
-        .choice-guests__wrapper-apply-and-cancel
-          button.apply(type="button") очистить
-          button.cancel(type="button") применить
+            button.button__remove-babyes(type="button" disabled) -
+            .buttons-of-choice__amount-of-babyes 0
+            button.button__add-babyes(type="button") +
+        if (options.applyAndCancel)
+          .panel-of-choice__wrapper-apply-and-cancel
+            button.cancel(type="button") очистить
+            button.apply(type="button") применить
