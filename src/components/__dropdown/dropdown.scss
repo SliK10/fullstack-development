@@ -135,8 +135,8 @@
 }
 .panel-of-choice__wrapper-apply-and-cancel {
 
-  .apply,
-  .cancel {
+  .button__clear,
+  .button__apply {
     @include font-two;
     font-size: 12px;
     line-height: 15px;
@@ -147,10 +147,13 @@
     background-color: #fff;
     cursor: pointer;
   }
-  .cancel {
+  .button__clear {
     color: #bc9cff;
   }
-  .apply {
+  .button__clear_hidden {
+    visibility: hidden;
+  }
+  .button__apply {
     color: rgba(31, 32, 65, 0.5);
   }
 }
