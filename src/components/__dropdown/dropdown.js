@@ -201,5 +201,3 @@ class DropdownGuests {
 
 const dropdownGuests = new DropdownGuests();
 dropdownGuests.dropdownInit();
-
-export default dropdownGuests;
