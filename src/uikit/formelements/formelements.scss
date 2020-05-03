@@ -6,10 +6,33 @@
 @import '../../components/__textfield/textfield.scss';
 @import '../../components/__maskedtf/maskedtf.scss';
 @import '../../components/__dropdown/dropdown.scss';
+@import '../../components/__date-dropdown/date-dropdown.scss';
+@import '../../components/__filter-date-dropdown/filter-date-dropdown.scss';
 
 .page__row.toxin {
   margin-bottom: 63px;
 }
 .page__cell {
   margin: 0 8.8125rem;
+}
+.text-field__wrapper-0 {
+  margin-bottom: 19px;
+}
+.text-field__wrapper-1 {
+  margin-bottom: 20.5px;
+}
+.dropdown__wrapper {
+  margin-bottom: 20px;
+}
+.masked-text-field__wrapper {
+  margin-bottom: 42px;
+}
+.date-dropdown__wrapper {
+  width: 320px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 42px;
+}
+.filter-date-dropdown__wrapper {
+
 }

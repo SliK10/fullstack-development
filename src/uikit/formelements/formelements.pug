@@ -1,6 +1,8 @@
 extends ../../views/layout/main.pug
 include ../../components/__textfield/textfield.pug
 include ../../components/__dropdown/dropdown.pug
+include ../../components/__date-dropdown/date-dropdown.pug
+include ../../components/__filter-date-dropdown/filter-date-dropdown.pug
 
 block title
   title Form Elements
@@ -10,7 +12,16 @@ block content
     include ../../components/toxin-icon/toxin.pug
   .page__row
     .page__cell
-      +text-field({name: 'text field', labelFor: 'email', inputType: 'text', inputPlaceholder: 'Email'})
-      +text-field({name: 'text field', labelFor: 'email', inputTupe: 'text', inputPlaceholder: 'This pretty awesome'})
-      +dropdownGuests({label: 'dropdown', placeholder: 'Сколько гостей', firstGuestLabel: 'взрослые', secondGuestLabel: 'дети', thirdGuestLabel: 'младенцы', applyAndCancel: true})
-      +text-field({name: 'masked text field', labelFor: 'maskedtf', inputType: 'text', inputPlaceholder: 'ДД.ММ.ГГГГ'})
+      .text-field__wrapper-0
+        +text-field({name: 'text field', labelFor: 'email', inputType: 'text', inputPlaceholder: 'Email'})
+      .text-field__wrapper-1
+        +text-field({name: 'text field', labelFor: 'email', inputTupe: 'text', inputPlaceholder: 'This pretty awesome'})
+      .dropdown__wrapper
+        +dropdownGuests({label: 'dropdown', placeholder: 'Сколько гостей', firstGuestLabel: 'взрослые', secondGuestLabel: 'дети', thirdGuestLabel: 'младенцы', applyAndCancel: true})
+      .masked-text-field__wrapper
+        +text-field({name: 'masked text field', labelFor: 'maskedtf', inputType: 'text', inputPlaceholder: 'ДД.ММ.ГГГГ'})
+      .date-dropdown__wrapper
+        +date-dropdown({label: 'date dropdown', placeholder: 'ДД.ММ.ГГГГ'})
+        +date-dropdown({label: 'date dropdown', placeholder: '19.08.2019'})
+      .filter-date-dropdown__wrapper
+        +filter-date-dropdown({label: 'filter date dropdown', placeholder: '19 авг - 23 авг'})
