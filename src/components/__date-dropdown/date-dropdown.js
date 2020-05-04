@@ -1,6 +1,7 @@
-let datepicker = $('.date-dropdown__area-of-placeholder').datepicker({
+$('.date-dropdown__area-of-placeholder').datepicker({
   minDate: new Date(),
-  dateFormat: "dd.mm.yyyy"
+  dateFormat: "dd.mm.yyyy",
+  showEvent: 'focus',
+  inline: true,
+  range: true,
 })
-let button = document.querySelector('.date-dropdown__show-info')
-button.addEventListener('click', datepicker.hide)

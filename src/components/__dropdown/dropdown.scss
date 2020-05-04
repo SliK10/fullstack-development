@@ -145,13 +145,13 @@
     cursor: pointer;
   }
   .button__clear {
-    color: #bc9cff;
+    color: rgba(31, 32, 65, 0.5);
   }
   .button__clear_hidden {
     visibility: hidden;
   }
   .button__apply {
-    color: rgba(31, 32, 65, 0.5);
+    color: #bc9cff;
   }
 }
 
