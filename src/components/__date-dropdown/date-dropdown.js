@@ -1,5 +1,5 @@
 $('.date-dropdown__area-of-placeholder').datepicker({
-  minDate: new Date(),
+  //minDate: new Date(),
   dateFormat: "dd.mm.yyyy",
   showEvent: 'focus',
   inline: true,
