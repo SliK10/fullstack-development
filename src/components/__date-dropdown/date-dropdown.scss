@@ -1,3 +1,9 @@
+.date-dropdown {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  margin-bottom: 5px;
+}
 .date-dropdown__label-name {
 @include font-two;
 font-size: 12px;
@@ -23,6 +29,7 @@ cursor: pointer;
     height: 41px;
     color: rgba(31, 32, 65, 0.75);
     border: none;
+    line-height: 40px;
   }
   .date-dropdown__expand-more-wrapper {
     width: 44px;

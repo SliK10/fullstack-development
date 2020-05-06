@@ -47,6 +47,7 @@
 
             todayButton: false,
             clearButton: false,
+            applyButton: false,
 
             showEvent: 'focus',
             autoClose: false,
@@ -589,6 +590,21 @@
         },
 
         clear: function () {
+            this.selectedDates = [];
+            this.minRange = '';
+            this.maxRange = '';
+            this.views[this.currentView]._render();
+            this._setInputValue();
+            if (this.opts.onSelect) {
+                this._triggerOnChange()
+            }
+        },
+        /* Добавил кнопку применить */
+        apply: function () {
+            console.log(this.selectedDates)
+            console.log(this.maxRange)
+            console.log(this.minRange)
+
             this.selectedDates = [];
             this.minRange = '';
             this.maxRange = '';
@@ -1480,6 +1496,7 @@
             monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
             today: 'Сегодня',
             clear: 'Очистить',
+            apply: 'Применить',
             dateFormat: 'dd.mm.yyyy',
             timeFormat: 'hh:ii',
             firstDay: 1
@@ -1848,6 +1865,9 @@
             }
             if (this.opts.clearButton) {
                 this._addButton('clear')
+            }
+            if (this.opts.applyButton) {
+                this._addButton('apply')
             }
         },
 

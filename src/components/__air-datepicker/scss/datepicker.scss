@@ -206,7 +206,7 @@
   font-size: 12px;
   color: rgba(31, 32, 65, 0.5);
   width: 320px;
-  height: 369px;
+  min-height: 369px;
   position: absolute;
   left: -100000px;
   opacity: 0;
@@ -388,16 +388,18 @@
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 4px;
-  border-top: 1px solid #efefef; }
-
+  padding: 11px 20px;
+  justify-content: space-between;
+}
 .datepicker--button {
-  color: #4EB5E6;
+  color: rgba(31, 32, 65, 0.5);
+  @include font-two;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
   cursor: pointer;
   border-radius: 4px;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -408,6 +410,9 @@
       -ms-flex-align: center;
           align-items: center;
   height: 32px; }
+  .datepicker--button[data-action="apply"] {
+    color: #BC9CFF;
+  }
   .datepicker--button:hover {
     color: #4a4a4a;
     background: #f0f0f0; }
