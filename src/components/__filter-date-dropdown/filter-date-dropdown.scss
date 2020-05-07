@@ -33,31 +33,9 @@
       }
     }
   }
-  .filter-date-dropdown__show-info_active {
-  @include font-main;
-  font-size: 14px;
-  line-height: 25px;
-  padding-left: 15px;
-  width: 320px;
-  height: 44px;
-  margin-top: 4px;
-  display: flex;
-  border: 1px solid rgba(31, 32, 65, 0.5);
-  border-radius: 4px 4px 0 0;
-  cursor: pointer;
-    .filter-date-dropdown__area-of-placeholder {
-      width: 276px;
-      height: 44px;
-      line-height: 42px;
-      color: rgba(31, 32, 65, 0.75);
-    }
-    .filter-date-dropdown__expand-more-wrapper {
-      width: 44px;
-      height: 44px;
-      text-align: center;
-      .filter-date-dropdown__expand-more-svg {
-        vertical-align: bottom;
-        transform: rotate(180deg);
-      }
-    }
-  }
+
+.filter-date-airdatepicker {
+  margin-top: 5px;
+  display: none;
+  position: absolute;
+}

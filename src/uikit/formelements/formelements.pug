@@ -3,6 +3,7 @@ include ../../components/__textfield/textfield.pug
 include ../../components/__dropdown/dropdown.pug
 include ../../components/__date-dropdown/date-dropdown.pug
 include ../../components/__filter-date-dropdown/filter-date-dropdown.pug
+include ../../components/__subscription-text-field/subscription-text-field.pug
 
 block title
   title Form Elements
@@ -24,3 +25,5 @@ block content
         +date-dropdown({label_one: 'date dropdown', label_two: 'date dropdown',placeholder: 'ДД.ММ.ГГГГ'})
       .filter-date-dropdown__wrapper
         +filter-date-dropdown({label: 'filter date dropdown', placeholder: '19 авг - 23 авг'})
+      .subscription-text-field__wrapper
+        +subscription-text-field({name: 'subscription text field', labelFor: 'email', id: 'subscription', inputTupe: 'text', inputPlaceholder: 'Email'})

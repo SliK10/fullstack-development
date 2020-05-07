@@ -9,6 +9,7 @@
 @import '../../components/__air-datepicker/scss/datepicker.scss';
 @import '../../components/__date-dropdown/date-dropdown.scss';
 @import '../../components/__filter-date-dropdown/filter-date-dropdown.scss';
+@import '../../components/__subscription-text-field/subscription-text-field.scss';
 
 
 .page__row.toxin {
@@ -32,4 +33,7 @@
 .wrapper-for-date-dropdown {
   width: 320px;
   margin-bottom: 42px;
+}
+.filter-date-dropdown__wrapper {
+  margin-bottom: 39px;
 }
