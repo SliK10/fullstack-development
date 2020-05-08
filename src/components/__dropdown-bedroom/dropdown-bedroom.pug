@@ -1,0 +1,31 @@
+//-
+  options принимает объект настроек
+  {label: <text>, placeholder: <text>, amountOfBedrooms: <text>, amountOfBeds: <text>, amountOfBathrooms: <text> , applyAndCancel: true/false}
+mixin dropdownBedroom(options)
+  .dropdown-bedroom
+    .dropdown-bedroom__wrapper
+      p.dropdown-bedroom__label-name= options.label
+      .dropdown-bedroom__show-info
+        .dropdown-bedroom__area-of-placeholder= options.placeholder
+        .dropdown-bedroom__expand-more-wrapper
+          svg.dropdown-bedroom__expand-more-svg(width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg")
+            path(d="M10.5938 0.578125L12 1.98438L6 7.98438L0 1.98438L1.40625 0.578125L6 5.17188L10.5938 0.578125Z" fill="#1F2041" fill-opacity="0.5")
+      .dropdown-bedroom__panel-of-choice.hide
+        .dropdown-bedroom__panel-of-choice__wrapper
+          .dropdown-bedroom__panel-of-choice__label= options.amountOfBedrooms
+          .buttons-of-choice
+            button.button__remove-bedrooms(type="button" disabled) -
+            .buttons-of-choice__amount-of-bedrooms 0
+            button.button__add-bedrooms(type="button") +
+        .dropdown-bedroom__panel-of-choice__wrapper
+          .dropdown-bedroom__panel-of-choice__label= options.amountOfBeds
+          .buttons-of-choice
+            button.button__remove-beds(type="button" disabled) -
+            .buttons-of-choice__amount-of-beds 0
+            button.button__add-beds(type="button") +
+        .dropdown-bedroom__panel-of-choice__wrapper
+          .dropdown-bedroom__panel-of-choice__label= options.amountOfBathrooms
+          .buttons-of-choice
+            button.button__remove-bathrooms(type="button" disabled) -
+            .buttons-of-choice__amount-of-bathrooms 0
+            button.button__add-bathrooms(type="button") +

@@ -10,6 +10,7 @@
 @import '../../components/__date-dropdown/date-dropdown.scss';
 @import '../../components/__filter-date-dropdown/filter-date-dropdown.scss';
 @import '../../components/__subscription-text-field/subscription-text-field.scss';
+@import '../../components/__dropdown-bedroom/dropdown-bedroom.scss';
 
 
 .page__row.toxin {
@@ -35,5 +36,11 @@
   margin-bottom: 42px;
 }
 .filter-date-dropdown__wrapper {
-  margin-bottom: 39px;
+  margin-bottom: 40px;
+}
+.subscription-text-field__wrapper {
+  margin-bottom: 102px;
+}
+.dropdown-bedroom-wrapper {
+  margin-bottom: 20px;
 }
