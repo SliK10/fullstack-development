@@ -5,6 +5,7 @@ include ../../components/__date-dropdown/date-dropdown.pug
 include ../../components/__filter-date-dropdown/filter-date-dropdown.pug
 include ../../components/__subscription-text-field/subscription-text-field.pug
 include ../../components/__dropdown-bedroom/dropdown-bedroom.pug
+include ../../components/__expandable-checkbox-list/expandable-checkbox-list.pug
 
 block title
   title Form Elements
@@ -30,3 +31,5 @@ block content
         +subscription-text-field({name: 'subscription text field', labelFor: 'email', id: 'subscription', inputTupe: 'text', inputPlaceholder: 'Email'})
       .dropdown-bedroom-wrapper
         +dropdownBedroom({label: 'dropdown', placeholder: '2 спальни, 2 кровати...', amountOfBedrooms: 'спальни', amountOfBeds: 'кровати', amountOfBathrooms: 'ванные комнаты'})
+      .expandable-checkbox-list-wrapper
+        +expandableCheckboxList({name: 'expandable checkbox list'})
