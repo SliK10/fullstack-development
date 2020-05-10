@@ -6,12 +6,13 @@ include ../../components/__filter-date-dropdown/filter-date-dropdown.pug
 include ../../components/__subscription-text-field/subscription-text-field.pug
 include ../../components/__dropdown-bedroom/dropdown-bedroom.pug
 include ../../components/__expandable-checkbox-list/expandable-checkbox-list.pug
+include ../../components/__checkbox-buttons/checkbox-buttons.pug
 
 block title
   title Form Elements
 
 block content
-  .page__row.toxin
+  .page__row-header.toxin
     include ../../components/toxin-icon/toxin.pug
   .page__row
     .page__cell
@@ -33,3 +34,7 @@ block content
         +dropdownBedroom({label: 'dropdown', placeholder: '2 спальни, 2 кровати...', amountOfBedrooms: 'спальни', amountOfBeds: 'кровати', amountOfBathrooms: 'ванные комнаты'})
       .expandable-checkbox-list-wrapper
         +expandableCheckboxList({name: 'expandable checkbox list'})
+    .page__cell-two
+      .checkbox-buttons-wrapper
+        +checkboxButtons({name: 'checkbox buttons'})
+    .page__cell-three

@@ -1,0 +1,13 @@
+mixin checkboxButtons(options)
+  .checkbox-buttons
+    .checkbox-buttons__name= options.name
+    .checkbox-buttons-list
+      .checkbox-list__item
+        input.custom-checkbox(id="checkbox-smoke" type="checkbox" name="smoke")
+        label(for="checkbox-smoke") Можно курить
+      .checkbox-list__item
+        input.custom-checkbox(id="checkbox-pets" type="checkbox" name="pets")
+        label(for="checkbox-pets") Можно с питомцами
+      .checkbox-list__item
+        input.custom-checkbox(id="checkbox-guests" type="checkbox" name="guests")
+        label(for="checkbox-guests") Можно пригласить гостей<br>(до 10 человек)

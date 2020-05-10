@@ -12,13 +12,24 @@
 @import '../../components/__subscription-text-field/subscription-text-field.scss';
 @import '../../components/__dropdown-bedroom/dropdown-bedroom.scss';
 @import '../../components/__expandable-checkbox-list/expandable-checkbox-list.scss';
+@import '../../components/__checkbox-buttons/checkbox-buttons.scss';
 
 
-.page__row.toxin {
+.page__row-header.toxin {
   margin-bottom: 63px;
 }
-.page__cell {
+.page__row {
+  display: flex;
   margin: 0 8.8125rem;
+}
+.page__cell {
+  width: 320px;
+  &-two {
+    margin-left: 126px;
+  }
+  &-three {
+    margin-left: 72px;
+  }
 }
 .text-field__wrapper-0 {
   margin-bottom: 19px;

@@ -1,6 +1,4 @@
 .expandable-checkbox-list {
-  width: 266px;
-  height: 44px;
   box-sizing: border-box;
   &__select {
     width: 266px;
@@ -8,6 +6,18 @@
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
+  }
+  &__select_active {
+    width: 266px;
+    height: 44px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    .expandable-checkbox-list__expand-more-svg{
+      transform: rotate(180deg);
+    }
   }
   &__name {
     @include font-two;
@@ -22,9 +32,13 @@
     text-align: center;
     line-height: 42px;
   }
-  &__checkbox-list {
-    height: 171px;
-    width: 266px;
+}
+.checkbox-list {
+  margin-top: 2px;
+  height: 171px;
+  width: 266px;
+  &.hide {
+    display: none;
   }
 }
 .checkbox-list__item {
@@ -32,7 +46,9 @@
   height: 20px;
   @include font-main;
   font-size: 14px;
+  line-height: 22px;
   color: rgba(31, 32, 65, 0.5);
+  margin-bottom: 10px;
 }
 .custom-checkbox {
   position: absolute;
@@ -44,18 +60,18 @@
     user-select: none;
   }
   &+label::before {
+    box-sizing: border-box;
     content: '';
     display: inline-block;
     width: 20px;
     height: 20px;
-    flex-shrink: 0;
-    flex-grow: 0;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
-    margin-right: 0.5em;
+    margin-right: 10px;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 4.5px 3.5px;
     background-size: 50% 50%;
+    line-height: 18px;
   }
   &:checked+label::before {
     border-color: #BC9CFF;
