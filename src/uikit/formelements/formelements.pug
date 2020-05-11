@@ -9,6 +9,7 @@ include ../../components/__expandable-checkbox-list/expandable-checkbox-list.pug
 include ../../components/__checkbox-buttons/checkbox-buttons.pug
 include ../../components/__radio-buttons/radio-buttons.pug
 include ../../components/__toggle/toggle.pug
+include ../../components/__like-button/like-button.pug
 
 block title
   title Form Elements
@@ -43,4 +44,6 @@ block content
         +radioButtons({name: 'radio buttons'})
       .toggle-wrapper
         +toggle({name: 'toggle'})
+      .like-button-wrapper
+        +likeButton({name: 'like button'})
     .page__cell-three
