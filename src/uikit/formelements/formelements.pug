@@ -8,6 +8,7 @@ include ../../components/__dropdown-bedroom/dropdown-bedroom.pug
 include ../../components/__expandable-checkbox-list/expandable-checkbox-list.pug
 include ../../components/__checkbox-buttons/checkbox-buttons.pug
 include ../../components/__radio-buttons/radio-buttons.pug
+include ../../components/__toggle/toggle.pug
 
 block title
   title Form Elements
@@ -40,4 +41,6 @@ block content
         +checkboxButtons({name: 'checkbox buttons'})
       .radio-buttons-wrapper
         +radioButtons({name: 'radio buttons'})
+      .toggle-wrapper
+        +toggle({name: 'toggle'})
     .page__cell-three

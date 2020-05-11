@@ -14,6 +14,7 @@
 @import '../../components/__expandable-checkbox-list/expandable-checkbox-list.scss';
 @import '../../components/__checkbox-buttons/checkbox-buttons.scss';
 @import '../../components/__radio-buttons/radio-buttons.scss';
+@import '../../components/__toggle/toggle.scss';
 
 
 .page__row-header.toxin {
@@ -59,4 +60,10 @@
 }
 .checkbox-buttons-wrapper {
   margin-bottom: 40px;
+}
+.radio-buttons-wrapper {
+  margin-bottom: 37px;
+}
+.toggle-wrapper {
+  margin-bottom: 74px;
 }
