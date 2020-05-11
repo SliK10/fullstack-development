@@ -1,0 +1,11 @@
+mixin radioButtons(options)
+  .radio-buttons
+    .radio-buttons__label= options.name
+    .radio-buttons__items
+      form(action="#")
+        .radio-buttons__item
+          input.custom-radio(type="radio" name="sex" value="man" id="man" checked)
+          label(for="man") Мужчина
+        .radio-buttons__item
+          input.custom-radio(type="radio" name="sex" value="woman" id="woman")
+          label(for="woman") Женщина

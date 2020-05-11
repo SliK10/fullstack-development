@@ -13,6 +13,7 @@
 @import '../../components/__dropdown-bedroom/dropdown-bedroom.scss';
 @import '../../components/__expandable-checkbox-list/expandable-checkbox-list.scss';
 @import '../../components/__checkbox-buttons/checkbox-buttons.scss';
+@import '../../components/__radio-buttons/radio-buttons.scss';
 
 
 .page__row-header.toxin {
@@ -55,4 +56,7 @@
 }
 .dropdown-bedroom-wrapper {
   margin-bottom: 242px;
+}
+.checkbox-buttons-wrapper {
+  margin-bottom: 40px;
 }

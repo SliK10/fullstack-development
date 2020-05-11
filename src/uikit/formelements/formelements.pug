@@ -7,6 +7,7 @@ include ../../components/__subscription-text-field/subscription-text-field.pug
 include ../../components/__dropdown-bedroom/dropdown-bedroom.pug
 include ../../components/__expandable-checkbox-list/expandable-checkbox-list.pug
 include ../../components/__checkbox-buttons/checkbox-buttons.pug
+include ../../components/__radio-buttons/radio-buttons.pug
 
 block title
   title Form Elements
@@ -37,4 +38,6 @@ block content
     .page__cell-two
       .checkbox-buttons-wrapper
         +checkboxButtons({name: 'checkbox buttons'})
+      .radio-buttons-wrapper
+        +radioButtons({name: 'radio buttons'})
     .page__cell-three
