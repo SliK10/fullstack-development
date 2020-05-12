@@ -1,0 +1,60 @@
+.rich-checkbox-buttons {
+  max-width: 266px;
+  height: 145px;
+
+  &__label {
+    @include font-two;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+    margin-bottom: 16px;
+  }
+  &__item {
+    @include font-two;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+  &__item p {
+    @include font-main;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(31, 32, 65, 0.5);
+    margin: 1px 0 9px 30px;
+  }
+  &__item .for-disabled {
+    width: 234px;
+  }
+  &__item .for-corridor {
+    width: 203px;
+  }
+  &__button {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    &+label {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+    }
+    &+label::before {
+      box-sizing: border-box;
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid rgba(31, 32, 65, 0.25);
+      border-radius: 4px;
+      margin-right: 10px;
+      background-repeat: no-repeat;
+      background-position: 4.5px 3.5px;
+      background-size: 50% 50%;
+      line-height: 18px;
+    }
+    &:checked+label::before {
+      border-color: #BC9CFF;
+      background-image: url("/assets/img/vector.svg");
+    }
+  }
+}

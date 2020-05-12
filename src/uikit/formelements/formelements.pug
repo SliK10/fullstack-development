@@ -11,6 +11,7 @@ include ../../components/__radio-buttons/radio-buttons.pug
 include ../../components/__toggle/toggle.pug
 include ../../components/__like-button/like-button.pug
 include ../../components/__rate-button/rate-button.pug
+include ../../components/__rich-checkbox-buttons/rich-checkbox-buttons.pug
 
 block title
   title Form Elements
@@ -47,6 +48,8 @@ block content
         +toggle({name: 'toggle'})
       .like-button-wrapper
         +likeButton({name: 'like button'})
-      .rate-button
+      .rate-button-wrapper
         +rateButton({name: 'rate button', label: true})
+      .rich-checkbox-buttons-wrapper
+        +richCheckboxButtons({name: 'rich checkbox buttons'})
     .page__cell-three

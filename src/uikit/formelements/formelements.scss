@@ -17,6 +17,7 @@
 @import '../../components/__toggle/toggle.scss';
 @import '../../components/__like-button/like-button.scss';
 @import '../../components/__rate-button/rate-button.scss';
+@import '../../components/__rich-checkbox-buttons/rich-checkbox-buttons.scss';
 
 .page__row-header.toxin {
   margin-bottom: 63px;
@@ -70,4 +71,7 @@
 }
 .like-button-wrapper {
   margin-bottom: 40px;
+}
+.rate-button-wrapper {
+  margin-bottom: 517px;
 }
