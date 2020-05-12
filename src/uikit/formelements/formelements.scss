@@ -16,6 +16,7 @@
 @import '../../components/__radio-buttons/radio-buttons.scss';
 @import '../../components/__toggle/toggle.scss';
 @import '../../components/__like-button/like-button.scss';
+@import '../../components/__rate-button/rate-button.scss';
 
 .page__row-header.toxin {
   margin-bottom: 63px;
@@ -66,4 +67,7 @@
 }
 .toggle-wrapper {
   margin-bottom: 74px;
+}
+.like-button-wrapper {
+  margin-bottom: 40px;
 }

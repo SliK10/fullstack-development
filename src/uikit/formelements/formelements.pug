@@ -10,6 +10,7 @@ include ../../components/__checkbox-buttons/checkbox-buttons.pug
 include ../../components/__radio-buttons/radio-buttons.pug
 include ../../components/__toggle/toggle.pug
 include ../../components/__like-button/like-button.pug
+include ../../components/__rate-button/rate-button.pug
 
 block title
   title Form Elements
@@ -46,4 +47,6 @@ block content
         +toggle({name: 'toggle'})
       .like-button-wrapper
         +likeButton({name: 'like button'})
+      .rate-button
+        +rateButton({name: 'rate button', label: true})
     .page__cell-three

@@ -1,0 +1,38 @@
+.rate-button {
+  max-width: 120px;
+
+  &__label {
+    @include font-two;
+    font-size: 12px;
+    line-height: 15px;
+    color: #1F2041;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+  &__buttons {
+    width: 120px;
+    height: 24px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  &__input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  &__input+label {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("/assets/img/star_border.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+  }
+  &__input:checked+label,
+  &__input+label:hover,
+  &__input:checked~label,
+  &__input:hover~label {
+    background-image: url("/assets/img/star.svg");
+  }
+}
