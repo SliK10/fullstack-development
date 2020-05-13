@@ -1,0 +1,26 @@
+.range-slider {
+  width: 266px;
+  height: 47px;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__name {
+    @include font-two;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #1F2041;
+  }
+  &__from-to {
+    @include font-main;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgba(31, 32, 65, 0.5);
+  }
+  &__slider input{
+    width: 266px;
+  }
+}

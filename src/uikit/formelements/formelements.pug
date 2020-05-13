@@ -12,6 +12,7 @@ include ../../components/__toggle/toggle.pug
 include ../../components/__like-button/like-button.pug
 include ../../components/__rate-button/rate-button.pug
 include ../../components/__rich-checkbox-buttons/rich-checkbox-buttons.pug
+include ../../components/__range-slider/range-slider.pug
 
 block title
   title Form Elements
@@ -28,7 +29,7 @@ block content
       .dropdown__wrapper
         +dropdownGuests({label: 'dropdown', placeholder: 'Сколько гостей', firstGuestLabel: 'взрослые', secondGuestLabel: 'дети', thirdGuestLabel: 'младенцы', applyAndCancel: true})
       .masked-text-field__wrapper
-        +text-field({name: 'masked text field', labelFor: 'maskedtf', inputType: 'text', inputPlaceholder: 'ДД.ММ.ГГГГ'})
+        +text-field({name: 'masked text field', labelFor: 'maskedtf', inputType: 'text', inputPlaceholder: 'ДД.ММ.ГГГГ', pattern: '[0-9]{2}\.[0-9]{2}\.[0-9]{4}'})
       .wrapper-for-date-dropdown
         +date-dropdown({label_one: 'date dropdown', label_two: 'date dropdown',placeholder: 'ДД.ММ.ГГГГ'})
       .filter-date-dropdown__wrapper
@@ -53,3 +54,4 @@ block content
       .rich-checkbox-buttons-wrapper
         +richCheckboxButtons({name: 'rich checkbox buttons'})
     .page__cell-three
+      +rangeSlider({name: 'range slider'})

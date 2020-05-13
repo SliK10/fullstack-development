@@ -4,7 +4,6 @@
 @import '../../views/layout/main.scss';
 @import '../../components/toxin-icon/toxin.scss';
 @import '../../components/__textfield/textfield.scss';
-@import '../../components/__maskedtf/maskedtf.scss';
 @import '../../components/__dropdown/dropdown.scss';
 @import '../../components/__air-datepicker/scss/datepicker.scss';
 @import '../../components/__date-dropdown/date-dropdown.scss';
@@ -18,6 +17,8 @@
 @import '../../components/__like-button/like-button.scss';
 @import '../../components/__rate-button/rate-button.scss';
 @import '../../components/__rich-checkbox-buttons/rich-checkbox-buttons.scss';
+@import '../../components/__range-slider/range-slider.scss';
+@import '../../components/__range-slider/ion-rangeslider/ion.rangeSlider.scss';
 
 .page__row-header.toxin {
   margin-bottom: 63px;
@@ -29,9 +30,13 @@
 .page__cell {
   width: 320px;
   &-two {
+    width: 320px;
+    box-sizing: content-box;
     margin-left: 126px;
   }
   &-three {
+    width: 320px;
+    box-sizing: content-box;
     margin-left: 72px;
   }
 }
