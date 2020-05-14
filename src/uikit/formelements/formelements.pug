@@ -13,6 +13,7 @@ include ../../components/__like-button/like-button.pug
 include ../../components/__rate-button/rate-button.pug
 include ../../components/__rich-checkbox-buttons/rich-checkbox-buttons.pug
 include ../../components/__range-slider/range-slider.pug
+include ../../components/__buttons/buttons.pug
 
 block title
   title Form Elements
@@ -54,4 +55,13 @@ block content
       .rich-checkbox-buttons-wrapper
         +richCheckboxButtons({name: 'rich checkbox buttons'})
     .page__cell-three
-      +rangeSlider({name: 'range slider'})
+      .range-slider-wrapper
+        +rangeSlider({name: 'range slider'})
+      .buttons-wrapper
+        .buttons-wrapper__block
+          +button({buttonType: 'button', label: 'buttons', buttonColorClass: 'button__background', name: 'click me'})
+        .buttons-wrapper__block
+          +button({buttonType: 'button', buttonColorClass: 'button__border', name: 'click me'})
+        .buttons-wrapper__block-three
+          +button({buttonType: 'link', name: 'click me'})
+        +button({buttonType: 'button', buttonColorClass: 'button__long', name: 'перейти к оплате'})
