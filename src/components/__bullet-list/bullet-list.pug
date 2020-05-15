@@ -1,0 +1,9 @@
+//- Принимает 2 параметра настроек  1). Объект options = {name: "") 2). Массив, кол-ва эл. в массиве =кол-ву эл. в списке list = ['description', 'description',...];
+
+mixin bulletList(options, list)
+  .bullet-list
+    if (options.label)
+      .bullet-list__label= options.label
+    ul
+      for i in list
+        li.bullet-list__item= i

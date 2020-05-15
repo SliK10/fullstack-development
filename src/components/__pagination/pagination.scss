@@ -1,0 +1,47 @@
+.pagination {
+  width: 241px;
+
+  &__label {
+    @include font-two;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+  }
+  &__list {
+    margin-top: 16px;
+    & a {
+      text-decoration: none;
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      padding-top: 12px;
+      @include font-main;
+      font-size: 12px;
+      line-height: 15px;
+      color: rgba(31, 32, 65, 0.5);;
+    }
+    & a.active {
+      @include font-two;
+      border-radius: 22px;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      color: #fff;
+    }
+    & a.further {
+      border-radius: 22px;
+      background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      & svg {
+        margin: -5px;
+      }
+    }
+  }
+  &__description {
+    margin-top: 7px;
+    @include font-main;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: rgba(31, 32, 65, 0.75);
+  }
+}

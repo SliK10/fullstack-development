@@ -1,0 +1,38 @@
+.bullet-list {
+  width: 264px;
+  &__label {
+    @include font-two;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+  }
+  &__item {
+    @include font-main;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+  & ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 13px;
+    & .bullet-list__item {
+      margin-bottom: 10px;
+      position: relative;
+      padding: 0 0 0 21px;
+    }
+    & .bullet-list__item::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: rgba(31, 32, 65, 0.25);
+      display: inline-block;
+      border-radius: 50%;
+      margin-right: 11px;
+      position: absolute;
+      left: 0px;
+      top: 7px;
+    }
+  }
+}

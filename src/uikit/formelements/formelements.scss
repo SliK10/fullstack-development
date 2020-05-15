@@ -20,6 +20,8 @@
 @import '../../components/__range-slider/range-slider.scss';
 @import '../../components/__range-slider/ion-rangeslider/ion.rangeSlider.scss';
 @import '../../components/__buttons/buttons.scss';
+@import '../../components/__pagination/pagination.scss';
+@import '../../components/__bullet-list/bullet-list.scss';
 
 .page__row-header.toxin {
   margin-bottom: 63px;
@@ -86,10 +88,14 @@
 }
 .buttons-wrapper {
   width: 218px;
+  margin-bottom: 40px;
   &__block {
     margin-bottom: 30px;
   }
   &__block-three {
     margin-bottom: 29px;
   }
+}
+.pagination-wrapper {
+  margin-bottom: 553px;
 }
