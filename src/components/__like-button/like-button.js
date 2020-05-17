@@ -20,5 +20,5 @@ class Like {
   }
 }
 
-let like = new Like;
+let like = new Like();
 like.init();

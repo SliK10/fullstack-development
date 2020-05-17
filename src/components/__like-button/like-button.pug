@@ -1,6 +1,7 @@
 mixin likeButton(options)
   .like-button
-    .like-button__label= options.name
+    if (options.name)
+      .like-button__label= options.name
     .like-button__like
       form(action="#")
         button.like-button__toggle

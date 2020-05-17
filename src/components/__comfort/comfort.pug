@@ -1,0 +1,10 @@
+//- Пример options = [{materialIcons: "insert_emoticon", name: "name", description: "description"}, {}, ...]
+
+mixin comfort(options)
+  .comfort
+    for i in options
+      .comfort__block
+        span.material-icons= i.materialIcons
+        span.description= i.name
+          <br>
+          span.description__font-normal= i.description

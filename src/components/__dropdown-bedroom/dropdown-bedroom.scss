@@ -31,8 +31,13 @@
     width: 55px;
     height: 44px;
     text-align: center;
-    .dropdown-bedroom__expand-more-svg {
-      vertical-align: bottom;
+    & span.material-icons {
+      width: 44px;
+      height: 44px;
+      @include Material-Icons;
+      font-size: 24px;
+      color: rgba(31, 32, 65, 0.5);
+      padding-left: 11px;
     }
   }
 }
@@ -59,8 +64,13 @@
     width: 55px;
     height: 44px;
     text-align: center;
-    .dropdown-bedroom__expand-more-svg {
-      vertical-align: bottom;
+    & span.material-icons {
+      width: 44px;
+      height: 44px;
+      @include Material-Icons;
+      font-size: 24px;
+      color: rgba(31, 32, 65, 0.5);
+      padding-left: 9px;
       transform: rotate(180deg);
     }
   }

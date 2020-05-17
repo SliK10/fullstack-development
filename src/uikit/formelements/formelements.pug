@@ -16,6 +16,8 @@ include ../../components/__range-slider/range-slider.pug
 include ../../components/__buttons/buttons.pug
 include ../../components/__pagination/pagination.pug
 include ../../components/__bullet-list/bullet-list.pug
+include ../../components/__comfort/comfort.pug
+include ../../components/__review/review.pug
 
 block title
   title Form Elements
@@ -23,7 +25,7 @@ block title
 block content
   .page__row-header.toxin
     include ../../components/toxin-icon/toxin.pug
-  .page__row
+  .page__row-two
     .page__cell
       .text-field__wrapper-0
         +text-field({name: 'text field', labelFor: 'email', inputType: 'text', inputPlaceholder: 'Email'})
@@ -71,3 +73,8 @@ block content
         +pagination({name: 'pagination', description: '1 – 12 из 100+ вариантов аренды'})
       .bullet-list-wrapper
         +bulletList({label: 'bullet list'}, ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+  .page__row
+    .page__cell-four
+      +comfort([{materialIcons: "insert_emoticon", name: "Комфорт", description: "Шумопоглощающие стены"}, {materialIcons: "location_city", name: "Удобство", description: "Окно в каждой из спален"}])
+    .page__cell-five
+      +review({name: "Мурад Сарафанов", date: "5 дней назад", description: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."})

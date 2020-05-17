@@ -1,0 +1,29 @@
+.comfort {
+  &__block {
+    width: 280px;
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    &+.comfort__block {
+      margin-top: 20px;
+    }
+  }
+  & span.material-icons {
+    @include Material-Icons;
+    font-size: 48px;
+    line-height: 41px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    background-clip: text;
+    color: transparent;
+  }
+  & .description {
+    @include font-two;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+    margin-left: 9px;
+  }
+  & .description__font-normal {
+    @include font-main;
+  }
+}

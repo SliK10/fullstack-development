@@ -22,13 +22,18 @@
 @import '../../components/__buttons/buttons.scss';
 @import '../../components/__pagination/pagination.scss';
 @import '../../components/__bullet-list/bullet-list.scss';
-
+@import '../../components/__comfort/comfort.scss';
+@import '../../components/__review/review.scss';
 .page__row-header.toxin {
   margin-bottom: 63px;
 }
-.page__row {
+.page__row,
+.page__row-two {
   display: flex;
   margin: 0 8.8125rem;
+}
+.page__row-two {
+  margin-bottom: 208px;
 }
 .page__cell {
   width: 320px;
@@ -41,6 +46,16 @@
     width: 320px;
     box-sizing: content-box;
     margin-left: 72px;
+  }
+  &-four {
+    width: 320px;
+    box-sizing: content-box;
+  }
+  &-five {
+    width: 711px;
+    box-sizing: content-box;
+    margin-left: 156px;
+    margin-top: 10px;
   }
 }
 .text-field__wrapper-0 {

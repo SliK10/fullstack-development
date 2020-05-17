@@ -31,3 +31,11 @@
 @mixin dark5 {
   background: rgba(31, 32, 65, 0.05);
 }
+@mixin Material-Icons {
+  font-family: Material-Icons, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}

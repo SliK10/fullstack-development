@@ -1,0 +1,42 @@
+.review {
+  width: 771px;
+  @include font-main;
+  color: rgba(31, 32, 65, 0.75);
+  font-size: 14px;
+  line-height: 24px;
+
+  & .user {
+    display: flex;
+
+    &__name {
+      @include font-two;
+      margin-left: 9px;
+    }
+    &__last-date {
+      @include font-main;
+    }
+  }
+  & .user__photo{
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+    width: 48px;
+    height: 48px;
+    background-color: #fff;
+    background: url(/assets/img/image.png) 50% 24% no-repeat;
+    border: 2px solid #FFFFFF;
+    border-radius: 32px;
+  }
+
+  & .description {
+    margin-top: 12px;
+    display: flex;
+    &__like-button {
+      margin-left: 3px;
+    }
+    &__text {
+      width: 653px;
+      margin-left: 15px;
+      line-height: 23px;
+    }
+  }
+}
