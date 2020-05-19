@@ -1,24 +1,21 @@
 class Like {
   constructor() {
-    this.toggle = document.querySelector('.like-button__toggle')
-    this.amount = document.querySelector('.like-button__amount')
-  }
-  init() {
-    this.toggle.addEventListener('click', this.liked.bind(this))
+    this.button;
+    document.addEventListener('click', this.liked.bind(this))
   }
   liked(e) {
-    e.preventDefault();
-    if (this.toggle.classList.contains('like-active')) {
-      this.toggle.classList.remove('like-active')
-      let reduceAmount = +this.amount.innerHTML - 1;
-      this.amount.innerHTML = reduceAmount;
-    } else {
-      this.toggle.classList.add('like-active');
-      let increaseAmount = +this.amount.innerHTML + 1;
-      this.amount.innerHTML = increaseAmount;
+    if (e.target.parentElement.classList.contains('like-active')) {
+      this.button = e.target.parentElement;
+      this.button.classList.remove('like-active')
+      let reduceAmount = +this.button.lastChild.innerHTML - 1;
+      this.button.lastChild.innerHTML = reduceAmount;
+    } else if (e.target.parentElement.classList.contains('like-button__toggle')) {
+      this.button = e.target.parentElement;
+      this.button.classList.add('like-active');
+      let increaseAmount = +this.button.lastChild.innerHTML + 1;
+      this.button.lastChild.innerHTML = increaseAmount;
     }
   }
 }
 
 let like = new Like();
-like.init();

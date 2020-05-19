@@ -4,6 +4,6 @@ mixin likeButton(options)
       .like-button__label= options.name
     .like-button__like
       form(action="#")
-        button.like-button__toggle
+        button(type="button").like-button__toggle
           span.like-button__heart
           span.like-button__amount 11
