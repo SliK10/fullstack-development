@@ -1,0 +1,14 @@
+extends ../../views/layout/main.pug
+include ../../components/search-room/search-room.pug
+
+block title
+  title Cards
+
+block content
+  .page__row-header.toxin
+    include ../../components/toxin-icon/toxin.pug
+  .page__row
+    .page__cell
+      +searchRoom({name: "Найдём номера под ваши пожелания"})
+    .page__cell
+    .page__cell-left

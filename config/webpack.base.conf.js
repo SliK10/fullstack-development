@@ -23,7 +23,8 @@ module.exports = {
   entry: {
     app: PATHS.src,
     colorstype: `${PATHS.src}/uikit/colorstype/colorstype.js`,
-    formelements: `${PATHS.src}/uikit/formelements/formelements.js`
+    formelements: `${PATHS.src}/uikit/formelements/formelements.js`,
+    cards: `${PATHS.src}/uikit/cards/cards.js`,
   },
   output: {
     path: PATHS.build,
@@ -114,6 +115,12 @@ module.exports = {
       template: `${PAGES_DIR}/uikit/formelements/formelements.pug`,
       chunks: ["formelements"],
       filename: './uikit/formelements.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/uikit/cards/cards.pug`,
+      chunks: ["cards"],
+      filename: './uikit/cards.html',
       inject: true
     }),
     new HtmlWebpackExternalsPlugin({

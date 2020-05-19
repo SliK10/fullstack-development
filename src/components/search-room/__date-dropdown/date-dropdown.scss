@@ -1,0 +1,53 @@
+@import './__air-datepicker/scss/datepicker.scss';
+
+.date-dropdown {
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  margin-bottom: 5px;
+}
+.date-dropdown__label-name {
+@include font-two;
+font-size: 12px;
+line-height: 14px;
+margin: 0;
+text-transform: uppercase;
+}
+.date-dropdown__show-info {
+border: 1px solid rgba(31, 32, 65, 0.25);
+border-radius: 4px;
+@include font-main;
+font-size: 14px;
+line-height: 26.3px;
+padding-left: 14px;
+width: 150px;
+height: 44px;
+margin-top: 5px;
+display: flex;
+cursor: pointer;
+
+  .date-dropdown__area-of-placeholder {
+    width: 93px;
+    height: 41px;
+    color: rgba(31, 32, 65, 0.75);
+    border: none;
+    line-height: 40px;
+  }
+  .date-dropdown__expand-more-wrapper {
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    & span.material-icons {
+      width: 44px;
+      height: 44px;
+      @include Material-Icons;
+      font-size: 24px;
+      line-height: 24px;
+      color: rgba(31, 32, 65, 0.5);
+      padding-left: 11px;
+    }
+  }
+}
+.date-airdatepicker {
+  position: absolute;
+}

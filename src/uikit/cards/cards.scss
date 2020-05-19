@@ -1,0 +1,21 @@
+@import '../../assets/scss/normalize.scss';
+@import '../../assets/scss/fonts.scss';
+@import '../../assets/scss/mixins.scss';
+@import '../../views/layout/main.scss';
+@import '../../components/toxin-icon/toxin.scss';
+@import '../../components/search-room/search-room.scss';
+
+.page__row-header{
+  background: #E5E5E5;
+  padding-top: 1.875rem;
+  padding-left: 1.875rem;
+
+}
+.page__row {
+  display: flex;
+  padding: 72px 140px;
+  background: #E5E5E5;
+}
+.page__cell {
+  width: 380px;
+}
