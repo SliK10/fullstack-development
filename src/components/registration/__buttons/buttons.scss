@@ -35,6 +35,8 @@
     height: 44px;
     border: 1px solid transparent;
     border-radius: 22px;
+    z-index: 0;
+
     &::before {
       content: '';
       position: absolute;

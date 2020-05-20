@@ -1,0 +1,12 @@
+//- options = {
+    labelFor: 'задаёт имя input и id',
+    inputPlaceholder: 'ДД.ММ.ГГГГ',
+    pattern: 'Паттерн для формата ввода данных'
+  }
+
+mixin masked-text-field(options)
+  .masked-text-field
+    form.form
+      if (options.name)
+        label.form__title-label(for= options.labelFor)= options.name
+      input.form__input(type= options.inputType name= options.labelFor id= options.labelFor placeholder= options.inputPlaceholder pattern= options.pattern)

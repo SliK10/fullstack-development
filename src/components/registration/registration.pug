@@ -1,0 +1,29 @@
+include ./__textfield/textfield.pug
+include ./__radio-buttons/radio-buttons.pug
+include ./__masked-text-field/masked-text-field.pug
+include ./__toggle/toggle.pug
+include ./__buttons/buttons.pug
+
+mixin registration(options)
+  .registration
+    .registration__headline= options.headline
+    .registration__data
+      .name
+        +text-field({inputType: "text", labelFor: "first-name", inputPlaceholder: "Имя"})
+      .surname
+        +text-field({inputType: "text", labelFor: "surname", inputPlaceholder: "Фамилия"})
+      .sex
+        +radioButtons({})
+      .date-of-birth
+        +masked-text-field({name: "Дата рождения", inputType: "text", labelFor: "birthday", inputPlaceholder: "ДД.ММ.ГГГГ"})
+      .email
+        +text-field({name: "Данные для входа в сервис", inputType: "text", labelFor: "email", inputPlaceholder: "Email"})
+      .password
+        +text-field({inputType: "password", labelFor: "password", inputPlaceholder: "Пароль"})
+      .offers
+        +toggle({description: "Получать спецпредложения"})
+      .button-go-pay
+        +button({buttonType: 'button', buttonColorClass: "button__long", name: "Перейти к оплате"})
+      .button-sign-in
+        div.button-sign-in__question Уже есть аккаунт на Toxin
+        +button({buttonType: 'button', buttonColorClass: "button__border", name: "Войти"})

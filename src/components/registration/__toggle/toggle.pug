@@ -1,0 +1,8 @@
+mixin toggle(options)
+  .toggle
+    .toggle__label= options.name
+    .toggle__items
+      form(action="#")
+        .toggle__item
+          input.custom-checkbox(type="checkbox" name="offers" id="offers")
+          label(for="offers")= options.description
