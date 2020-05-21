@@ -5,6 +5,7 @@
 @import '../../components/toxin-icon/toxin.scss';
 @import '../../components/search-room/search-room.scss';
 @import '../../components/registration/registration.scss';
+@import '../../components/to-book/to-book.scss';
 
 .page__row-header{
   background: #E5E5E5;
@@ -14,9 +15,13 @@
 }
 .page__row {
   display: flex;
+  justify-content: space-between;
   padding: 72px 140px;
   background: #E5E5E5;
 }
 .page__cell {
   width: 380px;
+  &-left {
+    width: 320px;
+  }
 }

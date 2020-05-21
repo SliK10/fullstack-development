@@ -1,6 +1,7 @@
 extends ../../views/layout/main.pug
 include ../../components/search-room/search-room.pug
 include ../../components/registration/registration.pug
+include ../../components/to-book/to-book.pug
 
 block title
   title Cards
@@ -13,4 +14,5 @@ block content
       +searchRoom({name: "Найдём номера под ваши пожелания"})
       +registration({headline: "Регистрация аккаунта"})
     .page__cell
+      +to-book
     .page__cell-left

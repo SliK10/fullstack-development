@@ -1,0 +1,37 @@
+include ./__date-dropdown/date-dropdown.pug
+include ./__dropdown/dropdown.pug
+include ./__buttons/buttons.pug
+
+mixin to-book(options)
+  .to-book
+    .to-book__number-and-price
+      .number №
+        span.number__numeral 888
+        span.number__class люкс
+      .price
+        span.price__number 9 990₽
+        span.price__day в сутки
+    .residence
+      +date-dropdown({label_one: 'Прибытие', label_two: 'Выезд', placeholder: "ДД.ММ.ГГГГ"})
+    .guests
+      +dropdownGuests({label: 'Гости', placeholder: 'Сколько гостей', firstGuestLabel: 'взрослые', secondGuestLabel: 'дети', thirdGuestLabel: 'младенцы' , applyAndCancel: true})
+    .information
+      .information__item
+        .information__description 9 990₽ х 4 суток
+        .information__price 39 960₽
+      .information__item
+        .information__item-wrapper
+          .information__description Сбор за услуги: скидка 2 179₽
+          .info-sprite i
+        .information__price 0₽
+      .information__item
+        .information__item-wrapper
+          .information__description-last Сбор за дополнительные услуги
+          .info-sprite i
+        .information__price 300₽
+    .total
+      .total__text Итого
+      .total__line
+      .total__price 38 081₽
+    .button-reserve
+      +button({buttonType: 'button', buttonColorClass: 'button__long', name: 'Забронировать'})
