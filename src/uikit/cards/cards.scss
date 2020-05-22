@@ -6,6 +6,7 @@
 @import '../../components/search-room/search-room.scss';
 @import '../../components/registration/registration.scss';
 @import '../../components/to-book/to-book.scss';
+@import '../../components/sign-in/sign-in.scss';
 
 .page__row-header{
   background: #E5E5E5;
@@ -23,5 +24,8 @@
   width: 380px;
   &-left {
     width: 320px;
+  }
+  .to-book {
+    margin-bottom: 40px;
   }
 }

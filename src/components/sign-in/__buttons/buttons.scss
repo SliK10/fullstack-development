@@ -1,0 +1,91 @@
+.button {
+  &__label {
+    @include font-two;
+    font-size: 12px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #1F2041;
+    margin-bottom: 12px;
+  }
+  & button {
+    width: 99px;
+    height: 44px;
+    @include font-two;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    border-radius: 22px;
+    cursor: pointer;
+
+  }
+  &__background {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border: none;
+    color: #FFFFFF;
+    margin-left: 1px;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  & .gradient-box {
+
+    position: relative;
+    box-sizing: border-box;
+    width: 99px;
+    height: 44px;
+    border: 1px solid transparent;
+    border-radius: 22px;
+    z-index: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: -1;
+      margin: -1px;
+      border-radius: inherit;
+      background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+    .button__border {
+      width: 95px;
+      height: 40px;
+      background-color: #fff;
+      border: 2px solid transparent;
+      border-radius: 22px;
+      color: #BC9CFF;
+      margin: 1px;
+    }
+    &:hover::before {
+      opacity: 0.5;
+    }
+  }
+  & button.button__long {
+    width: 320px;
+    height: 44px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border: none;
+    border-radius: 22px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    & .button__name {
+      padding-left: 37px;
+      line-height: 18px;
+    }
+    & svg {
+      margin-right: 7px;
+    }
+  }
+  &__link {
+    @include font-two;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #BC9CFF;
+    text-decoration: none;
+
+    &:hover {
+      color: rgba(31, 32, 65, 0.5);
+    }
+  }
+}

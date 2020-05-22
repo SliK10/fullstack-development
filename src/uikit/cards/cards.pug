@@ -2,6 +2,7 @@ extends ../../views/layout/main.pug
 include ../../components/search-room/search-room.pug
 include ../../components/registration/registration.pug
 include ../../components/to-book/to-book.pug
+include ../../components/sign-in/sign-in.pug
 
 block title
   title Cards
@@ -15,4 +16,5 @@ block content
       +registration({headline: "Регистрация аккаунта"})
     .page__cell
       +to-book
+      +sign-in
     .page__cell-left

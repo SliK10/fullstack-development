@@ -1,0 +1,39 @@
+@import './__textfield/textfield.scss';
+@import './__buttons/buttons.scss';
+
+.sign-in {
+  width: 380px;
+  @include border-block;
+
+  &__headline {
+    @include h1;
+    line-height: 27px;
+    width: 320px;
+    margin: 40px auto 18px;
+  }
+  &__email-and-password {
+    width: 320px;
+    margin: 0 auto 20px;
+
+    & .email {
+      margin-bottom: 6px;
+    }
+  }
+  &__login {
+    width: 320px;
+    margin: 0 auto 30px;
+  }
+  .create {
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    margin: 0 auto 31px;
+    &__question {
+      font-size: 14px;
+      line-height: 18px;
+      display: flex;
+      align-items: center;
+      color: #000000;
+    }
+  }
+}
