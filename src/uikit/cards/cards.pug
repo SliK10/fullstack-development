@@ -3,6 +3,7 @@ include ../../components/search-room/search-room.pug
 include ../../components/registration/registration.pug
 include ../../components/to-book/to-book.pug
 include ../../components/sign-in/sign-in.pug
+include ../../components/hotel-room/hotel-room.pug
 
 block title
   title Cards
@@ -18,3 +19,8 @@ block content
       +to-book
       +sign-in
     .page__cell-left
+      .datepicker-here
+      +hotel-room({url: '/assets/img/room-image1.png',numberNumeral: 888, priceNumber: '9 990₽',
+    numberClass: 'люкс', amountReview: 145,})
+      +hotel-room({url: '/assets/img/room-image2.png', numberNumeral: 840, priceNumber: '9 900₽',
+    amountReview: 65,})

@@ -1,0 +1,39 @@
+//- options = {
+    url: '/assets/img/room-image1.png'
+    numberNumeral: number,
+    numberClass: 'text',
+    priceNumber: 'number + ₽'
+    amountReview: number,
+  }
+include ./__rate-button/rate-button.pug
+
+mixin hotel-room(options)
+  .hotel-room
+    .hotel-room__slideshow
+      .owl-carousel.slider
+        .slider__item(style="background-image: url("+options.url+");")
+          .gradient
+          .gradient-transform
+        .slider__item(style="background-image: url("+options.url+");")
+          .gradient
+          .gradient-transform
+        .slider__item(style="background-image: url("+options.url+");")
+          .gradient
+          .gradient-transform
+        .slider__item(style="background-image: url("+options.url+");")
+          .gradient
+          .gradient-transform
+    .hotel-room__short-info
+      .number №
+        if (options.numberNumeral)
+          span.number__numeral= options.numberNumeral
+        if (options.numberClass)
+          span.number__class= options.numberClass
+      .price
+        span.price__number= options.priceNumber
+        span.price__day в сутки
+    .hotel-room__raiting
+      +rateButton({})
+      .amount-review
+        span.amount-review__number= options.amountReview
+        span.amount-review__word Отзывов

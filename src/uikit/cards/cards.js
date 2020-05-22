@@ -1,3 +1,5 @@
 import './cards.scss'
 import '../../components/search-room/search-room'
 import '../../components/registration/registration'
+import '../../components/__air-datepicker/js/datepicker'
+import '../../components/hotel-room/hotel-room'
