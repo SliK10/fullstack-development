@@ -25,6 +25,7 @@ module.exports = {
     colorstype: `${PATHS.src}/uikit/colorstype/colorstype.js`,
     formelements: `${PATHS.src}/uikit/formelements/formelements.js`,
     cards: `${PATHS.src}/uikit/cards/cards.js`,
+    headersfooters: `${PATHS.src}/uikit/headersfooters/headersfooters.js`,
   },
   output: {
     path: PATHS.build,
@@ -121,6 +122,12 @@ module.exports = {
       template: `${PAGES_DIR}/uikit/cards/cards.pug`,
       chunks: ["cards"],
       filename: './uikit/cards.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/uikit/headersfooters/headersfooters.pug`,
+      chunks: ["headersfooters"],
+      filename: './uikit/headersfooters.html',
       inject: true
     }),
     new HtmlWebpackExternalsPlugin({

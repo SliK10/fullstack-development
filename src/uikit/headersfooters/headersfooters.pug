@@ -1,0 +1,35 @@
+extends ../../views/layout/main.pug
+include ../../components/header/header.pug
+
+block title
+  title Headres & Footers
+
+block content
+  .page__row-header.toxin
+    include ../../components/toxin-icon/toxin.pug
+  .page__row
+    .page__cell-standard-nav-bar
+      +header([{
+          link: 'hello',
+          link_name: 'Home'
+        },
+        {
+          link: '#',
+          link_name: 'About Us'
+        },
+        {
+          link: '#',
+          link_name: 'Services'
+        },
+        {
+          link: '#',
+          link_name: 'Careers'
+        },
+        {
+          link: '#',
+          link_name: 'News'
+        },
+        {
+          link: '#',
+          link_name: 'Documentation'
+        },])
