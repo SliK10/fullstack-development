@@ -1,15 +1,15 @@
+//- options = {
+    name: 'name',
+    rate: number,
+  }
+
 mixin rateButton(options)
   .rate-button
-    if (options.label === true)
+    if (options.name)
       .rate-button__label= options.name
     .rate-button__buttons
-      input.rate-button__input(id="star-rating-5" type="radio" name="rating" value="5")
-      label.rate-button__ico(for="star-rating-5")
-      input.rate-button__input(id="star-rating-4" type="radio" name="rating" value="4")
-      label.rate-button__ico(for="star-rating-4")
-      input.rate-button__input(id="star-rating-3" type="radio" name="rating" value="3")
-      label.rate-button__ico(for="star-rating-3")
-      input.rate-button__input(id="star-rating-2" type="radio" name="rating" value="2")
-      label.rate-button__ico(for="star-rating-2")
-      input.rate-button__input(id="star-rating-1" type="radio" name="rating" value="1")
-      label.rate-button__ico(for="star-rating-1")
+      - for(i=1; i <= 5; i++)
+          if(options.rate >= i)
+            span.rate-button__input star
+          else
+            span.rate-button__input star_border

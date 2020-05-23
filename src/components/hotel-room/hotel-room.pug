@@ -2,7 +2,8 @@
     url: '/assets/img/room-image1.png'
     numberNumeral: number,
     numberClass: 'text',
-    priceNumber: 'number + ₽'
+    priceNumber: 'number + ₽',
+    rate: number,
     amountReview: number,
   }
 include ./__rate-button/rate-button.pug
@@ -33,7 +34,7 @@ mixin hotel-room(options)
         span.price__number= options.priceNumber
         span.price__day в сутки
     .hotel-room__raiting
-      +rateButton({})
+      +rateButton({rate: options.rate})
       .amount-review
         span.amount-review__number= options.amountReview
         span.amount-review__word Отзывов
