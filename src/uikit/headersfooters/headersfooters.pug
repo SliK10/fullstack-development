@@ -10,6 +10,7 @@ block content
   .page__row
     .page__cell-standard-nav-bar
       +header([{
+          selected: true,
           link: 'hello',
           link_name: 'Home'
         },
@@ -19,7 +20,8 @@ block content
         },
         {
           link: '#',
-          link_name: 'Services'
+          link_name: 'Services',
+          expand_more: true,
         },
         {
           link: '#',
