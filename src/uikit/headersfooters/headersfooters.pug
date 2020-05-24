@@ -5,9 +5,9 @@ block title
   title Headres & Footers
 
 block content
-  .page__row-header.toxin
-    include ../../components/toxin-icon/toxin.pug
   .page__row
+    .page__cell-header.toxin
+      include ../../components/toxin-icon/toxin.pug
     .page__cell-standard-nav-bar
       +header([{
           selected: true,
@@ -35,3 +35,30 @@ block content
           link: '#',
           link_name: 'Documentation'
         },])
+    .page__cell-logged-nav-bar
+      +header([{
+          selected: true,
+          link: 'hello',
+          link_name: 'Home'
+        },
+        {
+          link: '#',
+          link_name: 'About Us'
+        },
+        {
+          link: '#',
+          link_name: 'Services',
+          expand_more: true,
+        },
+        {
+          link: '#',
+          link_name: 'Careers'
+        },
+        {
+          link: '#',
+          link_name: 'News'
+        },
+        {
+          link: '#',
+          link_name: 'Documentation'
+        },], {user: 'Cosmin Negoita'})

@@ -5,19 +5,18 @@
 @import '../../components/toxin-icon/toxin.scss';
 @import '../../components/header/header.scss';
 
-.page {
-  background: #E5E5E5;
 
-  &__row-header{
+.page__row {
+  background: #E5E5E5;
+  max-width: 1440px;
+  min-height: 900px;
+
+  .page__cell-header{
     padding-top: 1.875rem;
     padding-left: 1.875rem;
     margin-bottom: 72px;
   }
-  &__row {
-    max-width: 1440px;
-
-    .page__cell-standard-nav-bar {
-
-    }
+  .page__cell-standard-nav-bar {
+    margin-bottom: 40px;
   }
 }

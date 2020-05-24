@@ -45,7 +45,8 @@ mixin header(options, logged)
             li.nav__item
               a(href=""+i.link+"")= i.link_name
       if (logged)
-        .logged
+        .logged= logged.user
+
       else
         .login-register
           .login-register__login
