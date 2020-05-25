@@ -1,0 +1,17 @@
+//-
+  Принимаем объект настроек options= {
+    name: <text>,
+    inputType: 'text',
+    labelFor: 'text',
+    id: 'text',
+    inputPlaceholder: 'text'
+  ,}
+mixin subscription-text-field(options)
+  .subscription-text-field
+    form.subscription-text-field__form
+      if (options.name)
+        label.subscription-text-field__form-title-label.label(for= options.id)= options.name
+      .subscription-text-field__form-wrapper
+        input.subscription-text-field__form-input(type= options.inputType name= options.labelFor id= options.id placeholder= options.inputPlaceholder)
+        .subscription-text-field__form-submit
+          span.material-icons arrow_forward

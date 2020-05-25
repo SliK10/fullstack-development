@@ -4,7 +4,7 @@
 @import '../../views/layout/main.scss';
 @import '../../components/toxin-icon/toxin.scss';
 @import '../../components/header/header.scss';
-
+@import '../../components/footer/footer.scss';
 
 .page__row {
   background: #E5E5E5;
@@ -17,6 +17,9 @@
     margin-bottom: 72px;
   }
   .page__cell-standard-nav-bar {
+    margin-bottom: 40px;
+  }
+  .page__cell-logged-nav-bar {
     margin-bottom: 40px;
   }
 }

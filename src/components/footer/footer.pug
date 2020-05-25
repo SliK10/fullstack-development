@@ -1,0 +1,35 @@
+include ./__subscription-text-field/subscription-text-field.pug
+
+mixin footer(options, blocks_links, subscription, copiright)
+  .footer
+    .footer__widgets
+      .footer__logo
+        .logo
+          .logo__icon(style="background-image: url("+options.logoIconUrl+");")
+          .logo__name(style="background-image: url("+options.logoTextUrl+");")
+        .description= options.logoDescription
+
+      if(blocks_links)
+        each i in blocks_links
+          ul.block-links
+            each a in i
+              if(a === i[0])
+                .block-links__item-headline= a
+              else
+                .block-links__item
+                  a(href=""+a.links+"")= a.name
+      .subscription
+        .subscription__headline= subscription.name
+        .subscription__description= subscription.description
+        .subscription__form
+          +subscription-text-field({
+            inputType: subscription.options.inputType,
+            labelFor: subscription.options.labelFor,
+            id: subscription.options.id,
+            inputPlaceholder: subscription.options.inputPlaceholder})
+    .copiright-bar
+      .copiright-bar__copiright= copiright.text
+      .copiright-bar__sprites
+        .twitter
+        .facebook
+        .instagram

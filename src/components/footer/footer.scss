@@ -1,0 +1,95 @@
+@import './__subscription-text-field/subscription-text-field.scss';
+
+.footer {
+
+  height: 443px;
+  background-color: #fff;
+
+  &__widgets {
+    width: 1440px;
+    height: 373px;
+    padding: 100px 140px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #E5E5E5;
+  }
+  &__logo {
+    margin-right: 40px;
+    .logo {
+      display: flex;
+      margin-bottom: 17px;
+
+      .logo__icon {
+        width: 40px;
+        height: 40px;
+        background: no-repeat;
+      }
+      .logo__name {
+        width: 54px;
+        height: 14px;
+        margin: 13px 0 0 12px;
+        background: no-repeat;
+      }
+    }
+    .description {
+      font-size: 14px;
+      line-height: 24px;
+      color: rgba(31, 32, 65, 0.75);
+      max-width: 260px;
+    }
+  }
+  .block-links {
+    margin: 0;
+    padding: 4px 0 0 0;
+    width: 200px;
+    &__item-headline {
+      @include font-two;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #1F2041;
+      margin-bottom: 22px;
+    }
+    &__item {
+      margin-bottom: 20px;
+
+      a {
+      display: block;
+      font-size: 14px;
+      line-height: 18px;
+      color: rgba(31, 32, 65, 0.5);
+      text-decoration: none;
+      }
+    }
+  }
+  .subscription {
+    max-width: 260px;
+    &__headline {
+      margin: 4px 0 18px;
+      @include font-two;
+      font-size: 12px;
+      line-height: 15px;
+      text-transform: uppercase;
+      color: #1F2041;
+    }
+    &__description {
+      font-size: 14px;
+      line-height: 24px;
+      color: rgba(31, 32, 65, 0.75);
+      margin-bottom: 23px;
+    }
+  }
+
+  .copiright-bar {
+    width: 1440px;
+    height: 70px;
+    padding: 0 140px;
+
+    &__copiright {
+      font-size: 14px;
+      line-height: 17px;
+      color: rgba(31, 32, 65, 0.75);
+    }
+
+  }
+}
