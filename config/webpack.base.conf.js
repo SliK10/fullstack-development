@@ -26,6 +26,7 @@ module.exports = {
     formelements: `${PATHS.src}/uikit/formelements/formelements.js`,
     cards: `${PATHS.src}/uikit/cards/cards.js`,
     headersfooters: `${PATHS.src}/uikit/headersfooters/headersfooters.js`,
+    landing_page: `${PATHS.src}/pages/landing-page/landing-page.js`,
   },
   output: {
     path: PATHS.build,
@@ -93,7 +94,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/${PATHS.assets}/fonts`, to: `${PATHS.assets}fonts` },
-      { from: `${PATHS.src}/components`, to: `${PATHS.assets}img`, flatten:true, ignore:['*.html', '*.pug', '*.css', '*.scss', '*.js'] }
+      { from: `${PATHS.src}/components`, to: `${PATHS.assets}img`, flatten:true, ignore:['*.html', '*.pug', '*.css', '*.scss', '*.js'] },
+      { from: `${PATHS.src}/pages`, to: `${PATHS.assets}img`, flatten:true, ignore:['*.html', '*.pug', '*.css', '*.scss', '*.js'] }
     ]),
 
 
@@ -128,6 +130,12 @@ module.exports = {
       template: `${PAGES_DIR}/uikit/headersfooters/headersfooters.pug`,
       chunks: ["headersfooters"],
       filename: './uikit/headersfooters.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/pages/landing-page/landing-page.pug`,
+      chunks: ["landing_page"],
+      filename: './pages/landing-page.html',
       inject: true
     }),
     new HtmlWebpackExternalsPlugin({

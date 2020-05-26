@@ -1,5 +1,16 @@
 include ./__buttons/buttons.pug
 
+//- options = [{
+          selected: true,
+          link: '#',
+          link_name: 'Home'
+        },
+        {
+          link: '#',
+          link_name: 'About Us'
+        }, {...},]
+    logged = {user: 'Cosmin Negoita' || login: 'Login', register: 'Register'}
+
 mixin header(options, logged)
   .header
     .logo
@@ -44,12 +55,12 @@ mixin header(options, logged)
           else
             li.nav__item
               a(href=""+i.link+"")= i.link_name
-      if (logged)
+      if (logged.user)
         .logged= logged.user
 
-      else
+      else if (logged.login || logged.register)
         .login-register
           .login-register__login
-            +button({buttonType: "button", buttonColorClass: "button__border", name: "Login"})
+            +button({buttonType: "button", buttonColorClass: "button__border", name: ""+logged.login+""})
           .login-register__register
-            +button({buttonType: "button", buttonColorClass: "button__background", name: "Register"})
+            +button({buttonType: "button", buttonColorClass: "button__background", name: ""+logged.register+""})

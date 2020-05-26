@@ -1,0 +1,12 @@
+@import '../../assets/scss/normalize.scss';
+@import '../../assets/scss/fonts.scss';
+@import '../../assets/scss/mixins.scss';
+@import '../../views/layout/main.scss';
+@import '../../components/header/header.scss';
+
+.background {
+  height: 830px;
+  width: 1440px;
+  background: no-repeat;
+  background-position: 0 100%;
+}

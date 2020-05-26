@@ -1,0 +1,31 @@
+extends ../../views/layout/main.pug
+include ../../components/header/header.pug
+
+block title
+  title Landing Page
+
+block content
+  +header([{
+          link: '#',
+          link_name: 'О нас'
+        },
+        {
+          link: '#',
+          link_name: 'Услуги',
+          expand_more: true,
+        },
+        {
+          link: '#',
+          link_name: 'Вакансии',
+        },
+        {
+          link: '#',
+          link_name: 'Новости'
+        },
+        {
+          link: '#',
+          link_name: 'Соглашения',
+          expand_more: true,
+        },], {login: 'Войти', register: 'Зарегистрироваться'})
+  .page__cell
+    .background(style="background-image: url(/assets/img/background_landing_page.png);")
