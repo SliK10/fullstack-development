@@ -1,6 +1,7 @@
 extends ../../views/layout/main.pug
 include ../../components/header/header.pug
 include ../../components/footer/footer.pug
+include ../../components/footer-creative/footer-creative.pug
 
 block title
   title Headres & Footers
@@ -72,3 +73,8 @@ block content
       ['About Us', {name: 'Who we are', links: '#'}, {name: 'Our team', links: '#'}, {name: 'Careers', links: '#'}, {name: 'Investors', links: '#'}],
       ['Support', {name: 'Documentation', links: '#'}, {name: 'Community', links: '#'}, {name: 'Get in Touch', links: '#'}]], {name: 'Subscribe to our newsletter', description: 'Receive our latest news and promotions in your inbox!', options: { inputType: 'text', labelFor: 'subscription', id: 'subscription', inputPlaceholder: 'Your email address'}}, {text: 'Copyright © 2018 Toxin UI Kit. All rights reserved.', }
           )
+    .page__cell-footer-creative
+      +footer-creative({logoIconUrl: '/assets/img/footer-logo.svg',
+      logoTextUrl: '/assets/img/footer-toxin.svg',
+      logoDescription: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
+      social_network: ['#', '#', '#']})

@@ -5,11 +5,12 @@
 @import '../../components/toxin-icon/toxin.scss';
 @import '../../components/header/header.scss';
 @import '../../components/footer/footer.scss';
+@import '../../components/footer-creative/footer-creative.scss';
 
 .page__row {
   background: #E5E5E5;
   max-width: 1440px;
-  min-height: 900px;
+  height: 1350px;
 
   .page__cell-header{
     padding-top: 1.875rem;
@@ -19,7 +20,11 @@
   .page__cell-standard-nav-bar {
     margin-bottom: 40px;
   }
-  .page__cell-logged-nav-bar {
+  .page__cell-logged-nav-bar,
+  .page__cell-footer-widgets {
     margin-bottom: 40px;
+  }
+  .page__cell-footer-creative {
+    margin-bottom: 130px;
   }
 }

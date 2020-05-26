@@ -55,3 +55,6 @@
   align-items: center;
   text-align: center;
 }
+@mixin fa-brands {
+  font-family: fa-brands, sans-serif;
+}

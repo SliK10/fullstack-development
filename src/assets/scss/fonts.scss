@@ -53,3 +53,11 @@
        url('/assets/fonts/Material-Icons/MaterialIcons-Regular.ttf') format('truetype'),
        url('/assets/fonts/Material-Icons/MaterialIcons-Regular.svg') format('svg');
 }
+
+@font-face {
+  font-family: 'fa-brands';
+  src: url('/assets/fonts/fa-brands/fa-brands-400.eot');
+  src: url('/assets/fonts/fa-brands/fa-brands-400.woff') format('woff'),
+       url('/assets/fonts/fa-brands/fa-brands-400.ttf') format('truetype'),
+       url('/assets/fonts/fa-brands/fa-brands-400.svg') format('svg');
+}

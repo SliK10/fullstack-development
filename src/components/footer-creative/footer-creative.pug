@@ -1,0 +1,21 @@
+//- options = {
+  logoIconUrl: 'url',
+  logoTextUrl: 'url',
+  logoDescription: 'text',
+  social_network: ['#', '#', '#']
+  }
+
+mixin footer-creative(options)
+  .footer-creative
+    .footer-creative__logo-description
+      .logo
+        .logo__icon(style="background-image: url("+options.logoIconUrl+");")
+        .logo__name(style="background-image: url("+options.logoTextUrl+");")
+      .description= options.logoDescription
+    .footer-creative__sprites
+        .social-network
+          a(href=""+options.social_network[0]+"") &#xf099;
+        .social-network
+          a(href=""+options.social_network[1]+"") &#xf082;
+        .social-network
+          a(href=""+options.social_network[2]+"") &#xf16d;

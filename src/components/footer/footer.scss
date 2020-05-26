@@ -83,13 +83,29 @@
   .copiright-bar {
     width: 1440px;
     height: 70px;
-    padding: 0 140px;
+    padding: 24px 140px;
+    display: flex;
+    justify-content: space-between;
 
     &__copiright {
       font-size: 14px;
-      line-height: 17px;
+      line-height: 22px;
       color: rgba(31, 32, 65, 0.75);
     }
+    &__sprites {
+      @include fa-brands;
+      font-size: 24px;
+      line-height: 23px;
+      display: flex;
+      justify-content: space-between;
+      width: 112px;
 
+      a {
+        text-decoration: none;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        -webkit-background-clip: text;
+	      -webkit-text-fill-color: transparent;
+      }
+    }
   }
 }
