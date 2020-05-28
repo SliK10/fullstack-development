@@ -1,5 +1,28 @@
 include ./__subscription-text-field/subscription-text-field.pug
 
+//- options = {
+    logoIconUrl: 'url',
+    logoTextUrl: 'url',
+    logoDescription: 'text'
+  }
+  block_links = [
+    ['Имя заголовка', {name: 'Имя ссылки', links: 'адрес ссылки'}, {name: 'Имя ссылки', links: 'адрес ссылки'}, ...],
+    ['About Us', {name: 'Who we are', links: '#'}, {name: 'Our team', links: '#'}, ...]
+  ]
+
+  subscription = {
+    name: 'Имя блока подписки',
+    description: 'Описание подписки',
+    options: {
+      inputType: 'text',
+      labelFor: 'subscription',
+      id: 'subscription',
+      inputPlaceholder: 'Your email address'}
+  }
+  copiright = {
+    text: 'Copyright © 2018 Toxin UI Kit. All rights reserved.',
+  }
+
 mixin footer(options, blocks_links, subscription, copiright)
   .footer
     .footer__widgets

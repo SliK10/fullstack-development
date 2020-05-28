@@ -8,8 +8,6 @@
     margin-bottom: 12px;
   }
   & button {
-    width: 99px;
-    height: 44px;
     @include font-two;
     font-size: 12px;
     line-height: 15px;
@@ -31,8 +29,6 @@
 
     position: relative;
     box-sizing: border-box;
-    width: 99px;
-    height: 44px;
     border: 1px solid transparent;
     border-radius: 22px;
     &::before {
@@ -45,8 +41,6 @@
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     }
     .button__border {
-      width: 95px;
-      height: 40px;
       background-color: #fff;
       border: 2px solid transparent;
       border-radius: 22px;

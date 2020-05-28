@@ -3,10 +3,31 @@
 @import '../../assets/scss/mixins.scss';
 @import '../../views/layout/main.scss';
 @import '../../components/header/header.scss';
+@import '../../components/search-room/search-room.scss';
+@import '../../components/footer/footer.scss';
 
 .background {
+  position: relative;
   height: 830px;
   width: 1440px;
   background: no-repeat;
   background-position: 0 100%;
+
+  &__search-room {
+    position: absolute;
+    top: 70px;
+    left: 140px;
+  }
+
+  &__description {
+    position: absolute;
+    bottom: 21px;
+    right: 134px;
+    width: 297px;
+    height: 48px;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: right;
+    color: rgba(31, 32, 65, 0.75);
+  }
 }
