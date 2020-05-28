@@ -1,0 +1,19 @@
+@import '../../assets/scss/normalize.scss';
+@import '../../assets/scss/fonts.scss';
+@import '../../assets/scss/mixins.scss';
+@import '../../views/layout/main.scss';
+@import '../../components/header/header.scss';
+@import '../../components/__filter-date-dropdown/filter-date-dropdown.scss';
+@import '../../components/__dropdown/dropdown.scss';
+@import '../../components/__range-slider/range-slider.scss';
+@import '../../components/__checkbox-buttons/checkbox-buttons.scss';
+@import '../../components/__rich-checkbox-buttons/rich-checkbox-buttons.scss';
+@import '../../components/__dropdown-bedroom/dropdown-bedroom.scss';
+@import '../../components/__expandable-checkbox-list/expandable-checkbox-list.scss';
+
+.content {
+  height: 1357px;
+  margin-left: 140px;
+  display: flex;
+
+}

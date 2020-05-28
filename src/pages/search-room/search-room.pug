@@ -1,0 +1,51 @@
+extends ../../views/layout/main.pug
+include ../../components/header/header.pug
+include ../../components/__filter-date-dropdown/filter-date-dropdown.pug
+include ../../components/__dropdown/dropdown.pug
+include ../../components/__range-slider/range-slider.pug
+include ../../components/__checkbox-buttons/checkbox-buttons.pug
+include ../../components/__rich-checkbox-buttons/rich-checkbox-buttons.pug
+include ../../components/__dropdown-bedroom/dropdown-bedroom.pug
+include ../../components/__expandable-checkbox-list/expandable-checkbox-list.pug
+
+
+block title
+  title Search room/Filter
+
+block content
+  +header([{
+        link: '#',
+        link_name: 'О нас'
+      },
+      {
+        link: '#',
+        link_name: 'Услуги',
+        expand_more: true,
+      },
+      {
+        link: '#',
+        link_name: 'Вакансии',
+      },
+      {
+        link: '#',
+        link_name: 'Новости'
+      },
+      {
+        link: '#',
+        link_name: 'Соглашения',
+        expand_more: true,
+      },], {login: 'Войти', register: 'Зарегистрироваться'})
+  .content
+    .content__filters
+      +filter-date-dropdown({
+        label: 'Даты пребывания в отеле',
+        placeholder: '19 авг - 23 авг'
+        })
+      +dropdownGuests({label: 'Гости', placeholder: 'Сколько гостей', firstGuestLabel: 'Взрослые', secondGuestLabel: 'Дети', thirdGuestLabel: 'Младенцы' , applyAndCancel: true})
+      +rangeSlider({name: 'диапазон цены'})
+      .range-slider__down-description Стоимость за сутки пребывания в номере
+      +checkboxButtons({name: 'checkbox buttons'})
+      +richCheckboxButtons({name: 'доступность'})
+      +dropdownBedroom({label: 'Удобства номера', placeholder: 'Выберите удобства', amountOfBedrooms: 'спальни', amountOfBeds: 'кровати', amountOfBathrooms: 'ванные комнаты'})
+      +expandableCheckboxList({name: 'Дополнительные удобства'})
+    .content__rooms

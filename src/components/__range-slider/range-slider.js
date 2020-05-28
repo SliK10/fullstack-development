@@ -1,3 +1,5 @@
+import './ion-rangeslider/ion.rangeSlider'
+
 let slider = $(".js-range-slider").ionRangeSlider({
   skin: "round",
   type: "double",

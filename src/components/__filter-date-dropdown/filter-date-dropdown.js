@@ -1,3 +1,5 @@
+import './__air-datepicker/js/datepicker'
+
 $('.filter-date-airdatepicker').datepicker({
   minDate: new Date,
   range: true,
