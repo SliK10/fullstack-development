@@ -10,10 +10,73 @@
 @import '../../components/__rich-checkbox-buttons/rich-checkbox-buttons.scss';
 @import '../../components/__dropdown-bedroom/dropdown-bedroom.scss';
 @import '../../components/__expandable-checkbox-list/expandable-checkbox-list.scss';
+@import '../../components/hotel-room/hotel-room.scss';
+@import '../../components/__pagination/pagination.scss';
+@import '../../components/footer/footer.scss';
 
 .content {
   height: 1357px;
-  margin-left: 140px;
+  padding: 30px 140px 0;
   display: flex;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+  // justify-content: space-between;
 
+  & .filters {
+    max-width: 266px;
+    margin-right: 48px;
+
+    &__wrapper-for-filter-date-dropdown {
+      margin-bottom: 22px;
+    }
+    &__wrapper-for-dropdown {
+      width: 266px;
+      margin-bottom: 29px;
+    }
+    &__wrapper-for-range-slider {
+      margin-bottom: 27px;
+
+      .down-description {
+        margin-top: 13px;
+        font-size: 12px;
+        line-height: 14px;
+        color: rgba(31, 32, 65, 0.5);
+      }
+    }
+    &__wrapper-for-checkbox-buttons {
+      margin-bottom: 33px;
+    }
+    &__wrapper-for-rich-checkbox-buttons {
+      margin-bottom: 32px;
+    }
+    &__wrapper-for-dropdown-bedroom {
+      margin-bottom: 16px;
+    }
+  }
+  .rooms {
+    min-width: 846px;
+
+    &__header {
+      @include h1;
+      margin-bottom: 21px;
+      margin-left: 12px;
+    }
+
+    &__rooms-blocks {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+      // justify-content: space-between;
+      // align-content: flex-start;
+
+      .block-room {
+        margin-left: 12px;
+        margin-bottom: 12px;
+      }
+    }
+    &__pagination {
+      width: inherit;
+      display: flex;
+      justify-content: center;
+    }
+  }
 }

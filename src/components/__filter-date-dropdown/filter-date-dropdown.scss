@@ -12,18 +12,17 @@
   border-radius: 4px;
   @include font-main;
   font-size: 14px;
-  line-height: 26.3px;
   padding-left: 14px;
   width: 266px;
   height: 44px;
-  margin-top: 4px;
+  margin-top: 5px;
   display: flex;
   cursor: pointer;
 
     .filter-date-dropdown__area-of-placeholder {
       width: 222px;
       height: 44px;
-      line-height: 42px;
+      line-height: 41px;
       color: rgba(31, 32, 65, 0.75);
     }
     .filter-date-dropdown__expand-more-wrapper {

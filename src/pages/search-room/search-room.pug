@@ -7,7 +7,9 @@ include ../../components/__checkbox-buttons/checkbox-buttons.pug
 include ../../components/__rich-checkbox-buttons/rich-checkbox-buttons.pug
 include ../../components/__dropdown-bedroom/dropdown-bedroom.pug
 include ../../components/__expandable-checkbox-list/expandable-checkbox-list.pug
-
+include ../../components/hotel-room/hotel-room.pug
+include ../../components/__pagination/pagination.pug
+include ../../components/footer/footer.pug
 
 block title
   title Search room/Filter
@@ -36,16 +38,150 @@ block content
         expand_more: true,
       },], {login: 'Войти', register: 'Зарегистрироваться'})
   .content
-    .content__filters
-      +filter-date-dropdown({
+    .filters
+      .filters__wrapper-for-filter-date-dropdown
+        +filter-date-dropdown({
         label: 'Даты пребывания в отеле',
         placeholder: '19 авг - 23 авг'
         })
-      +dropdownGuests({label: 'Гости', placeholder: 'Сколько гостей', firstGuestLabel: 'Взрослые', secondGuestLabel: 'Дети', thirdGuestLabel: 'Младенцы' , applyAndCancel: true})
-      +rangeSlider({name: 'диапазон цены'})
-      .range-slider__down-description Стоимость за сутки пребывания в номере
-      +checkboxButtons({name: 'checkbox buttons'})
-      +richCheckboxButtons({name: 'доступность'})
-      +dropdownBedroom({label: 'Удобства номера', placeholder: 'Выберите удобства', amountOfBedrooms: 'спальни', amountOfBeds: 'кровати', amountOfBathrooms: 'ванные комнаты'})
+      .filters__wrapper-for-dropdown
+        +dropdownGuests({label: 'Гости', placeholder: 'Сколько гостей', firstGuestLabel: 'Взрослые', secondGuestLabel: 'Дети', thirdGuestLabel: 'Младенцы' , applyAndCancel: true})
+      .filters__wrapper-for-range-slider
+        +rangeSlider({name: 'диапазон цены'})
+        .down-description Стоимость за сутки пребывания в номере
+      .filters__wrapper-for-checkbox-buttons
+        +checkboxButtons({name: 'checkbox buttons'})
+      .filters__wrapper-for-rich-checkbox-buttons
+        +richCheckboxButtons({name: 'доступность'})
+      .filters__wrapper-for-dropdown-bedroom
+        +dropdownBedroom({label: 'Удобства номера', placeholder: 'Выберите удобства', amountOfBedrooms: 'спальни', amountOfBeds: 'кровати', amountOfBathrooms: 'ванные комнаты'})
       +expandableCheckboxList({name: 'Дополнительные удобства'})
-    .content__rooms
+    .rooms
+      .rooms__header Номера, которые мы для вас подобрали
+      .rooms__rooms-blocks
+        .block-room
+          +hotel-room({
+          url: '/assets/img/room-image1.png',
+          numberNumeral: 888,
+          numberClass: 'люкс',
+          priceNumber: '9 990₽',
+          rate: 5,
+          amountReview: 145,
+          })
+        .block-room
+          +hotel-room({
+          url: '/assets/img/room-image2.png',
+          numberNumeral: 840,
+          numberClass: '',
+          priceNumber: '9 900₽',
+          rate: 4,
+          amountReview: 65,
+          })
+        .block-room
+          +hotel-room({
+          url: '/assets/img/room-image3.png',
+          numberNumeral: 980,
+          numberClass: 'люкс',
+          priceNumber: '8 500₽',
+          rate: 3,
+          amountReview: 35,
+          })
+        .block-room
+          +hotel-room({
+          url: '/assets/img/room-image4.png',
+          numberNumeral: 856,
+          numberClass: '',
+          priceNumber: '7 300₽',
+          rate: 5,
+          amountReview: 19,
+          })
+        .block-room
+          +hotel-room({
+          url: '/assets/img/room-image5.png',
+          numberNumeral: 740,
+          numberClass: '',
+          priceNumber: '6 000₽',
+          rate: 4,
+          amountReview: 44,
+          })
+        .block-room
+          +hotel-room({
+          url: '/assets/img/room-image6.png',
+          numberNumeral: 982,
+          numberClass: '',
+          priceNumber: '5 800₽',
+          rate: 3,
+          amountReview: 56,
+          })
+        .block-room
+          +hotel-room({
+          url: '/assets/img/room-image7.png',
+          numberNumeral: 678,
+          numberClass: '',
+          priceNumber: '5 500₽',
+          rate: 5,
+          amountReview: 45,
+          })
+        .block-room
+          +hotel-room({
+          url: '/assets/img/room-image8.png',
+          numberNumeral: 450,
+          numberClass: '',
+          priceNumber: '5 300₽',
+          rate: 4,
+          amountReview: 39,
+          })
+        .block-room
+          +hotel-room({
+          url: '/assets/img/room-image9.png',
+          numberNumeral: 350,
+          numberClass: '',
+          priceNumber: '5 000₽',
+          rate: 3,
+          amountReview: 77,
+          })
+        .block-room
+          +hotel-room({
+          url: '/assets/img/room-image10.png',
+          numberNumeral: 666,
+          numberClass: '',
+          priceNumber: '5 000₽',
+          rate: 5,
+          amountReview: 25,
+          })
+        .block-room
+          +hotel-room({
+          url: '/assets/img/room-image11.png',
+          numberNumeral: 444,
+          numberClass: '',
+          priceNumber: '5 000₽',
+          rate: 3,
+          amountReview: 15,
+          })
+        .block-room
+          +hotel-room({
+          url: '/assets/img/room-image12.png',
+          numberNumeral: 352,
+          numberClass: '',
+          priceNumber: '5 000₽',
+          rate: 3,
+          amountReview: 55,
+          })
+      .rooms__pagination
+        +pagination({description: '1 – 12 из 100+ вариантов аренды'})
+  +footer({logoIconUrl: '/assets/img/Group.svg',
+        logoTextUrl: '/assets/img/TOXIN.svg',
+        logoDescription: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+        },
+        [['Навигация', {name: 'О нас', links: '#'}, {name: 'Новости', links: '#'}, {name: 'Служба поддержки', links: '#'}, {name: 'Услуги', links: '#'}],
+        ['О нас', {name: 'О сервисе', links: '#'}, {name: 'Наша команда', links: '#'}, {name: 'Вакансии', links: '#'}, {name: 'Инвесторы', links: '#'}],
+        ['Служба поддержки', {name: 'Соглашения', links: '#'}, {name: 'Сообщества', links: '#'}, {name: 'Связь с нами', links: '#'}]
+        ], {name: 'Подписка', description: 'Получайте специальные предложения и новости сервиса',
+        options: {
+                  inputType: 'text',
+                  labelFor: 'subscription',
+                  id: 'subscription',
+                  inputPlaceholder: 'Email'}
+        }, {
+            text: 'Copyright © 2018 Toxin отель. Все права зачищены.',
+            })
