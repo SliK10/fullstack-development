@@ -28,6 +28,7 @@ module.exports = {
     headersfooters: `${PATHS.src}/uikit/headersfooters/headersfooters.js`,
     landing_page: `${PATHS.src}/pages/landing-page/landing-page.js`,
     search_room: `${PATHS.src}/pages/search-room/search-room.js`,
+    room_details: `${PATHS.src}/pages/room-details/room-details.js`,
   },
   output: {
     path: PATHS.build,
@@ -143,6 +144,12 @@ module.exports = {
       template: `${PAGES_DIR}/pages/search-room/search-room.pug`,
       chunks: ["search_room"],
       filename: './pages/search-room.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/pages/room-details/room-details.pug`,
+      chunks: ["room_details"],
+      filename: './pages/room-details.html',
       inject: true
     }),
     new HtmlWebpackExternalsPlugin({

@@ -45,7 +45,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   height: 32px;
-  z-index: 1; }
+  z-index: 3; }
   .datepicker--cell.-focus- {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     color: #fff;
@@ -237,7 +237,7 @@
 .datepicker-inline .datepicker {
   border-color: #d7d7d7;
   box-shadow: none;
-  position: static;
+  // position: static;
   left: auto;
   right: auto;
   opacity: 1;

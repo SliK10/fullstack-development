@@ -1,0 +1,62 @@
+@import '../../assets/scss/normalize.scss';
+@import '../../assets/scss/fonts.scss';
+@import '../../assets/scss/mixins.scss';
+@import '../../views/layout/main.scss';
+@import '../../components/header/header.scss';
+@import '../../components/__comfort/comfort.scss';
+@import '../../components/to-book/to-book.scss';
+
+.page__row {
+  width: 1440px;
+  padding: 0 140px;
+  display:  flex;
+}
+.room {
+  width: 780px;
+
+  &__cell {
+    display: flex;
+  }
+  &__information {
+    margin-right: 81px;
+  }
+}
+.block-photo {
+  width: 1440px;
+  height: 485px;
+  display: flex;
+  margin-bottom: 70px;
+
+  &__main-photo {
+    width: 981px;
+    height: 485px;
+    background-repeat: no-repeat;
+  }
+  &__mini-photo {
+    width: 459px;
+    height: 485px;
+  
+    .photo__up {
+      width: 459px;
+      height: 243px;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .photo__down {
+      width: 459px;
+      height: 242px;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+}
+.name-of-block {
+  @include font-sans-bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: #1F2041;
+  margin-bottom: 20px;
+}
+.donut {
+  
+}
