@@ -5,7 +5,7 @@
 @import '../../components/header/header.scss';
 @import '../../components/__comfort/comfort.scss';
 @import '../../components/to-book/to-book.scss';
-@import './__chart/chart.scss';
+@import './apexchart/apexcharts.scss';
 
 .page__row {
   width: 1440px;
@@ -60,7 +60,12 @@
   font-size: 19px;
   line-height: 24px;
   color: #1F2041;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
+}
+
+#chart {
+  width: 120px;
+  height: 120px;
 }
 
 // .chart-container {
