@@ -1,0 +1,28 @@
+.chart {
+  display: flex;
+  justify-content: space-between;
+
+  & .unit {
+    fill: none;
+    stroke-width: 1;
+  }
+  &__text {
+    fill: #BC9CFF;
+    font: 16px/1.4em;
+    transform: translateY(0.25em);
+  }
+  &__number {
+    @include font-third;
+    font-size: 0.4em;
+    line-height: 1;
+    text-anchor: middle;
+    transform: translateY(-0.6em);
+  }
+  &__label {
+    @include font-two;
+    text-anchor: middle;
+    font-size: 0.2em;
+    text-transform: uppercase;
+    transform: translateY(0.4em);
+  }
+}

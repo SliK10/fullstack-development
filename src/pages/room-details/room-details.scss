@@ -5,6 +5,7 @@
 @import '../../components/header/header.scss';
 @import '../../components/__comfort/comfort.scss';
 @import '../../components/to-book/to-book.scss';
+@import './__chart/chart.scss';
 
 .page__row {
   width: 1440px;
@@ -39,7 +40,7 @@
   &__mini-photo {
     width: 459px;
     height: 485px;
-  
+
     .photo__up {
       width: 459px;
       height: 243px;
@@ -65,48 +66,22 @@
 // .chart-container {
 //   width: 311px;
 // }
-.chart {
-  display: flex;
-  justify-content: space-between;
 
-  & .unit {
-    fill: none;
-    stroke-width: 1;
+// .chart-container {
+//   width: 120px;
+//   height: 120px;
+//   overflow: hidden;
+//   border-radius: 50%;
+//   position: relative;
 
-    &:nth-child(2) {
-      stroke-dasharray: 0 100;
-      stroke-dashoffset: 25;
-    }
-    &:nth-child(4) {
-      stroke-dasharray: 25 75;
-      stroke-dashoffset: 125;
-    }
-    &:nth-child(6) {
-      stroke-dasharray: 25 75;
-      stroke-dashoffset: 100;
-    }
-    &:nth-child(8) {
-      stroke-dasharray: 50 50;
-      stroke-dashoffset: 75;
-    }
-  }
-  &__text {
-    fill: #BC9CFF;
-    font: 16px/1.4em;
-    transform: translateY(0.25em);
-  }
-  &__number {
-    @include font-third;
-    font-size: 0.4em;
-    line-height: 1;
-    text-anchor: middle;
-    transform: translateY(-0.6em);
-  }
-  &__label {
-    @include font-two;
-    text-anchor: middle;
-    font-size: 0.2em;
-    text-transform: uppercase;
-    transform: translateY(0.4em);
-  }
-}
+//   & .sector {
+//     width: 50%;
+//     height: 50%;
+//     position: absolute;
+//     left: 50%;
+//     top: 0;
+//     transform-origin: left bottom;
+//     background: #000;
+//     transform: rotate(45deg) skewY(108deg);
+//   }
+// }
