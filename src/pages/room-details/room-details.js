@@ -1,22 +1,41 @@
 import './room-details.scss'
 import '../../components/to-book/to-book'
-import './apexchart/apexcharts.js'
+// import ApexCharts from './apexchart/apexcharts'
 
-var divChart = document.querySelector("#chart");
-var options = {
-  chart: {
-    height: 120,
-    type: 'bar'
-  },
-  series: [{
-    name: 'sales',
-    data: [30,40,35,50,49,60,70,91,125]
-  }],
-  xaxis: {
-    categories: [1991,1992,1993,1994,1995,1996,1997, 1998,1999]
-  }
-}
+// var options = {
+//   chart: {
+//     width: 312,
+//     height: 125,
+//     type: 'donut'
+//   },
+//   series: [0 ,25, 25, 50],
+//   labels: ['Разочарован', 'Удовлетворительно', 'Хорошо', 'Великолепно'],
+//   dataLabels: {
+//     enabled: false
+//   },
+//   plotOptions: {
+//     pie: {
+//       donut: {
+//         size: '90%',
+//         labels: {
+//           show: true,
+//         }
+//       },
+//       customScale: 1.1,
+//     },
+//   },
+//   fill: {
+//     type: 'gradient',
+//     colors: [ '#919191', '#BC9CFF', '#6FCF97', '#FFE39C'],
+//     gradient: {
+//       type: 'vertical',
+//       shadeIntensity: 1,
+//       gradientToColors: ['#3D4975', '#8BA4F9', '#66D2EA', '#FFBA9C'],
+//       inverseColors: true,
+//     }
+//   }
+// }
 
-var chart = new ApexCharts(divChart, options);
+// var chart = new ApexCharts(document.querySelector("#chart"), options);
 
-chart.render();
+// chart.render();
