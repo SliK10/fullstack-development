@@ -4,16 +4,16 @@
 
   & .unit {
     fill: none;
-    stroke-width: 1;
+    stroke-width: 4;
   }
   &__text {
     fill: #BC9CFF;
     font: 16px/1.4em;
-    transform: translateY(0.25em);
+    transform: translateY(0.9em);
   }
   &__number {
     @include font-third;
-    font-size: 0.4em;
+    font-size: 1.6em;
     line-height: 1;
     text-anchor: middle;
     transform: translateY(-0.6em);
@@ -21,8 +21,8 @@
   &__label {
     @include font-two;
     text-anchor: middle;
-    font-size: 0.2em;
+    font-size: 0.8em;
     text-transform: uppercase;
-    transform: translateY(0.4em);
+    transform: translateY(0.3em);
   }
 }
