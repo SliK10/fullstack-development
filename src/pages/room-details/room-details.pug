@@ -2,7 +2,6 @@ extends ../../views/layout/main.pug
 include ../../components/header/header.pug
 include ../../components/__comfort/comfort.pug
 include ../../components/to-book/to-book.pug
-include ./__chart/chart.pug
 
 block title
   title Room details
@@ -52,6 +51,6 @@ block content
         .room__impressions
           .name-of-block Впечатления от номера
 
-          +chart
+          .chart
       .room__review
     +to-book

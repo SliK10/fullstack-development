@@ -1,6 +1,7 @@
 let data = {
   label: 'голосов',
-  values: [0, 65, 65, 130]
+  values: [0, 65, 65, 130],
+  mark: ['Разочарован', 'Удовлетворительно', 'Хорошо', 'Великолепно']
 }
 
 class Chart {
@@ -8,47 +9,52 @@ class Chart {
     this.donutChart = document.querySelector('.chart')
     this.label = data.label
     this.values = data.values
+    this.mark = data.mark
     this.angleOffset = -90
     this.strokeDasharray = 376.99111843077515
     this.chartData = []
+    this.background = [
+      ['#919191', '#3D4975'],
+      ['#BC9CFF', '#8BA4F9'],
+      ['#6FCF97', '#66D2EA'],
+      ['#FFE39C', '#FFBA9C'],
+    ]
+
   }
   init() {
-    this.calculateChartData()
-    const chart = `
+    this.calculateChartData();
+    this.mark.reverse();
+    let backgroundMark = this.background.slice();
+    let chartItem = '';
+    let markItem = '';
+    backgroundMark.reverse();
+    for(i=0; i<this.values.length; i++) {
+      markItem += `<div class="item">
+                      <div class="item__color" style="background: linear-gradient(180deg, ${backgroundMark[i][0]} 0%, ${backgroundMark[i][1]} 100%);"></div>
+                      <div class="item__description">${this.mark[i]}</div>
+                    </div>`
+      if (this.values[i] === 0) continue;
+      else {
+        chartItem += `<defs>
+                        <linearGradient id="grad${i}" x1="0%" y1="100%" x2="100%" y2="0%">
+                          <stop offset="0%" style="stop-color:${this.background[i][0]};"></stop>
+                          <stop offset="100%" style="stop-color:${this.background[i][1]};"></stop>
+                        </linearGradient>
+                      </defs>
+                      <circle class="unit" r="60" cx="62.5" cy="62.5" stroke="url(#grad${i})" stroke-dasharray="${this.strokeDasharray - 2}" stroke-dashoffset="${this.calculateStrokeDashOffset(this.values[i])}" transform="rotate(${this.returnCircleTransformValue(i)}, 62.5, 62.5)"></circle>`
+      }
+    }
+    let chart = `
       <svg width="120" height="120" viewBox="0 0 125 125">
-        <defs>
-          <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" style="stop-color:#919191;"></stop>
-            <stop offset="100%" style="stop-color:#3D4975;"></stop>
-          </linearGradient>
-        </defs>
-        <circle class="unit" r="60" cx="62.5" cy="62.5" stroke="url(#grad1)" stroke-dasharray="${this.strokeDasharray - 2}" stroke-dashoffset="${this.calculateStrokeDashOffset(this.values[0])}" transform="rotate(${this.returnCircleTransformValue(0)}, 62.5, 62.5)"></circle>
-        <defs>
-          <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" style="stop-color:#BC9CFF;"></stop>
-            <stop offset="100%" style="stop-color:#8BA4F9;"></stop>
-          </linearGradient>
-        </defs>
-        <circle class="unit" r="60" cx="62.5" cy="62.5" stroke="url(#grad2)" stroke-dasharray="${this.strokeDasharray - 2}" stroke-dashoffset="${this.calculateStrokeDashOffset(this.values[1])}" transform="rotate(${this.returnCircleTransformValue(1)}, 62.5, 62.5)"></circle>
-        <defs>
-          <linearGradient id="grad3" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" style="stop-color:#6FCF97;"></stop>
-            <stop offset="100%" style="stop-color:#66D2EA;"></stop>
-          </linearGradient>
-        </defs>
-        <circle class="unit" r="60" cx="62.5" cy="62.5" stroke="url(#grad3)" stroke-dasharray="${this.strokeDasharray - 2}" stroke-dashoffset="${this.calculateStrokeDashOffset(this.values[2])}" transform="rotate(${this.returnCircleTransformValue(2)}, 62.5, 62.5)"></circle>
-        <defs>
-          <linearGradient id="grad4" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" style="stop-color:#FFE39C;"></stop>
-            <stop offset="100%" style="stop-color:#FFBA9C;"></stop>
-          </linearGradient>
-        </defs>
-        <circle class="unit" r="60" cx="62.5" cy="62.5" stroke="url(#grad4)" stroke-dasharray="${this.strokeDasharray - 2}" stroke-dashoffset="${this.calculateStrokeDashOffset(this.values[3])}" transform="rotate(${this.returnCircleTransformValue(3)}, 62.5, 62.5)"></circle>
+        ${chartItem}
         <g class="chart__text">
           <text class="chart__number" x="50%" y="50%">${this.total()}</text>
           <text class="chart__label" x="50%" y="50%">${this.label}</text>
         </g>
-      </svg>`
+      </svg>
+      <div class="chart__mark">
+        ${markItem}
+      </div>`
 
     this.donutChart.innerHTML = chart;
   }
