@@ -2,6 +2,9 @@ extends ../../views/layout/main.pug
 include ../../components/header/header.pug
 include ../../components/__comfort/comfort.pug
 include ../../components/to-book/to-book.pug
+include ../../components/__review/review.pug
+include ../../components/__bullet-list/bullet-list.pug
+include ../../components/footer/footer.pug
 
 block title
   title Room details
@@ -50,7 +53,49 @@ block content
             description: "Номер оснащён камином"}])
         .room__impressions
           .name-of-block Впечатления от номера
-
           .chart
       .room__review
+        .headline
+          .name-of-block Отзывы посетителей номера
+          .amount-of-review 2 отзыва
+        +review({
+          photo: 'https://yt3.ggpht.com/a/AGF-l79u4pK8A72pXMrd1Rzoz16VFrxsVKhDkFuTyA=s900-c-k-c0xffffffff-no-rj-mo',
+          name: 'Мурад Сарафанов',
+          date: '5 дней назад',
+          liked: {
+            amount: 11,
+          },
+          description: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+        })
+        +review({
+          photo: 'https://f1golos.ru/images/alisa.png',
+          name: 'Патрисия Стёклышкова',
+          date: 'Неделю назад',
+          liked: {
+            amount: 2,
+          },
+          description: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент',})
+      .room__cell
+        .rules
+          .name-of-block Правила
+          +bulletList({}, ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+        .cancel
+          .name-of-block Отмена
+          .cancel__description Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
     +to-book
+  +footer({logoIconUrl: '/assets/img/Group.svg',
+          logoTextUrl: '/assets/img/TOXIN.svg',
+          logoDescription: 'Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»',
+          },
+          [['Навигация', {name: 'О нас', links: '#'}, {name: 'Новости', links: '#'}, {name: 'Служба поддержки', links: '#'}, {name: 'Услуги', links: '#'}],
+          ['О нас', {name: 'О сервисе', links: '#'}, {name: 'Наша команда', links: '#'}, {name: 'Вакансии', links: '#'}, {name: 'Инвесторы', links: '#'}],
+          ['Служба поддержки', {name: 'Соглашения', links: '#'}, {name: 'Сообщества', links: '#'}, {name: 'Связь с нами', links: '#'}]
+          ], {name: 'Подписка', description: 'Получайте специальные предложения и новости сервиса',
+          options: {
+                    inputType: 'text',
+                    labelFor: 'subscription',
+                    id: 'subscription',
+                    inputPlaceholder: 'Email'}
+          }, {
+              text: 'Copyright © 2018 Toxin отель. Все права зачищены.',
+              })

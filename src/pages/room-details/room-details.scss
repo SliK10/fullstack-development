@@ -6,26 +6,11 @@
 @import '../../components/__comfort/comfort.scss';
 @import '../../components/to-book/to-book.scss';
 @import './__chart/chart.scss';
+@import '../../components/__review/review.scss';
+@import '../../components/__bullet-list/bullet-list.scss';
+@import '../../components/footer/footer.scss';
 
-.page__row {
-  width: 1440px;
-  padding: 0 140px;
-  display:  flex;
-}
-.room {
-  width: 780px;
 
-  &__cell {
-    display: flex;
-  }
-  &__information {
-    margin-right: 81px;
-  }
-
-  &__impressions {
-    width: 311px;
-  }
-}
 .block-photo {
   width: 1440px;
   height: 485px;
@@ -55,6 +40,63 @@
     }
   }
 }
+.page__row {
+  width: 1440px;
+  padding: 0 140px 45px;
+  display:  flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(31,32,65,.25);
+}
+.room {
+  width: 712px;
+
+  &__cell {
+    max-width: 711px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 11px;
+
+    .rules {
+      .name-of-block {
+        margin-left: 20px;
+        margin-bottom: 17px;
+      }
+    }
+    .cancel {
+      margin-right: 9px;
+      .name-of-block {
+        margin-bottom: 17px;
+      }
+      &__description {
+        width: 341px;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgba(31, 32, 65, 0.75);
+      }
+    }
+  }
+
+  &__impressions {
+    width: 311px;
+    margin-right: 39px;
+  }
+  &__review {
+    max-width: 711px;
+    margin-bottom: 33px;
+    .headline {
+      display: flex;
+      justify-content: space-between;
+
+      .amount-of-review {
+        font-size: 14px;
+        line-height: 28px;
+        text-align: right;
+        color: rgba(31, 32, 65, 0.5);
+      }
+    }
+  }
+}
+
 .name-of-block {
   @include font-sans-bold;
   font-size: 19px;
@@ -62,25 +104,3 @@
   color: #1F2041;
   margin-bottom: 21px;
 }
-// .chart-container {
-//   width: 311px;
-// }
-
-// .chart-container {
-//   width: 120px;
-//   height: 120px;
-//   overflow: hidden;
-//   border-radius: 50%;
-//   position: relative;
-
-//   & .sector {
-//     width: 50%;
-//     height: 50%;
-//     position: absolute;
-//     left: 50%;
-//     top: 0;
-//     transform-origin: left bottom;
-//     background: #000;
-//     transform: rotate(45deg) skewY(108deg);
-//   }
-// }

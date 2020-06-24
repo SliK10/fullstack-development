@@ -1,13 +1,23 @@
+//- options = {
+      photo: url,
+      name: string,
+      date: string,
+      liked: {
+        amount: number,
+      }
+      description: string,
+    }
+
 include ./__like-button/like-button.pug
 
 mixin review(options)
   .review
     .user
-      .user__photo
+      .user__photo(style="background-image: url("+options.photo+")")
       span.user__name= options.name
         <br>
         span.user__last-date= options.date
     .description
       .description__like-button
-        +likeButton({})
+        +likeButton(options.liked)
       .description__text= options.description
