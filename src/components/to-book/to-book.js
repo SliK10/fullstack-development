@@ -6,6 +6,7 @@ import moment from './momentjs/moment'
 class Calculator {
   constructor() {
     this.toBook = document.querySelector('.to-book')
+    this.datePicker = document.querySelector('.datepicker-here')
     this.costs = this.toBook.querySelector('.price__number')
     this.costsDescription = this.toBook.querySelector(".information__description")
     this.informPrice = this.toBook.querySelector('.information__price')
@@ -17,26 +18,25 @@ class Calculator {
     this.toBook.addEventListener('click', this.date.bind(this))
   }
   date(e) {
-    if (e.target.classList.contains('material-icons') ) {
-      let computedStyle = getComputedStyle(document.querySelector('.date-airdatepicker'))
-      if (computedStyle.display === 'none') {
-        let dateArrival = document.querySelector('.arrival');
-        let dateDeparture = document.querySelector('.departure');
+    if (e.target.dataset.action == 'apply') {
+      let dateArrival = document.querySelector('.arrival');
+      let dateDeparture = document.querySelector('.departure');
 
-        dateArrival = dateArrival.innerHTML.split('.');
-        dateDeparture = dateDeparture.innerHTML.split('.');
+      dateArrival = dateArrival.innerHTML.split('.');
+      dateDeparture = dateDeparture.innerHTML.split('.');
 
-        dateArrival.reverse();
-        dateDeparture.reverse();
+      dateArrival.reverse();
+      dateDeparture.reverse();
 
-        let a = moment(dateArrival);
-        let b = moment(dateDeparture);
+      let a = moment(dateArrival);
+      let b = moment(dateDeparture);
 
-        let total = b.diff(a, 'days');
+      let total = b.diff(a, 'days');
 
-        this.informPrice.innerHTML = `${this.calculateTotalCosts(total)}₽`
-        this.totalPrice.innerHTML = `${this.calculateTotalCosts(total) - this.transformToNumber(this.descriptionPrice.innerHTML) + this.transformToNumber(this.serviceCharge.innerHTML)}₽`
-      }
+      this.informPrice.innerHTML = `${this.calculateTotalCosts(total)}₽`
+      this.totalPrice.innerHTML = `${this.calculateTotalCosts(total) - this.transformToNumber(this.descriptionPrice.innerHTML) + this.transformToNumber(this.serviceCharge.innerHTML)}₽`
+
+      this.datePicker.style.display = "none"
     }
   }
   calculateTotalCosts(total) {
