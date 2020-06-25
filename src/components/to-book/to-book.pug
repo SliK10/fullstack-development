@@ -17,21 +17,22 @@ mixin to-book
       +dropdownGuests({label: 'Гости', placeholder: 'Сколько гостей', firstGuestLabel: 'взрослые', secondGuestLabel: 'дети', thirdGuestLabel: 'младенцы' , applyAndCancel: true})
     .information
       .information__item
-        .information__description 9 990₽ х 4 суток
-        .information__price 39 960₽
+        .information__description 9 990₽ х 0 суток
+        .information__price 0₽
       .information__item
         .information__item-wrapper
-          .information__description Сбор за услуги: скидка 2 179₽
+          .information__description Сбор за услуги: скидка&#160;
+          .information__description-price 2 179₽
           .info-sprite i
         .information__price 0₽
       .information__item
         .information__item-wrapper
           .information__description-last Сбор за дополнительные услуги
           .info-sprite i
-        .information__price 300₽
+        .information__price-service 300₽
     .total
       .total__text Итого
       .total__line
-      .total__price 38 081₽
+      .total__price 0₽
     .button-reserve
       +button({buttonType: 'button', buttonColorClass: 'button__long', name: 'Забронировать'})
