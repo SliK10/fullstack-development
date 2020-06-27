@@ -29,6 +29,7 @@ module.exports = {
     landing_page: `${PATHS.src}/pages/landing-page/landing-page.js`,
     search_room: `${PATHS.src}/pages/search-room/search-room.js`,
     room_details: `${PATHS.src}/pages/room-details/room-details.js`,
+    registration: `${PATHS.src}/pages/registration/registration.js`,
   },
   output: {
     path: PATHS.build,
@@ -150,6 +151,12 @@ module.exports = {
       template: `${PAGES_DIR}/pages/room-details/room-details.pug`,
       chunks: ["room_details"],
       filename: './pages/room-details.html',
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      template: `${PAGES_DIR}/pages/registration/registration.pug`,
+      chunks: ["registration"],
+      filename: './pages/registration.html',
       inject: true
     }),
     new HtmlWebpackExternalsPlugin({
