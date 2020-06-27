@@ -8,8 +8,7 @@
     margin-bottom: 12px;
   }
   & button {
-    width: 99px;
-    height: 44px;
+
     @include font-two;
     font-size: 12px;
     line-height: 15px;
@@ -19,6 +18,9 @@
 
   }
   &__background {
+    min-width: 79px;
+    min-height: 34px;
+    padding: 0 20px;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border: none;
     color: #FFFFFF;
@@ -31,8 +33,6 @@
 
     position: relative;
     box-sizing: border-box;
-    width: 99px;
-    height: 44px;
     border: 1px solid transparent;
     border-radius: 22px;
     z-index: 0;
@@ -47,13 +47,14 @@
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     }
     .button__border {
-      width: 95px;
-      height: 40px;
+      min-width: 75px;
+      min-height: 30px;
       background-color: #fff;
       border: 2px solid transparent;
       border-radius: 22px;
       color: #BC9CFF;
       margin: 1px;
+      padding: 0 17px;
     }
     &:hover::before {
       opacity: 0.5;
@@ -69,7 +70,8 @@
     display: flex;
     justify-content: space-between;
     & .button__name {
-      padding-left: 37px;
+      width: 260px;
+      margin-left: 23px;
       line-height: 18px;
     }
     & svg {

@@ -1,0 +1,23 @@
+@import '../../assets/scss/normalize.scss';
+@import '../../assets/scss/fonts.scss';
+@import '../../assets/scss/mixins.scss';
+@import '../../views/layout/main.scss';
+@import '../../components/header/header.scss';
+@import '../../components/login-block/login-block.scss';
+@import '../../components/footer/footer.scss';
+
+.background {
+  width: 1440px;
+  height: 684px;
+  background-repeat: no-repeat;
+  background-position: 50% 101%;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper-login {
+    width: 380px;
+    height: 358px;
+  }
+}

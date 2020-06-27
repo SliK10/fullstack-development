@@ -2,7 +2,7 @@ extends ../../views/layout/main.pug
 include ../../components/search-room/search-room.pug
 include ../../components/registration-block/registration-block.pug
 include ../../components/to-book/to-book.pug
-include ../../components/block-sign-in/block-sign-in.pug
+include ../../components/login-block/login-block.pug
 include ../../components/hotel-room/hotel-room.pug
 
 block title
@@ -17,7 +17,7 @@ block content
       +registration({headline: "Регистрация аккаунта"})
     .page__cell
       +to-book
-      +sign-in
+      +login
     .page__cell-left
       .datepicker-here
       +hotel-room({url: '/assets/img/room-image1.png',numberNumeral: 888, priceNumber: '9 990₽',
