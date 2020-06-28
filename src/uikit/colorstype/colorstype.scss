@@ -10,8 +10,38 @@
   margin-bottom: 4.1875rem;
 }
 .page__cell {
-  margin-right: 191px;
+  margin-right: 11.9375rem;
   margin-left: 9.375rem;
   display: flex;
   justify-content: space-between;
+}
+
+@media (max-width: 1280px) {
+  .page__cell {
+    margin: 0 auto;
+    max-width: 922px;
+  }
+}
+@media (max-width: 950px) {
+  .page__cell {
+    margin: 0 15px;
+  }
+}
+@media (max-width: 800px) {
+
+  .page__cell {
+    max-width: 405px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    .rectangle__wrapper {
+      margin: 0 auto;
+    }
+  }
+}
+@media (max-width: 435px) {
+  .page__cell {
+    flex-wrap: wrap;
+    margin: 0 15px;
+  }
 }
