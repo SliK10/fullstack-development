@@ -1,52 +1,60 @@
-.rectangle__wrapper {
+.colors {
   font-size: 1.1875rem;
   line-height: 1.8125;
-  display: flex;
-}
-.rectangle-color {
-  .rectangle {
-    width: 4.375rem;
-    height: 4.375rem;
-    border-radius: 6px;
-    margin-bottom: 1.25rem;
-  }
-  &__dark100 {
-    @include dark100;
-  }
-  &__dark75 {
-    @include dark75;
-  }
-  &__dark50 {
-    @include dark50;
-  }
-  &__dark25 {
-    @include dark25;
-  }
-  &__dark5 {
-    @include dark5;
-  }
-  &__purple {
-    @include purple;
-  }
-  &__green {
-    @include green;
-  }
-}
-.rectangle-description {
-  margin-left: 2.5rem;
-  width: 160px;
-  .rectangle-text {
-    margin-bottom: 25px;
 
-    &__name {
-      margin: 0;
-      padding-top: 3px;
-      @include font-third;
+  &__rectangle {
+    display: flex;
+    margin-bottom: 20px;
+
+    .rectangle {
+      width: 4.375rem;
+      height: 4.375rem;
+      border-radius: 6px;
+      margin-right: 40px;
+
+      &__dark100 {
+        @include dark100;
+      }
+      &__dark75 {
+        @include dark75;
+      }
+      &__dark50 {
+        @include dark50;
+      }
+      &__dark25 {
+        @include dark25;
+      }
+      &__dark5 {
+        @include dark5;
+      }
+      &__purple {
+        @include purple;
+      }
+      &__green {
+        @include green;
+      }
     }
-    &__color {
-      line-height: 1.5;
-      margin: 0;
-      @include font-forth;
+
+    .description {
+      height: 57px;
+
+      &__text-name {
+        @include font-third;
+        padding-top: 4px;
+      }
+      &__text-color {
+        @include font-forth;
+        line-height: 1.3;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .rectangle-color {
+    .rectangle {
+      width: 3.375rem;
+      height: 3.375rem;
     }
   }
 }

@@ -1,4 +1,7 @@
 extends ../../views/layout/main.pug
+include ../../components/rectangle/rectangle.pug
+include ../../components/fontsize/fontsize.pug
+
 
 block title
   title Colors & Type
@@ -8,5 +11,12 @@ block content
     include ../../components/toxin-icon/toxin.pug
   .page__row
     .page__cell
-      include ../../components/rectangle/rectangle.pug
-      include ../../components/fontsize/fontsize.pug
+      +rectangle([['dark100', 'Dark Shade 100%', '#1F2041'],
+        ['dark75', 'Dark Shade 75%', '#1F2041'],
+        ['dark50', 'Dark Shade 50%', '#1F2041'],
+        ['dark25', 'Dark Shade 25%', '#1F2041'],
+        ['dark5', 'Dark Shade 5%', '#1F2041'],
+        ['purple', 'Purple', '#BC9CFF'],
+        ['green', 'Green', '#6FCF97']])
+
+      +font-size

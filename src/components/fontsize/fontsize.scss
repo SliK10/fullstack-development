@@ -1,57 +1,83 @@
-.font-size__wrapper {
-  width: 403.5px;
+.font-size {
+  max-width: 403.5px;
   display: flex;
   justify-content: space-between;
 }
-.font-size__headline {
-  text-align: right;
-  color:  rgba(31, 32, 65, 0.25);
-  .h1 {
-    font-size: 24px;
-    line-height: 29px;
-    margin-top: 0;
-    margin-bottom: 80px;
-  }
-  .h2 {
-    font-size: 1.1875rem;
-    line-height: 1.4375;
-    margin-bottom: 74px;
-  }
-  .h3 {
-    font-size: 0.75rem;
-    line-height: 0.9375;
-    margin-bottom: 50px;
-  }
-  .body {
-    font-size: 0.875rem;
-    line-height: 1.5;
-  }
-}
 .font-size__text {
-  margin-left: 31px;
   &-h1 {
     @include font-third;
-    font-size: 24px;
-    line-height: 30px;
-    margin-top: 0;
+    font-size: 1.5rem;
+    line-height: 1.857;
+    padding-left: 4.1875rem;
     margin-bottom: 50px;
+    position: relative;
+
+    &::before {
+      @include font-main;
+      color:  rgba(31, 32, 65, 0.25);
+      content: 'H1';
+      font-size: 1.5rem;
+      line-height: 1.8125;
+      margin-bottom: 50px;
+      position: absolute;
+      left: 10px;
+    }
   }
   &-h2 {
     @include font-third;
-    font-size: 19px;
-    line-height: 24px;
+    font-size: 1.1875rem;
+    line-height: 1.5;
+    padding-left: 4.1875rem;
     margin-bottom: 50px;
+    position: relative;
+
+    &::before {
+      @include font-main;
+      color:  rgba(31, 32, 65, 0.25);
+      content: 'H2';
+      font-size: 1.1875rem;
+      line-height: 1.4375;
+      margin-bottom: 50px;
+      position: absolute;
+      left: 10px;
+    }
   }
   &-h3 {
-    font-size: 12px;
-    line-height: 15px;
-    margin-bottom: 48px;
     @include font-two;
+    font-size: 0.75rem;
+    line-height: 0.9375;
+    margin-bottom: 48px;
+    padding-left: 4.1875rem;
+    position: relative;
+
+    &::before {
+      @include font-main;
+      color:  rgba(31, 32, 65, 0.25);
+      content: 'H3';
+      font-size: 0.75;
+      line-height: 0.9375;
+      margin-bottom: 50px;
+      position: absolute;
+      left: 21px;
+    }
   }
   &-body {
-    font-size: 14px;
-    line-height: 24px;
-    margin-top: 9px;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    padding-left: 4.1875rem;
+    position: relative;
     color: rgba(31, 32, 65, 0.75);
+
+
+    &::before {
+      @include font-main;
+      color:  rgba(31, 32, 65, 0.25);
+      content: 'Body';
+      font-size: 0.875rem;
+      line-height: 1.5;
+      margin-bottom: 50px;
+      position: absolute;
+      left: 0px;
+    }
   }
 }

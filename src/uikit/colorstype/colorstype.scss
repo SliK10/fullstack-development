@@ -13,6 +13,7 @@
   margin-right: 11.9375rem;
   margin-left: 9.375rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -22,26 +23,38 @@
     max-width: 922px;
   }
 }
-@media (max-width: 950px) {
+@media (max-width: 1024px) {
   .page__cell {
-    margin: 0 15px;
+    margin: 0 50px;
   }
 }
 @media (max-width: 800px) {
+  html {
+    font-size: 90%;
 
-  .page__cell {
-    max-width: 405px;
-    flex-wrap: wrap;
-    margin: 0 auto;
-
-    .rectangle__wrapper {
-      margin: 0 auto;
+    .page__cell {
+      display: block;
+      margin: 0 15px;
+    }
+    .colors {
+      max-width: 270px;
+    }
+    .colors,
+    .font-size {
+        margin: 0 auto;
     }
   }
+
 }
-@media (max-width: 435px) {
+
+@media (max-width: 320px) {
+  html {
+    font-size: 80%;
+  }
   .page__cell {
-    flex-wrap: wrap;
     margin: 0 15px;
+  }
+  .colors {
+    margin: 0 auto;
   }
 }
