@@ -12,6 +12,6 @@ let airdatepicker = $('.datepicker-here').datepicker({
   }
 }).data('datepicker')
 
-$('.date-dropdown__show-info').click(function() {
-  $('.datepicker-here').toggle();
-});
+// $('.date-dropdown__show-info').click(function() {
+//   $('.datepicker-here').toggle();
+// });

@@ -2,7 +2,7 @@ class DropdownGuests {
   constructor () {
     this.dropdownShowInfo = document.querySelector('.dropdown__show-info');
     this.dropdownAreaOfPlaceholder = document.querySelector('.dropdown__area-of-placeholder');
-    this.choiceGuests = document.querySelector('.panel-of-choice');
+    this.choiceGuests = document.querySelector('#choice-guests');
     this.outputAmountOfAdults = document.querySelector('.buttons-of-choice__amount-of-adults');
     this.outputAmountOfChildren = document.querySelector('.buttons-of-choice__amount-of-children');
     this.outputAmountOfBabyes = document.querySelector('.buttons-of-choice__amount-of-babyes');
@@ -26,25 +26,21 @@ class DropdownGuests {
     this.handlerOnTheButtons = true;
   }
   dropdownInit() {
-    this.dropdownShowInfo.addEventListener('click', this.showChoiceGuests.bind(this));
+    document.addEventListener('click', this.showChoiceGuests.bind(this));
   }
-  showChoiceGuests() {
-    if(this.choiceGuests.classList.contains('hide')) {
+  showChoiceGuests(e) {
+    if(this.choiceGuests.hidden && e.target.closest('.dropdown__show-info')) {
       this.dropdownShowInfo.classList.remove('dropdown__show-info')
       this.dropdownShowInfo.classList.add('dropdown__show-info_active')
-      this.choiceGuests.classList.remove('hide');
-      this.choiceGuests.classList.add('show');
 
       this.hideAndShowButtonClear();
       if (this.handlerOnTheButtons) {
         this.choiceGuests.addEventListener('click', this.listenerOfButtons.bind(this))
         this.handlerOnTheButtons = false;
       }
-    } else if (this.choiceGuests.classList.contains('show')) {
+    } else if (!this.choiceGuests.hidden && e.target.closest('.dropdown__show-info_active')) {
       this.dropdownShowInfo.classList.add('dropdown__show-info')
       this.dropdownShowInfo.classList.remove('dropdown__show-info_active')
-      this.choiceGuests.classList.remove('show');
-      this.choiceGuests.classList.add('hide');
     }
   }
 
@@ -138,7 +134,10 @@ class DropdownGuests {
       this.setMaxAmount(this.amountOfBabyes, this.buttonAddBabyes, 5);
     }
     if (target == 'button__apply') {
-      console.log('Применить')
+      this.choiceGuests.hidden = !this.choiceGuests.hidden
+
+      this.dropdownShowInfo.classList.add('dropdown__show-info')
+      this.dropdownShowInfo.classList.remove('dropdown__show-info_active')
     }
     this.hideAndShowButtonClear();
   }

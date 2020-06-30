@@ -9,12 +9,15 @@ $('.filter-date-airdatepicker').datepicker({
   dateFormat: 'dd M',
   onSelect: function(formattedDate, date, inst) {
     if (formattedDate) {
-    $('.filter-date-dropdown__area-of-placeholder').text(formattedDate)
-    } else {
-      $('.filter-date-dropdown__area-of-placeholder').text('19 авг - 23 авг')
+      $('.filter-date-dropdown__area-of-placeholder').text(formattedDate)
     }
   }
 }).data('datepicker')
-$('.filter-date-dropdown__show-info').click(function() {
-  $('.filter-date-airdatepicker').toggle();
+
+let datepicker = document.getElementById('air-datepicker-filter-date')
+
+datepicker.addEventListener('click', function(e) {
+  if (e.target.dataset.action === 'apply') {
+    datepicker.hidden = !datepicker.hidden
+  }
 })

@@ -7,8 +7,8 @@
 mixin filter-date-dropdown(options)
   .filter-date-dropdown
     p.filter-date-dropdown__label-name= options.label
-    .filter-date-dropdown__show-info
+    .filter-date-dropdown__show-info(data-toggle-id="air-datepicker-filter-date")
       .filter-date-dropdown__area-of-placeholder= options.placeholder
       .filter-date-dropdown__expand-more-wrapper
         span.material-icons keyboard_arrow_down
-    .filter-date-airdatepicker
+    .filter-date-airdatepicker#air-datepicker-filter-date(hidden)

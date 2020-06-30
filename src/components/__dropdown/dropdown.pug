@@ -4,11 +4,11 @@
 mixin dropdownGuests(options)
   .dropdown
     p.dropdown__label-name= options.label
-    .dropdown__show-info
+    .dropdown__show-info(data-toggle-id="choice-guests")
       .dropdown__area-of-placeholder= options.placeholder
       .dropdown__expand-more-wrapper
         span.material-icons keyboard_arrow_down
-    .panel-of-choice.hide
+    .panel-of-choice#choice-guests(hidden)
       .panel-of-choice__wrapper
         .panel-of-choice__label= options.firstGuestLabel
         .buttons-of-choice

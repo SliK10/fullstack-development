@@ -6,14 +6,16 @@ mixin date-dropdown(options)
   .date-dropdown
     .date-dropdown__wrapper
       p.date-dropdown__label-name= options.label_one
-      .date-dropdown__show-info
+      .date-dropdown__show-info(data-toggle-id="air-datepicker")
         .date-dropdown__area-of-placeholder.arrival= options.placeholder
         .date-dropdown__expand-more-wrapper
           span.material-icons keyboard_arrow_down
     .date-dropdown__wrapper
       p.date-dropdown__label-name= options.label_two
-      .date-dropdown__show-info
+      .date-dropdown__show-info(data-toggle-id="air-datepicker")
         .date-dropdown__area-of-placeholder.departure= options.placeholder
         .date-dropdown__expand-more-wrapper
           span.material-icons keyboard_arrow_down
-  .date-airdatepicker.datepicker-here(style="display: none")
+  .date-airdatepicker.datepicker-here#air-datepicker(hidden)
+
+  //- (style="display: none")
