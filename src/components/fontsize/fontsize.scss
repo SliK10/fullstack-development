@@ -7,9 +7,9 @@
   &-h1 {
     @include font-third;
     font-size: 1.5rem;
-    line-height: 1.857;
+    line-height: 1.25;
     padding-left: 4.1875rem;
-    margin-bottom: 50px;
+    margin-bottom: 51px;
     position: relative;
 
     &::before {
@@ -17,8 +17,7 @@
       color:  rgba(31, 32, 65, 0.25);
       content: 'H1';
       font-size: 1.5rem;
-      line-height: 1.8125;
-      margin-bottom: 50px;
+      line-height: 1.2;
       position: absolute;
       left: 10px;
     }
@@ -26,9 +25,9 @@
   &-h2 {
     @include font-third;
     font-size: 1.1875rem;
-    line-height: 1.5;
+    line-height: 1.263;
     padding-left: 4.1875rem;
-    margin-bottom: 50px;
+    margin-bottom: 51px;
     position: relative;
 
     &::before {
@@ -36,8 +35,7 @@
       color:  rgba(31, 32, 65, 0.25);
       content: 'H2';
       font-size: 1.1875rem;
-      line-height: 1.4375;
-      margin-bottom: 50px;
+      line-height: 1.210;
       position: absolute;
       left: 10px;
     }
@@ -45,7 +43,7 @@
   &-h3 {
     @include font-two;
     font-size: 0.75rem;
-    line-height: 0.9375;
+    line-height: 1.25;
     margin-bottom: 48px;
     padding-left: 4.1875rem;
     position: relative;
@@ -55,15 +53,14 @@
       color:  rgba(31, 32, 65, 0.25);
       content: 'H3';
       font-size: 0.75;
-      line-height: 0.9375;
-      margin-bottom: 50px;
+      line-height: 1.25;
       position: absolute;
       left: 21px;
     }
   }
   &-body {
     font-size: 0.875rem;
-    line-height: 1.5;
+    line-height: 1.714;
     padding-left: 4.1875rem;
     position: relative;
     color: rgba(31, 32, 65, 0.75);
@@ -74,8 +71,7 @@
       color:  rgba(31, 32, 65, 0.25);
       content: 'Body';
       font-size: 0.875rem;
-      line-height: 1.5;
-      margin-bottom: 50px;
+      line-height: 1.714;
       position: absolute;
       left: 0px;
     }

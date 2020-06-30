@@ -37,11 +37,14 @@
       margin: 0 15px;
     }
     .colors {
-      max-width: 270px;
+      max-width: 240px;
     }
     .colors,
     .font-size {
         margin: 0 auto;
+    }
+    .colors__rectangle .rectangle {
+      margin-right: 30px;
     }
   }
 
@@ -50,11 +53,17 @@
 @media (max-width: 320px) {
   html {
     font-size: 80%;
+
+    .page__cell {
+      margin: 0 15px;
+    }
+    .colors {
+      max-width: 210px;
+      margin: 0 auto;
+    }
+    .colors__rectangle .rectangle {
+      margin-right: 20px;
+    }
   }
-  .page__cell {
-    margin: 0 15px;
-  }
-  .colors {
-    margin: 0 auto;
-  }
+
 }
