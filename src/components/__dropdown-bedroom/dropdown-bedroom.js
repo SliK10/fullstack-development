@@ -2,7 +2,7 @@ class DropdownBedroom {
   constructor () {
     this.dropdownShowInfo = document.querySelector('.dropdown-bedroom__show-info');
     this.dropdownAreaOfPlaceholder = document.querySelector('.dropdown-bedroom__area-of-placeholder');
-    this.choiceBedrooms = document.querySelector('.dropdown-bedroom__panel-of-choice');
+    this.choiceBedrooms = document.querySelector('#choice-bedrooms');
     this.outputAmountOfBedrooms = document.querySelector('.buttons-of-choice__amount-of-bedrooms');
     this.outputAmountOfBeds = document.querySelector('.buttons-of-choice__amount-of-beds');
     this.outputAmountOfBathrooms = document.querySelector('.buttons-of-choice__amount-of-bathrooms');
@@ -23,24 +23,18 @@ class DropdownBedroom {
     this.handlerOnTheButtons = true;
   }
   dropdownInit() {
-    this.dropdownShowInfo.addEventListener('click', this.showChoiceBedrooms.bind(this));
+    document.addEventListener('click', this.showChoiceBedrooms.bind(this));
   }
-  showChoiceBedrooms() {
-    if(this.choiceBedrooms.classList.contains('hide')) {
-      this.dropdownShowInfo.classList.remove('dropdown-bedroom__show-info')
-      this.dropdownShowInfo.classList.add('dropdown-bedroom__show-info_active')
-      this.choiceBedrooms.classList.remove('hide');
-      this.choiceBedrooms.classList.add('show');
+  showChoiceBedrooms(e) {
+    if(!this.choiceBedrooms.hidden) {
+      this.dropdownShowInfo.classList.add('active')
 
       if (this.handlerOnTheButtons) {
         this.choiceBedrooms.addEventListener('click', this.listenerOfButtons.bind(this))
         this.handlerOnTheButtons = false;
       }
-    } else if (this.choiceBedrooms.classList.contains('show')) {
-      this.dropdownShowInfo.classList.add('dropdown-bedroom__show-info')
-      this.dropdownShowInfo.classList.remove('dropdown-bedroom__show-info_active')
-      this.choiceBedrooms.classList.remove('show');
-      this.choiceBedrooms.classList.add('hide');
+    } else if (this.choiceBedrooms.hidden) {
+      this.dropdownShowInfo.classList.remove('active')
     }
   }
 

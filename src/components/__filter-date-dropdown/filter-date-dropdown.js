@@ -20,4 +20,7 @@ datepicker.addEventListener('click', function(e) {
   if (e.target.dataset.action === 'apply') {
     datepicker.hidden = !datepicker.hidden
   }
+  if (e.target.dataset.action === 'clear') {
+    document.querySelector('.filter-date-dropdown__area-of-placeholder').innerHTML = 'Выбрать дату';
+  }
 })

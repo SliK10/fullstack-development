@@ -601,18 +601,7 @@
         },
         /* Добавил кнопку применить */
         apply: function () {
-            console.log(this.selectedDates)
-            console.log(this.maxRange)
-            console.log(this.minRange)
 
-            this.selectedDates = [];
-            this.minRange = '';
-            this.maxRange = '';
-            this.views[this.currentView]._render();
-            this._setInputValue();
-            if (this.opts.onSelect) {
-                this._triggerOnChange()
-            }
         },
 
         /**

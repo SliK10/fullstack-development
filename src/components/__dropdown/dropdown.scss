@@ -43,7 +43,7 @@
       }
     }
   }
-  &__show-info_active {
+  &__show-info.active {
     @include font-main;
     font-size: 14px;
     line-height: 25px;

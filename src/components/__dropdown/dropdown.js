@@ -29,18 +29,18 @@ class DropdownGuests {
     document.addEventListener('click', this.showChoiceGuests.bind(this));
   }
   showChoiceGuests(e) {
-    if(this.choiceGuests.hidden && e.target.closest('.dropdown__show-info')) {
-      this.dropdownShowInfo.classList.remove('dropdown__show-info')
-      this.dropdownShowInfo.classList.add('dropdown__show-info_active')
+
+    if (!this.choiceGuests.hidden) {
+      this.dropdownShowInfo.classList.add('active');
 
       this.hideAndShowButtonClear();
       if (this.handlerOnTheButtons) {
-        this.choiceGuests.addEventListener('click', this.listenerOfButtons.bind(this))
+        this.choiceGuests.addEventListener('click', this.listenerOfButtons.bind(this));
         this.handlerOnTheButtons = false;
       }
-    } else if (!this.choiceGuests.hidden && e.target.closest('.dropdown__show-info_active')) {
-      this.dropdownShowInfo.classList.add('dropdown__show-info')
-      this.dropdownShowInfo.classList.remove('dropdown__show-info_active')
+    } else if (this.choiceGuests.hidden) {
+
+      this.dropdownShowInfo.classList.remove('active');
     }
   }
 
@@ -134,10 +134,9 @@ class DropdownGuests {
       this.setMaxAmount(this.amountOfBabyes, this.buttonAddBabyes, 5);
     }
     if (target == 'button__apply') {
-      this.choiceGuests.hidden = !this.choiceGuests.hidden
+      this.choiceGuests.hidden = true;
 
-      this.dropdownShowInfo.classList.add('dropdown__show-info')
-      this.dropdownShowInfo.classList.remove('dropdown__show-info_active')
+      this.dropdownShowInfo.classList.remove('active')
     }
     this.hideAndShowButtonClear();
   }

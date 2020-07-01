@@ -5,11 +5,11 @@ mixin dropdownBedroom(options)
   .dropdown-bedroom
     .dropdown-bedroom__wrapper
       p.dropdown-bedroom__label-name= options.label
-      .dropdown-bedroom__show-info
+      .dropdown-bedroom__show-info(data-toggle-id="choice-bedrooms")
         .dropdown-bedroom__area-of-placeholder= options.placeholder
         .dropdown-bedroom__expand-more-wrapper
           span.material-icons keyboard_arrow_down
-      .dropdown-bedroom__panel-of-choice.hide
+      .dropdown-bedroom__panel-of-choice#choice-bedrooms(hidden)
         .dropdown-bedroom__panel-of-choice__wrapper
           .dropdown-bedroom__panel-of-choice__label= options.amountOfBedrooms
           .buttons-of-choice

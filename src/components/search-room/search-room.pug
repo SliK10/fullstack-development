@@ -14,4 +14,4 @@ mixin searchRoom(options)
     .search-room__dropdown
       +dropdownGuests({label: 'гости', placeholder: 'Сколько гостей', firstGuestLabel: 'взрослые', secondGuestLabel: 'дети', thirdGuestLabel: 'младенцы' , applyAndCancel: true})
     .search-room__button
-      +button({buttonType: 'button', buttonColorClass: 'button__long', name: 'подобрать номер'})
+      +button({buttonType: 'button', buttonColorClass: 'button__long', name: 'подобрать номер', dataRole: 'search-room'})
