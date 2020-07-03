@@ -1,13 +1,13 @@
 .date-dropdown {
   display: flex;
   justify-content: space-between;
-  width: 320px;
+  max-width: 320px;
   margin-bottom: 5px;
 }
 .date-dropdown__label-name {
 @include font-two;
-font-size: 12px;
-line-height: 14px;
+font-size: 0.75rem;
+line-height: 1.16;
 margin: 0;
 text-transform: uppercase;
 }
@@ -15,32 +15,32 @@ text-transform: uppercase;
 border: 1px solid rgba(31, 32, 65, 0.25);
 border-radius: 4px;
 @include font-main;
-font-size: 14px;
-line-height: 26.3px;
+font-size: 0.875rem;
+line-height: 1.857;
 padding-left: 14px;
-width: 150px;
+max-width: 150px;
 height: 44px;
 margin-top: 5px;
 display: flex;
 cursor: pointer;
 
   .date-dropdown__area-of-placeholder {
-    width: 93px;
+    max-width: 93px;
     height: 41px;
     color: rgba(31, 32, 65, 0.75);
     border: none;
     line-height: 40px;
   }
   .date-dropdown__expand-more-wrapper {
-    width: 44px;
+    max-width: 44px;
     height: 44px;
     text-align: center;
     & span.material-icons {
-      width: 44px;
+      max-width: 44px;
       height: 44px;
       @include Material-Icons;
-      font-size: 24px;
-      line-height: 24px;
+      font-size: 1.5rem;
+      line-height: 1;
       color: rgba(31, 32, 65, 0.5);
       padding-left: 11px;
     }
@@ -48,4 +48,10 @@ cursor: pointer;
 }
 .date-airdatepicker {
   position: absolute;
+}
+
+@media (max-width: 320px) {
+  .datepicker {
+    max-width: 320px;
+  }
 }

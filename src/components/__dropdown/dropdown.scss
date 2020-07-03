@@ -5,26 +5,25 @@
   .panel-of-choice__label
   {
     @include font-two;
-    font-size: 12px;
-    line-height: 14px;
-    margin: 0;
+    font-size: 0.75rem;
+    line-height: 1;
+    margin: 0 0 5px;
     text-transform: uppercase;
   }
   &__show-info {
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
     @include font-main;
-    font-size: 14px;
-    line-height: 25px;
+    font-size: 0.875rem;
+    line-height: 1.785;
     padding-left: 15px;
     max-width: 320px;
     height: 44px;
-    margin-top: 4px;
     display: flex;
+    justify-content: space-between;
     cursor: pointer;
 
     .dropdown__area-of-placeholder {
-      width: 276px;
       height: 44px;
       line-height: 42px;
       color: rgba(31, 32, 65, 0.75);
@@ -104,7 +103,7 @@
     margin-top: 12px;
   }
   .panel-of-choice__label {
-    line-height: 28px;
+    line-height: 1.75;
   }
   .buttons-of-choice {
     display: inline-flex;
@@ -168,4 +167,8 @@
       color: #bc9cff;
     }
   }
+}
+
+@media (max-width: 400px) {
+
 }
