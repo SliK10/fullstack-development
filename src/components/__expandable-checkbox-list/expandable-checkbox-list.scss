@@ -42,8 +42,8 @@
   &__name {
     @include font-two;
     color: #1F2041;
-    font-size: 12px;
-    line-height: 44px;
+    font-size: 0.75rem;
+    line-height: 3.6667;
     text-transform: uppercase;
   }
 
@@ -60,8 +60,8 @@
   box-sizing: border-box;
   height: 20px;
   @include font-main;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.5714;
   color: rgba(31, 32, 65, 0.5);
   margin-bottom: 10px;
 }
@@ -91,5 +91,12 @@
   &:checked+label::before {
     border-color: #BC9CFF;
     background-image: url("/assets/img/vector.svg");
+  }
+}
+
+@media (max-width: 400px) {
+  .expandable-checkbox-list__expand-more span.material-icons,
+  .expandable-checkbox-list__select_active .expandable-checkbox-list__expand-more span.material-icons {
+    height: 36px;
   }
 }

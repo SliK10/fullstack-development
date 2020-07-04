@@ -4,22 +4,22 @@
 
   &__label {
     @include font-two;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 1.25;
     text-transform: uppercase;
     color: #1F2041;
     margin-bottom: 16px;
   }
   &__item {
     @include font-two;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 0.875rem;
+    line-height: 1.2857;
     color: rgba(31, 32, 65, 0.75);
   }
   &__item p {
     @include font-main;
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 0.75rem;
+    line-height: 1.1667;
     color: rgba(31, 32, 65, 0.5);
     margin: 1px 0 9px 30px;
   }

@@ -3,8 +3,8 @@
 
   &__label {
     @include font-two;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 1.25;
     text-transform: uppercase;
     color: #1F2041;
   }
@@ -18,8 +18,8 @@
       text-align: center;
       padding-top: 12px;
       @include font-main;
-      font-size: 12px;
-      line-height: 15px;
+      font-size: 0.75rem;
+      line-height: 1.25;
       color: rgba(31, 32, 65, 0.5);;
     }
     & a.active {
@@ -39,8 +39,8 @@
   &__description {
     margin-top: 7px;
     @include font-main;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 0.875rem;
+    line-height: 1.7143;
     text-align: center;
     color: rgba(31, 32, 65, 0.75);
   }

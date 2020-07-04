@@ -4,15 +4,15 @@
 
   &__label {
     @include font-two;
-    font-size: 12px;
-    line-height: 22px;
+    font-size: 0.75rem;
+    line-height: 1.8333;
     text-transform: uppercase;
     margin-bottom: 9px;
   }
   &__items {
     @include font-main;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 0.875rem;
+    line-height: 1.7143;
     color: rgba(31, 32, 65, 0.75);
     & form {
       display: flex;

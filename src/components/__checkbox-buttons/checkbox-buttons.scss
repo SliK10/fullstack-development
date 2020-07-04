@@ -4,8 +4,8 @@
   &__name {
     @include font-two;
     color: #1F2041;
-    font-size: 12px;
-    line-height: 19px;
+    font-size: 0.75rem;
+    line-height: 1.5833;
     text-transform: uppercase;
     margin-bottom: 14px;
   }
@@ -15,8 +15,8 @@
     box-sizing: border-box;
     height: 20px;
     @include font-main;
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.5714;
     color: rgba(31, 32, 65, 0.5);
     margin-bottom: 10px;
   }

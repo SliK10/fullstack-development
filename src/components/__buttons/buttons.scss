@@ -1,8 +1,8 @@
 .button {
   &__label {
     @include font-two;
-    font-size: 12px;
-    line-height: 22px;
+    font-size: 0.75rem;
+    line-height: 1.8333;
     text-transform: uppercase;
     color: #1F2041;
     margin-bottom: 12px;
@@ -11,8 +11,8 @@
     width: 99px;
     height: 44px;
     @include font-two;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 1.25;
     text-transform: uppercase;
     border-radius: 22px;
     cursor: pointer;
@@ -68,8 +68,10 @@
     justify-content: space-between;
     align-items: center;
     & .button__name {
-      padding-left: 89px;
+      padding-left: 25px;
+      width: 100%;
       line-height: 18px;
+      text-align: center;
     }
     & svg {
       margin-right: 7px;
@@ -77,8 +79,8 @@
   }
   &__link {
     @include font-two;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 1.25;
     text-transform: uppercase;
     color: #BC9CFF;
     text-decoration: none;
@@ -86,5 +88,11 @@
     &:hover {
       color: rgba(31, 32, 65, 0.5);
     }
+  }
+}
+
+@media (max-width: 400px) {
+  .button__long {
+    max-width: 100%;
   }
 }

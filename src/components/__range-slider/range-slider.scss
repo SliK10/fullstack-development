@@ -11,15 +11,15 @@
 
   &__name {
     @include font-two;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.6667;
     text-transform: uppercase;
     color: #1F2041;
   }
   &__from-to {
     @include font-main;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 0.75rem;
+    line-height: 1.6667;
     color: rgba(31, 32, 65, 0.5);
   }
   &__slider input{

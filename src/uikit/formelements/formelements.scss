@@ -81,7 +81,7 @@
   margin-bottom: 40px;
 }
 .subscription-text-field__wrapper {
-  margin-bottom: 102px;
+  margin-bottom: 100px;
 }
 .dropdown-bedroom-wrapper {
   margin-bottom: 242px;
@@ -99,7 +99,7 @@
   margin-bottom: 40px;
 }
 .rate-button-wrapper {
-  margin-bottom: 517px;
+  margin-bottom: 519px;
 }
 .range-slider-wrapper {
   max-width: 320px;
@@ -171,7 +171,7 @@
   .page__cell-three,
   .page__cell-four,
   .page__cell-five {
-    margin: 0 15px;
+    margin: 0 15px 40px;
   }
   .page__cell-three {
     display: flex;
@@ -219,8 +219,8 @@
     margin: 0 15px;
   }
 }
-// @media (max-width: 400px) {
-//   .text-field .form__input {
-//     width: 290px;
-//   }
-// }
+@media (max-width: 400px) {
+  .expandable-checkbox-list-wrapper {
+    margin-bottom: 40px;
+  }
+}

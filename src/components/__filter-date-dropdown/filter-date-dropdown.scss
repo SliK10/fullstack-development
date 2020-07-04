@@ -2,8 +2,8 @@
 
 .filter-date-dropdown__label-name {
   @include font-two;
-  font-size: 12px;
-  line-height: 15px;
+  font-size: 0.75rem;
+  line-height: 1.25;
   margin: 0;
   text-transform: uppercase;
   }
@@ -11,7 +11,7 @@
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   @include font-main;
-  font-size: 14px;
+  font-size: 0.875rem;
   padding-left: 14px;
   width: 266px;
   height: 44px;
@@ -44,6 +44,21 @@
 
 .filter-date-airdatepicker {
   margin-top: 5px;
-  // display: none;
   position: absolute;
+}
+
+@media (max-width: 400px) {
+  .filter-date-dropdown {
+    position: relative;
+
+    .filter-date-airdatepicker {
+      max-width: 320px;
+      left: 0;
+      right: 0;
+
+      .datepicker {
+        width: 100%;
+      }
+    }
+  }
 }
