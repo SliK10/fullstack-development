@@ -24,4 +24,9 @@ dateDropdownDatepicker.addEventListener('click', function(e) {
   if (e.target.dataset.action === 'apply' && e.target.closest('#air-datepicker')) {
     dateDropdownDatepicker.hidden = !dateDropdownDatepicker.hidden
   }
+  if (e.target.dataset.action === 'clear') {
+
+    document.querySelector('.arrival').innerHTML = 'ДД.ММ.ГГГГ';
+    document.querySelector('.departure').innerHTML = 'ДД.ММ.ГГГГ';
+  }
 })

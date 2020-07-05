@@ -1,5 +1,6 @@
 const path = require('path')
 const fs = require('fs')
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -18,7 +19,7 @@ const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.p
 module.exports = {
   externals: {
     paths: PATHS,
-    jquery: 'jQuery'
+    // jquery: 'jQuery'
   },
   entry: {
     app: PATHS.src,
@@ -166,14 +167,20 @@ module.exports = {
       filename: './pages/login.html',
       inject: true
     }),
-    new HtmlWebpackExternalsPlugin({
-      externals: [
-        {
-          module: 'jquery',
-          entry: 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',
-          global: 'jQuery',
-        }
-      ]
+    new webpack.ProvidePlugin({
+      '$': 'jquery',
+      'jQuery': 'jquery',
+      'window.jQuery': 'jquery',
     }),
+
+    // new HtmlWebpackExternalsPlugin({
+    //   externals: [
+    //     {
+    //       module: 'jquery',
+    //       entry: 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',
+    //       global: 'jQuery',
+    //     }
+    //   ]
+    // }),
   ]
 }

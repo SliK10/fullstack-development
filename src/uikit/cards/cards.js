@@ -1,5 +1,7 @@
 import './cards.scss'
+import '../../components/toggler'
 import '../../components/search-room/search-room'
 import '../../components/registration-block/registration-block'
+import '../../components/to-book/to-book'
 import '../../components/__air-datepicker/js/datepicker'
 import '../../components/hotel-room/hotel-room'

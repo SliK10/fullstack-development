@@ -1,18 +1,18 @@
 .button {
   &__label {
     @include font-two;
-    font-size: 12px;
-    line-height: 22px;
+    font-size: 0.75rem;
+    line-height: 1.8333;
     text-transform: uppercase;
     color: #1F2041;
     margin-bottom: 12px;
   }
   & button {
-    // width: 99px;
-    // height: 44px;
+    width: 99px;
+    height: 44px;
     @include font-two;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 1.25;
     text-transform: uppercase;
     border-radius: 22px;
     cursor: pointer;
@@ -31,8 +31,8 @@
 
     position: relative;
     box-sizing: border-box;
-    // width: 99px;
-    // height: 44px;
+    width: 99px;
+    height: 44px;
     border: 1px solid transparent;
     border-radius: 22px;
     &::before {
@@ -45,8 +45,8 @@
       background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     }
     .button__border {
-      // width: 95px;
-      // height: 40px;
+      width: 95px;
+      height: 40px;
       background-color: #fff;
       border: 2px solid transparent;
       border-radius: 22px;
@@ -65,13 +65,13 @@
     border-radius: 22px;
     color: #fff;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     & .button__name {
-      width: 270px;
-      text-align: center;
-      padding-left: 37px;
+      padding-left: 25px;
+      width: 100%;
       line-height: 18px;
+      text-align: center;
     }
     & svg {
       margin-right: 7px;
@@ -79,8 +79,8 @@
   }
   &__link {
     @include font-two;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 0.75rem;
+    line-height: 1.25;
     text-transform: uppercase;
     color: #BC9CFF;
     text-decoration: none;
@@ -88,5 +88,11 @@
     &:hover {
       color: rgba(31, 32, 65, 0.5);
     }
+  }
+}
+
+@media (max-width: 400px) {
+  .button__long {
+    max-width: 100%;
   }
 }

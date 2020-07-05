@@ -3,32 +3,31 @@
   {label: <text>, placeholder: <text>, firstGuestLabel: <text>, secondGuestLabel: <text>, thirdGuestLabel: <text> , applyAndCancel: true/false}
 mixin dropdownGuests(options)
   .dropdown
-    .dropdown__wrapper
-      p.dropdown__label-name= options.label
-      .dropdown__show-info
-        .dropdown__area-of-placeholder= options.placeholder
-        .dropdown__expand-more-wrapper
-          span.material-icons keyboard_arrow_down
-      .panel-of-choice.hide
-        .panel-of-choice__wrapper
-          .panel-of-choice__label= options.firstGuestLabel
-          .buttons-of-choice
-            button.button__remove-adults(type="button" disabled) -
-            .buttons-of-choice__amount-of-adults 0
-            button.button__add-adults(type="button") +
-        .panel-of-choice__wrapper
-          .panel-of-choice__label= options.secondGuestLabel
-          .buttons-of-choice
-            button.button__remove-children(type="button" disabled) -
-            .buttons-of-choice__amount-of-children 0
-            button.button__add-children(type="button") +
-        .panel-of-choice__wrapper
-          .panel-of-choice__label= options.thirdGuestLabel
-          .buttons-of-choice
-            button.button__remove-babyes(type="button" disabled) -
-            .buttons-of-choice__amount-of-babyes 0
-            button.button__add-babyes(type="button") +
-        if (options.applyAndCancel)
-          .panel-of-choice__wrapper-apply-and-cancel
-            button.button__clear(type="button") очистить
-            button.button__apply(type="button") применить
+    p.dropdown__label-name= options.label
+    .dropdown__show-info(data-toggle-id="choice-guests")
+      .dropdown__area-of-placeholder= options.placeholder
+      .dropdown__expand-more-wrapper
+        span.material-icons keyboard_arrow_down
+    .panel-of-choice#choice-guests(hidden)
+      .panel-of-choice__wrapper
+        .panel-of-choice__label= options.firstGuestLabel
+        .buttons-of-choice
+          button.button__remove-adults(type="button" disabled) -
+          .buttons-of-choice__amount-of-adults 0
+          button.button__add-adults(type="button") +
+      .panel-of-choice__wrapper
+        .panel-of-choice__label= options.secondGuestLabel
+        .buttons-of-choice
+          button.button__remove-children(type="button" disabled) -
+          .buttons-of-choice__amount-of-children 0
+          button.button__add-children(type="button") +
+      .panel-of-choice__wrapper
+        .panel-of-choice__label= options.thirdGuestLabel
+        .buttons-of-choice
+          button.button__remove-babyes(type="button" disabled) -
+          .buttons-of-choice__amount-of-babyes 0
+          button.button__add-babyes(type="button") +
+      if (options.applyAndCancel)
+        .panel-of-choice__wrapper-apply-and-cancel
+          button.button__clear(type="button") очистить
+          button.button__apply(type="button") применить

@@ -1,33 +1,39 @@
-@import './__air-datepicker/scss/datepicker.scss';
-
 .date-dropdown {
-  display: flex;
-  justify-content: space-between;
-  width: 320px;
-  margin-bottom: 5px;
+
+  max-width: 320px;
+
+
+  &__wrapper-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  &__wrapper-datepicker {
+    position: relative;
+  }
 }
 .date-dropdown__label-name {
-@include font-two;
-font-size: 12px;
-line-height: 14px;
-margin: 0;
-text-transform: uppercase;
+  @include font-two;
+  font-size: 0.75rem;
+  line-height: 1.16;
+  margin: 0;
+  text-transform: uppercase;
 }
 .date-dropdown__show-info {
-border: 1px solid rgba(31, 32, 65, 0.25);
-border-radius: 4px;
-@include font-main;
-font-size: 14px;
-line-height: 26.3px;
-padding-left: 14px;
-width: 150px;
-height: 44px;
-margin-top: 5px;
-display: flex;
-cursor: pointer;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  @include font-main;
+  font-size: 0.875rem;
+  line-height: 1.857;
+  padding-left: 14px;
+  max-width: 150px;
+  height: 44px;
+  margin-top: 5px;
+  display: flex;
+  cursor: pointer;
 
   .date-dropdown__area-of-placeholder {
-    width: 93px;
+    width: 90px;
     height: 41px;
     color: rgba(31, 32, 65, 0.75);
     border: none;
@@ -38,11 +44,11 @@ cursor: pointer;
     height: 44px;
     text-align: center;
     & span.material-icons {
-      width: 44px;
+      max-width: 44px;
       height: 44px;
       @include Material-Icons;
-      font-size: 24px;
-      line-height: 24px;
+      font-size: 1.5rem;
+      line-height: 1;
       color: rgba(31, 32, 65, 0.5);
       padding-left: 11px;
     }
@@ -50,4 +56,25 @@ cursor: pointer;
 }
 .date-airdatepicker {
   position: absolute;
+}
+
+
+
+@media (max-width: 400px) {
+  .date-dropdown {
+    .date-dropdown__show-info {
+      .date-dropdown__area-of-placeholder {
+        width: 80px;
+        text-align: center;
+      }
+    }
+    .date-airdatepicker {
+      width: 100%;
+      .datepicker-inline {
+        .datepicker {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
