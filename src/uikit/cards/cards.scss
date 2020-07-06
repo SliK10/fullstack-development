@@ -10,21 +10,26 @@
 @import '../../components/__air-datepicker/scss/datepicker.scss';
 @import '../../components/hotel-room/hotel-room.scss';
 
+.page {
+  background-color: #E5E5E5;
+}
 .page__row-header{
   background: #E5E5E5;
   padding-top: 1.875rem;
   padding-left: 1.875rem;
+  margin-bottom: 72px;
 
 }
 .page__row {
   display: flex;
-  justify-content: space-between;
-  padding: 72px 140px;
+  justify-content: center;
+  flex-wrap: wrap;
   background: #E5E5E5;
 }
 .page__cell {
   width: 380px;
-  &-left {
+  margin: 0 20px;
+  &.left {
     width: 320px;
     .datepicker-here {
       margin-bottom: 40px;
@@ -35,5 +40,60 @@
   }
   .to-book {
     margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .page__row {
+    margin: 0 15px;
+  }
+  .page__cell {
+    margin: 0 auto 40px;
+  }
+}
+
+@media (max-width: 1166px) {
+  .page__row {
+    margin: 0 auto;
+    justify-content: space-around;
+  }
+  .page__cell {
+    margin: 0 10px 40px;
+
+    &.left {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 800px) {
+  html {
+    font-size: 90%;
+  }
+  .page__cell {
+    max-width: 100%;
+    margin: 0 15px 40px;
+
+    &.left {
+      display: block;
+      max-width: 100%;
+
+      .datepicker-here {
+        margin: 0 auto 40px;
+        max-width: 320px;
+      }
+
+      .hotel-room {
+        margin: 0 auto 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .page__cell {
+    margin: 0 auto 40px;
   }
 }
