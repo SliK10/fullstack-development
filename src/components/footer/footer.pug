@@ -31,16 +31,16 @@ mixin footer(options, blocks_links, subscription, copiright)
           .logo__icon(style="background-image: url("+options.logoIconUrl+");")
           .logo__name(style="background-image: url("+options.logoTextUrl+");")
         .description= options.logoDescription
-
-      if(blocks_links)
-        each i in blocks_links
-          ul.block-links
-            each a in i
-              if(a === i[0])
-                .block-links__item-headline= a
-              else
-                .block-links__item
-                  a(href=""+a.links+"")= a.name
+      .block-for-links
+        if(blocks_links)
+          each i in blocks_links
+            ul.block-links
+              each a in i
+                if(a === i[0])
+                  .block-links__item-headline= a
+                else
+                  .block-links__item
+                    a(href=""+a.links+"")= a.name
       .subscription
         .subscription__headline= subscription.name
         .subscription__description= subscription.description
@@ -50,12 +50,14 @@ mixin footer(options, blocks_links, subscription, copiright)
             labelFor: subscription.options.labelFor,
             id: subscription.options.id,
             inputPlaceholder: subscription.options.inputPlaceholder})
+    .underline
     .copiright-bar
-      .copiright-bar__copiright= copiright.text
-      .copiright-bar__sprites
-        .social-network
-          a(href="#") &#xf099;
-        .social-network
-          a(href="#") &#xf082;
-        .social-network
-          a(href="#") &#xf16d;
+      .copiright-bar__wrapper
+        .copiright-bar__copiright= copiright.text
+        .copiright-bar__sprites
+          .social-network
+            a(href="#") &#xf099;
+          .social-network
+            a(href="#") &#xf082;
+          .social-network
+            a(href="#") &#xf16d;
