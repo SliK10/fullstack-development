@@ -3,7 +3,7 @@
 @import './__buttons/buttons.scss';
 
 .to-book {
-  width: 380px;
+  max-width: 380px;
   height: 511px;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.12);
@@ -12,7 +12,7 @@
   border-radius: 4px;
 
   &__number-and-price {
-    width: 320px;
+    max-width: 320px;
     height: 30px;
     margin: 40px auto 20px;
     display: flex;
@@ -20,19 +20,19 @@
 
     & .number {
       @include font-third;
-      font-size: 14px;
+      font-size: 0.875rem;
       color: #1F2041;
 
       &__numeral {
-        font-size: 24px;
+        font-size: 1.5rem;
         margin-left: 7px;
-        line-height: 28px;
+        line-height: 1.12;
       }
       &__class {
         margin-left: 6px;
         @include font-two;
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 0.75rem;
+        line-height: 1.25;
         text-transform: uppercase;
         color: #BC9CFF;
       }
@@ -42,19 +42,19 @@
       color: rgba(31, 32, 65, 0.5);
       &__number {
         @include font-two;
-        font-size: 14px;
-        line-height: 36px;
+        font-size: 0.875rem;
+        line-height: 2.5714;
       }
       &__day {
         @include font-main;
-        font-size: 12px;
+        font-size: 0.75;
         margin-left: 4px;
       }
     }
   }
   .residence,
   .guests {
-    width: 320px;
+    max-width: 320px;
     height: 65px;
     margin: 0 auto 20px;
   }
@@ -62,10 +62,10 @@
     margin-bottom: 20px;
   }
   .information {
-    width: 320px;
+    max-width: 320px;
     margin: 0 auto 30px;
-    font-size: 14px;
-    line-height: 15px;
+    font-size: 0.875rem;
+    line-height: 1.0714;
     color: rgba(31, 32, 65, 0.75);
     padding-left: 1px;
     &__item {
@@ -91,6 +91,8 @@
     }
     .info-sprite {
       @include font-two;
+      font-size: 0.75rem;
+      line-height: 1.5833;
       width: 20px;
       height: 20px;
       margin-left: 5px;
@@ -98,24 +100,22 @@
       border-radius: 50%;
       box-sizing: border-box;
       text-align: center;
-      font-size: 12px;
-      line-height: 19px;
       color: rgba(31, 32, 65, 0.25);
     }
   }
   .total {
-    width: 320px;
+    max-width: 320px;
     margin: 0 auto 20px;
     display: flex;
     justify-content: space-between;
     @include h1;
-    font-size: 19px;
-    line-height: 24px;
+    font-size: 1.1875rem;
+    line-height: 1.2632;
     &__text {
       margin-left: 1px;
     }
     &__line {
-      width: 182px;
+      max-width: 182px;
       border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
       margin-bottom: 5px;
     }
@@ -124,7 +124,14 @@
     }
   }
   .button-reserve {
-    width: 320px;
+    max-width: 320px;
     margin: 0 auto 29px;
+  }
+}
+
+@media (max-width: 400px) {
+  .to-book {
+    padding: 0 10px;
+    margin: 0 5px;
   }
 }

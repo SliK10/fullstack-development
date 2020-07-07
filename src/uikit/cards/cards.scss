@@ -95,5 +95,14 @@
 @media (max-width: 400px) {
   .page__cell {
     margin: 0 auto 40px;
+
+    &.left {
+      .datepicker-here {
+        margin: 0 5px;
+        .datepicker {
+          width: 100%;
+        }
+      }
+    }
   }
 }

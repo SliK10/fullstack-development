@@ -3,13 +3,14 @@
 
 .hotel-room {
   width: 270px;
+  max-height: 257px;
   background: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px;
 
 // ===== Slider style =====
   &__slideshow {
-    margin-bottom: 15px;
+    margin-bottom: 17px;
 
     .slider__item {
       height: 151px;
@@ -91,20 +92,20 @@
 
     & .number {
       @include font-third;
-      font-size: 14px;
+      font-size: 0.875rem;
       color: #1F2041;
       padding-left: 2px;
 
       &__numeral {
-        font-size: 19px;
+        font-size: 1.1875rem;
         margin-left: 6px;
-        line-height: 32px;
+        line-height: 1.6842;
       }
       &__class {
         margin-left: 6px;
         @include font-two;
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 0.75rem;
+        line-height: 1.25;
         text-transform: uppercase;
         color: #BC9CFF;
       }
@@ -114,12 +115,12 @@
       color: rgba(31, 32, 65, 0.5);
       &__number {
         @include font-two;
-        font-size: 14px;
-        line-height: 36px;
+        font-size: 0.875rem;
+        line-height: 2.5714;
       }
       &__day {
         @include font-main;
-        font-size: 12px;
+        font-size: 0.75rem;
         margin-left: 4px;
       }
     }
@@ -135,8 +136,8 @@
     justify-content: space-between;
 
     .amount-review {
-      font-size: 14px;
-      line-height: 26px;
+      font-size: 0.875rem;
+      line-height: 1.8571;
       margin-bottom: 17px;
       &__number {
         @include font-two;

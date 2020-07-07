@@ -1,3 +1,5 @@
+import './__air-datepicker/js/datepicker'
+
 let airdatepicker = $('.datepicker-here').datepicker({
   minDate: new Date(),
   dateFormat: "dd.mm.yyyy",
