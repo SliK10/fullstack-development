@@ -1,14 +1,23 @@
 @import './__buttons/buttons.scss';
 
 .header {
-  width: 1440px;
-  height: 70px;
+  max-width: 1440px;
+  min-height: 70px;
   background: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  padding: 0 140px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+
+
+  &__wrapper {
+    width: 1160px;
+    min-height: 70px;
+    margin: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
   .logo {
     display: flex;
@@ -20,8 +29,50 @@
       padding-top: 13px;
     }
   }
+  .nav-and-sign-register {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .nav {
     display: flex;
+
+
+    #menu__toggle {
+      opacity: 0;
+    }
+    #menu__toggle,
+    #menu__toggle+label {
+      display: none;
+    }
+
+    .menu__btn {
+      display: none;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+    }
+    .menu__btn > span,
+    .menu__btn > span::before,
+    .menu__btn > span::after {
+      display: block;
+      position: absolute;
+      width: 26px;
+      height: 2px;
+      background-color: #616161;
+    }
+    .menu__btn > span::before {
+      content: '';
+      top: -8px;
+    }
+    .menu__btn > span::after {
+      content: '';
+      top: 8px;
+    }
+
 
     &__list {
       padding: 0;
@@ -30,13 +81,12 @@
       justify-content: space-between;
       margin-right: 10px;
     }
-    &__item,
-    &__item_selected {
+    &__item {
       display: flex;
       padding: 0 10px;
     }
 
-    &__item_selected a{
+    &__item.selected a{
       @include font-two;
       font-size: 14px;
       line-height: 17px;
@@ -59,26 +109,103 @@
       color: rgba(31, 32, 65, 0.5);
       cursor: pointer;
     }
+  }
+
 //- ===== Залогинен =====
-    .logged {
-      height: 30px;
-      margin: auto;
-      padding-left: 20px;
-      border-left: 1px solid rgba(31, 32, 65, 0.1);
-      font-size: 14px;
-      line-height: 30px;
-      color: rgba(31, 32, 65, 0.5);
-    }
+  .logged {
+    height: 30px;
+    margin: auto;
+    padding-left: 20px;
+    border-left: 1px solid rgba(31, 32, 65, 0.1);
+    font-size: 14px;
+    line-height: 30px;
+    color: rgba(31, 32, 65, 0.5);
+  }
 
 //- ===== Не залогинен =====
-    .login-register {
-      min-width: 200px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+  .login-register {
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__login {
+      margin-right: 18px;
+    }
+  }
+
+}
+
+
+@media (max-width: 1024px) {
+  .header {
+    & .logo {
+      margin-top: 10px;
+    }
+    & .nav {
+      margin: 10px auto;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .header {
+    &__wrapper {
+      justify-content: space-around;
+      margin: 0 auto;
+      width: 100%;
+    }
+    & .login-register {
+      order: -1;
+      margin: 15px auto 0;
 
       &__login {
-        margin-right: 18px;
+        max-width: 84px;
+        margin: 0 5px;
+      }
+
+      &__register {
+        width: 180px;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    &__wrapper {
+      flex-direction: column;
+    }
+    .nav-and-sign-register {
+      flex-direction: column;
+      .nav {
+        // margin: 10px 10px;
+
+        #menu__toggle,
+        #menu__toggle+label {
+          display: block;
+          margin: 0 auto;
+        }
+        #menu__toggle:checked ~ .nav__list {
+          display: block;
+          visibility: visible;
+        }
+
+        &__list {
+          position: absolute;
+          z-index: 1;
+          background-color: #FFFFFF;
+          border: 1px solid rgba(31, 32, 65, 0.5);
+
+          display: none;
+
+          & .nav__item {
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .login-register {
+        margin: 15px auto;
       }
     }
   }
