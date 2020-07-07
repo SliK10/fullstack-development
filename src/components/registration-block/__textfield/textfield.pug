@@ -1,6 +1,6 @@
 mixin text-field(options)
   .text-field
-    form.form
-      p.form__title
-        label.form__title-label.label(for= options.labelFor)= options.name
-      input.form__input(type= options.inputType name= options.labelFor id= options.labelFor placeholder= options.inputPlaceholder pattern= options.pattern)
+    if (options.name)
+      p.text-field__title
+        label.text-field__title-label.label(for= options.labelFor)= options.name
+    input.text-field__input(type= options.inputType name= options.labelFor id= options.labelFor placeholder= options.inputPlaceholder pattern= options.pattern)

@@ -1,6 +1,5 @@
 include ./__textfield/textfield.pug
 include ./__radio-buttons/radio-buttons.pug
-include ./__masked-text-field/masked-text-field.pug
 include ./__toggle/toggle.pug
 include ./__buttons/buttons.pug
 
@@ -15,7 +14,7 @@ mixin registration(options)
       .sex
         +radioButtons({})
       .date-of-birth
-        +masked-text-field({name: "Дата рождения", inputType: "text", labelFor: "birthday", inputPlaceholder: "ДД.ММ.ГГГГ"})
+        +text-field({name: "Дата рождения", inputType: "text", labelFor: "birthday", inputPlaceholder: "ДД.ММ.ГГГГ", pattern: "[0-9]{2}.[0-9]{2}.[0-9]{4}"})
       .email
         +text-field({name: "Данные для входа в сервис", inputType: "text", labelFor: "email", inputPlaceholder: "Email"})
       .password

@@ -1,27 +1,37 @@
-.label {
-  @include font-two;
-  font-size: 12px;
-  line-height: 15px;
+.text-field {
+  max-width: 320px;
+
+  .label {
+    @include font-two;
+    font-size: 0.75rem;
+    line-height: 1.25;
+  }
+  .form__title {
+    margin: 0;
+    text-transform: uppercase;
+  }
+  .form__input {
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    border-radius: 4px;
+    @include font-main;
+    font-size: 0.875rem;
+    line-height: 1.714;
+    padding-left: 15px;
+    width: 100%;
+    height: 44px;
+    margin-top: 4px;
+  }
+  .form__input:hover,
+  .form__input:focus {
+    border: 1px solid rgba(31, 32, 65, 0.5);
+  }
+  input.form__input::placeholder {
+    color: rgba(31, 32, 65, 0.25);
+  }
 }
-.form__title {
-  margin: 0;
-  text-transform: uppercase;
-}
-.form__input {
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-  @include font-main;
-  font-size: 14px;
-  line-height: 24px;
-  padding-left: 15px;
-  width: 320px;
-  height: 44px;
-  margin-top: 4px;
-}
-.form__input:hover,
-.form__input:focus {
-  border: 1px solid rgba(31, 32, 65, 0.5);
-}
-input.form__input::placeholder {
-  color: rgba(31, 32, 65, 0.25);
+
+@media (max-width: 400px) {
+  .page__cell {
+    max-width: 100%;
+  }
 }

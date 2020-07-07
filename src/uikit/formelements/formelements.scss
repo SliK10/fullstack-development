@@ -222,6 +222,10 @@
   }
 }
 @media (max-width: 400px) {
+  .page__cell {
+    max-width: 100%;
+  }
+
   .expandable-checkbox-list-wrapper {
     margin-bottom: 40px;
   }

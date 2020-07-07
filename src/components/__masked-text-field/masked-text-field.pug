@@ -1,6 +1,12 @@
+//- options = {
+      name: "Дата рождения",
+      inputType: "text",
+      labelFor: "birthday",
+      inputPlaceholder: "ДД.ММ.ГГГГ"
+    }
+
 mixin masked-text-field(options)
   .masked-text-field
-    form.form
-      if (options.name)
-        label.form__title-label(for= options.labelFor)= options.name
-      input.form__input(type= options.inputType name= options.labelFor id= options.labelFor placeholder= options.inputPlaceholder pattern= options.pattern)
+    if (options.name)
+      label.masked-text-field__title-label(for= options.labelFor)= options.name
+    input.masked-text-field__input(type= options.inputType name= options.labelFor id= options.labelFor placeholder= options.inputPlaceholder pattern= options.pattern)
