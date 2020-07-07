@@ -178,8 +178,10 @@
     }
     .nav-and-sign-register {
       flex-direction: column;
+      justify-content: flex-end;
+
       .nav {
-        // margin: 10px 10px;
+        margin-right: 0;
 
         #menu__toggle,
         #menu__toggle+label {
@@ -193,9 +195,12 @@
 
         &__list {
           position: absolute;
+          left: 0;
+          right: 0;
           z-index: 1;
           background-color: #FFFFFF;
-          border: 1px solid rgba(31, 32, 65, 0.5);
+          // border: 1px solid rgba(31, 32, 65, 0.5);
+          margin: 15px 0;
 
           display: none;
 
@@ -203,6 +208,10 @@
             margin-bottom: 10px;
           }
         }
+      }
+      .logged {
+        margin: 10px auto;
+        order: -1;
       }
       .login-register {
         margin: 15px auto;
