@@ -7,8 +7,8 @@
   padding-top: 100px;
 
   &__logo-description {
-    width: 560px;
     margin: 0 auto 23px;
+
     .logo {
       display: flex;
       width: 106px;
@@ -26,8 +26,8 @@
       }
     }
     .description {
-      font-size: 14px;
-      line-height: 24px;
+      font-size: 0.875rem;
+      line-height: 1.7143;
       text-align: center;
       color: rgba(31, 32, 65, 0.75);
     }
@@ -36,8 +36,8 @@
     width: 112px;
     margin: 0 auto;
     @include fa-brands;
-    font-size: 24px;
-    line-height: 23px;
+    font-size: 1.5rem;
+    line-height: 0.9583;
     display: flex;
     justify-content: space-between;
 
@@ -48,5 +48,11 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-creative {
+    width: 100%;
   }
 }

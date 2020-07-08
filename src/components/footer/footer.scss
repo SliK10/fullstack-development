@@ -36,8 +36,8 @@
       }
     }
     .description {
-      font-size: 14px;
-      line-height: 24px;
+      font-size: 0.875rem;
+      line-height: 1.7143;
       color: rgba(31, 32, 65, 0.75);
       max-width: 260px;
     }
@@ -51,8 +51,8 @@
       width: 200px;
       &__item-headline {
         @include font-two;
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 0.75rem;
+        line-height: 1.25;
         text-transform: uppercase;
         color: #1F2041;
         margin-bottom: 22px;
@@ -62,8 +62,8 @@
 
         a {
         display: block;
-        font-size: 14px;
-        line-height: 18px;
+        font-size: 0.875rem;
+        line-height: 1.2857;
         color: rgba(31, 32, 65, 0.5);
         text-decoration: none;
         }
@@ -75,14 +75,14 @@
     &__headline {
       margin: 4px 0 18px;
       @include font-two;
-      font-size: 12px;
-      line-height: 15px;
+      font-size: 0.75rem;
+      line-height: 1.25;
       text-transform: uppercase;
       color: #1F2041;
     }
     &__description {
-      font-size: 14px;
-      line-height: 24px;
+      font-size: 0.875rem;
+      line-height: 1.7143;
       color: rgba(31, 32, 65, 0.75);
       margin-bottom: 23px;
     }
@@ -94,7 +94,7 @@
   }
   .copiright-bar {
     max-width: 1440px;
-    height: 70px;
+    min-height: 70px;
     padding-top: 24px;
     margin: 0 auto;
     display: flex;
@@ -104,16 +104,17 @@
       width: 1160px;
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
     }
     &__copiright {
-      font-size: 14px;
-      line-height: 22px;
+      font-size: 0.875rem;
+      line-height: 1.5714;
       color: rgba(31, 32, 65, 0.75);
     }
     &__sprites {
       @include fa-brands;
-      font-size: 24px;
-      line-height: 23px;
+      font-size: 1.5rem;
+      line-height: 0.9583;
       display: flex;
       justify-content: space-between;
       width: 111px;
@@ -133,7 +134,7 @@
   .footer {
     padding: 100px 15px 0;
     &__logo {
-      margin-right: 10px;
+      margin: 0 10px;
       min-width: 188px;
     }
     .block-for-links {
@@ -157,25 +158,64 @@
 @media (max-width: 1024px) {
   .footer {
 
-    &__widgets {
+    .footer__widgets {
       flex-wrap: wrap;
       justify-content: space-around;
       margin-bottom: 15px;
 
       .footer__logo {
         order: 0;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
       }
       .block-for-links {
         order: 2;
+        width: 100%;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
 
         .block-links {
-          min-width: 200px;
+          margin-right: 0;
+          width: 155px;
+          min-width: 155px;
         }
       }
       .subscription {
         order: 1;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .footer {
+    .footer__widgets {
+      .logo {
+        justify-content: center;
+      }
+      .description {
+        text-align: center;
+      }
+      .block-for-links {
+        order: 1;
+        width: 260px;
+        flex-direction: column;
+
+        .block-links {
+          margin: 0 auto 15px;
+          text-align: center;
+        }
+      }
+      .subscription {
+        text-align: center;
+      }
+    }
+    .copiright-bar__wrapper {
+      justify-content: center;
+
+      .copiright-bar__copiright,
+      .copiright-bar__sprites {
+        margin-bottom: 15px;
       }
     }
   }

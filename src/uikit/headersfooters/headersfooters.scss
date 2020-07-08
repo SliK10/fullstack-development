@@ -32,5 +32,9 @@
 @media (max-width: 1024px) {
   html {
     font-size: 90%;
+
+    .page__row .page__cell-footer-creative {
+      margin-bottom: 0;
+    }
   }
 }

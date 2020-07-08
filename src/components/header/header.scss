@@ -88,14 +88,14 @@
 
     &__item.selected a{
       @include font-two;
-      font-size: 14px;
-      line-height: 17px;
+      font-size: 0.875rem;
+      line-height: 1.2143;
       text-decoration: none;
       color: rgba(31, 32, 65, 0.75);
     }
     &__item a {
-      font-size: 14px;
-      line-height: 17px;
+      font-size: 0.875rem;
+      line-height: 1.2143;
       color: rgba(31, 32, 65, 0.5);
       text-decoration: none;
     }
@@ -117,8 +117,8 @@
     margin: auto;
     padding-left: 20px;
     border-left: 1px solid rgba(31, 32, 65, 0.1);
-    font-size: 14px;
-    line-height: 30px;
+    font-size: 0.875rem;
+    line-height: 2.1429;
     color: rgba(31, 32, 65, 0.5);
   }
 

@@ -65,10 +65,10 @@ block content
       },
       [['Навигация', {name: 'О нас', links: '#'}, {name: 'Новости', links: '#'}, {name: 'Служба поддержки', links: '#'}, {name: 'Услуги', links: '#'}],
       ['О нас', {name: 'О сервисе', links: '#'}, {name: 'Наша команда', links: '#'}, {name: 'Вакансии', links: '#'}, {name: 'Инвесторы', links: '#'}],
-      ['Служба поддержки', {name: 'Соглашения', links: '#'}, {name: 'Сообщество', links: '#'}, {name: 'Связь с нами', links: '#'}]], {name: 'Подписка', description: 'Получайте специальные предложения и новости сервиса', options: { inputType: 'text', labelFor: 'subscription', id: 'subscription', inputPlaceholder: 'Your email address'}}, {text: 'Copyright © 2018 Toxin отель. Все права зачищены.', }
+      ['Служба поддержки', {name: 'Соглашения', links: '#'}, {name: 'Сообщество', links: '#'}, {name: 'Связь с нами', links: '#'}]], {name: 'Подписка', description: 'Получайте специальные предложения и новости сервиса', options: { inputType: 'text', labelFor: 'subscription', id: 'subscription', inputPlaceholder: 'Email'}}, {text: 'Copyright © 2018 Toxin отель. Все права зачищены.', }
           )
-    //- .page__cell-footer-creative
-    //-   +footer-creative({logoIconUrl: '/assets/img/footer-logo.svg',
-    //-   logoTextUrl: '/assets/img/footer-toxin.svg',
-    //-   logoDescription: 'Copyright © 2018 Toxin отель. Все права зачищены.',
-    //-   social_network: ['#', '#', '#']})
+    .page__cell-footer-creative
+      +footer-creative({logoIconUrl: '/assets/img/footer-logo.svg',
+      logoTextUrl: '/assets/img/footer-toxin.svg',
+      logoDescription: 'Copyright © 2018 Toxin отель. Все права зачищены.',
+      social_network: ['#', '#', '#']})
