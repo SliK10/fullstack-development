@@ -45,6 +45,7 @@
 .filter-date-airdatepicker {
   margin-top: 5px;
   position: absolute;
+  z-index: 3;
 }
 
 @media (max-width: 400px) {

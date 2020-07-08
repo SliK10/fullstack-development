@@ -15,11 +15,17 @@
 @import '../../components/footer/footer.scss';
 
 .content {
-  height: 1357px;
-  padding: 30px 140px 0;
+  max-width: 1160px;
+  min-height: 1356px;
+  margin: 0 auto;
+  padding-top: 30px;
   display: flex;
-  border-bottom: 1px solid rgba(31, 32, 65, 0.25);
+  // border-bottom: 1px solid rgba(31, 32, 65, 0.25);
   // justify-content: space-between;
+  &__wrapper {
+    display: flex;
+
+  }
 
   & .filters {
     max-width: 266px;
@@ -37,8 +43,8 @@
 
       .down-description {
         margin-top: 13px;
-        font-size: 12px;
-        line-height: 14px;
+        font-size: 0.75rem;
+        line-height: 1.1667;
         color: rgba(31, 32, 65, 0.5);
       }
     }
@@ -46,14 +52,14 @@
       margin-bottom: 33px;
     }
     &__wrapper-for-rich-checkbox-buttons {
-      margin-bottom: 32px;
+      margin-bottom: 30px;
     }
     &__wrapper-for-dropdown-bedroom {
       margin-bottom: 16px;
     }
   }
   .rooms {
-    min-width: 846px;
+    max-width: 846px;
 
     &__header {
       @include h1;
@@ -65,8 +71,6 @@
       display: flex;
       flex-wrap: wrap;
       margin-bottom: 4px;
-      // justify-content: space-between;
-      // align-content: flex-start;
 
       .block-room {
         margin-left: 12px;
@@ -77,6 +81,79 @@
       width: inherit;
       display: flex;
       justify-content: center;
+    }
+  }
+}
+.underline {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(31, 32, 65, 0.25);
+}
+
+@media (max-width: 1190px) {
+  .content {
+    margin: 0 15px;
+
+    .filters {
+      margin-right: 10px;
+    }
+  }
+}
+@media (max-width: 1151px) {
+  .content {
+    &__wrapper {
+      width: 100%;
+      justify-content: space-around;
+    }
+    .rooms {
+      max-width: 576px;
+
+      &__pagination {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 90%;
+  }
+}
+@media (max-width: 869px) {
+  .content {
+    &__wrapper {
+      flex-direction: column;
+
+      .filters {
+        max-width: 839px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        & > div {
+          margin: 0 5px 20px;
+          width: 266px;
+        }
+      }
+    }
+    .rooms {
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 593px) {
+  .content {
+    .filters {
+      margin-right: 0;
+
+      & > div {
+        margin: 0 0 20px;
+        width: 290px;
+      }
+    }
+    .rooms {
+      max-width: 294px;
     }
   }
 }
