@@ -7,11 +7,10 @@
 @import '../../components/footer/footer.scss';
 
 .background {
-  width: 1440px;
-  height: 684px;
+  max-width: 1440px;
+  height: 702px;
   background-repeat: no-repeat;
   background-position: 50% 101%;
-  background-size: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,5 +18,23 @@
   &__wrapper-login {
     width: 380px;
     height: 358px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 918px) {
+  html {
+    font-size: 90%;
+  }
+  .background {
+    background-size: cover;
+  }
+  .background__wrapper-login {
+    max-width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .background {
+    height: 450px;
   }
 }

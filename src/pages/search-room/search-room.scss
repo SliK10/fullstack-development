@@ -20,8 +20,7 @@
   margin: 0 auto;
   padding-top: 30px;
   display: flex;
-  // border-bottom: 1px solid rgba(31, 32, 65, 0.25);
-  // justify-content: space-between;
+
   &__wrapper {
     display: flex;
 
@@ -32,14 +31,14 @@
     margin-right: 48px;
 
     &__wrapper-for-filter-date-dropdown {
-      margin-bottom: 22px;
+      margin-bottom: 21px;
     }
     &__wrapper-for-dropdown {
       width: 266px;
-      margin-bottom: 29px;
+      margin-bottom: 28px;
     }
     &__wrapper-for-range-slider {
-      margin-bottom: 27px;
+      margin-bottom: 28px;
 
       .down-description {
         margin-top: 13px;
