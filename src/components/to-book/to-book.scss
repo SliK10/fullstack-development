@@ -47,7 +47,7 @@
       }
       &__day {
         @include font-main;
-        font-size: 0.75;
+        font-size: 0.75rem;
         margin-left: 4px;
       }
     }
@@ -131,7 +131,7 @@
 
 @media (max-width: 400px) {
   .to-book {
-    padding: 0 10px;
+    padding: 0 5px;
     margin: 0 5px;
   }
 }

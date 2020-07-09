@@ -12,40 +12,41 @@
 
 
 .block-photo {
-  width: 1440px;
-  height: 485px;
+  max-width: 1440px;
   display: flex;
   margin-bottom: 70px;
 
   &__main-photo {
     width: 981px;
-    height: 485px;
+    // height: 485px;
+    padding-top: 33.78%;
     background-repeat: no-repeat;
+    background-size: 100%;
   }
   &__mini-photo {
     width: 459px;
-    height: 485px;
 
     .photo__up {
-      width: 459px;
-      height: 243px;
+      // width: 459px;
+      // height: 243px;
+      padding-top: 52.9%;
       background-repeat: no-repeat;
       background-size: 100%;
     }
     .photo__down {
-      width: 459px;
-      height: 242px;
+      // width: 459px;
+      // height: 242px;
+      padding-top: 53%;
       background-repeat: no-repeat;
       background-size: 100%;
     }
   }
 }
 .page__row {
-  width: 1440px;
-  padding: 0 140px 45px;
+  max-width: 1160px;
+  margin: 0 auto 45px;
   display:  flex;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(31,32,65,.25);
 }
 .room {
   width: 712px;
@@ -69,8 +70,8 @@
       }
       &__description {
         width: 341px;
-        font-size: 14px;
-        line-height: 24px;
+        font-size: 0.875rem;
+        line-height: 1.7143;
         color: rgba(31, 32, 65, 0.75);
       }
     }
@@ -82,7 +83,7 @@
   }
   &__review {
     max-width: 711px;
-    margin-bottom: 33px;
+    margin-bottom: 34px;
     .headline {
       display: flex;
       justify-content: space-between;
@@ -96,11 +97,124 @@
     }
   }
 }
+.calculator {
+  width: 380px;
+}
+.underline {
+  width: 100%;
+  height: 1px;
+  background-color: rgba(31,32,65,.25);
+}
 
 .name-of-block {
   @include font-sans-bold;
-  font-size: 19px;
-  line-height: 24px;
+  font-size: 1.1875rem;
+  line-height: 1.2632;
   color: #1F2041;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1190px) {
+
+  .page__row {
+    margin: 0 15px 45px;
+  }
+  .room {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .page__row {
+    flex-wrap: wrap;
+
+    .room,
+    .calculator {
+      margin: 0 auto;
+    }
+  }
+}
+@media (max-width: 918px) {
+  html {
+    font-size: 90%;
+  }
+  .block-photo {
+    flex-wrap: wrap;
+
+    &__main-photo {
+      width: 100%;
+      padding-top: 49%;
+      background-position: center;
+    }
+
+    &__mini-photo {
+      width: 100%;
+      display: flex;
+
+      .photo__up,
+      .photo__down {
+        width: 100%;
+        padding-top: 26%;
+      }
+    }
+  }
+  .room__cell {
+    flex-wrap: wrap;
+
+    .room__impressions,
+    .room__information {
+      margin: 0 auto 15px;
+    }
+
+    & .rules,
+      .cancel {
+      margin: 0 auto 15px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .page {
+    .page__row {
+      margin: 0 0 45px;
+    }
+
+    .block-photo {
+
+      &__mini-photo {
+        flex-wrap: wrap;
+
+        .photo__up,
+        .photo__down {
+          padding-top: 50%;
+        }
+      }
+    }
+  }
+
+  .room {
+    width: 100%;
+
+    &__cell,
+    &__review {
+      margin: 0 15px 10px;
+    }
+
+    &__impressions {
+      width: 100%;
+      .name-of-block {
+        text-align: center;
+      }
+      .chart {
+        justify-content: space-evenly;
+      }
+    }
+
+    .cancel__description {
+      width: 100%;
+    }
+  }
+  .calculator {
+    width: 100%;
+  }
 }

@@ -35,8 +35,6 @@ class Calculator {
 
       this.informPrice.innerHTML = `${this.calculateTotalCosts(total)}₽`
       this.totalPrice.innerHTML = `${this.calculateTotalCosts(total) - this.transformToNumber(this.descriptionPrice.innerHTML) + this.transformToNumber(this.serviceCharge.innerHTML)}₽`
-
-      this.datePicker.style.display = "none"
     }
   }
   calculateTotalCosts(total) {
